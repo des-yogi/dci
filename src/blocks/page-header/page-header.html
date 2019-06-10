@@ -7,5 +7,128 @@
 -->
 
 <header class="page-header" role="banner">
-  page-header
+
+  <div class="page-header__top">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="service-menu" role="navigation">
+          <ul class="service-menu__list">
+            <li class="service-menu__item">
+              <a class="service-menu__link" href="#">Доставка та оплата</a>
+            </li>
+            <li class="service-menu__service-link">
+              <a class="service-menu__link" href="#">Про компанію</a>
+            </li>
+            <li class="service-menu__service-link">
+              <a class="service-menu__link" href="#">Вакансії</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="social-contact" role="navigation">
+          <ul class="social-contact__list">
+            <li class="social-contact__item">
+              <a href="#" class="social-contact__link" title="Twitter">
+                <img src="img/twitter-icon.svg" alt="Twitter" width="24" height="24">
+              </a>
+            </li>
+            <li class="social-contact__item">
+              <a href="#" class="social-contact__link" title="Viber">
+                <img src="img/viber-icon.svg" alt="Viber" width="24" height="24">
+              </a>
+            </li>
+            <li class="social-contact__item">
+              <a href="#" class="social-contact__link" title="WhatsApp">
+                <img src="img/whatsapp-icon.svg" alt="WhatsApp" width="24" height="24">
+              </a>
+            </li>
+            <li class="social-contact__item">
+              <a href="#" class="social-contact__link" title="Facebook">
+                <img src="img/fb-icon.svg" alt="Facebook" width="24" height="24">
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="lang-switcher  dropdown">
+          <button class="dropdown-toggle" type="button" id="lang-switcher" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">RU</button>
+          <div class="dropdown-menu" aria-labelledby="lang-switcher">
+            <a class="dropdown-item" href="#">UA</a>
+            <a class="dropdown-item" href="#">RU</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="page-header__main">
+    <div class="container">
+
+      <a href="/" class="logo" title="DCI Group">
+        <picture>
+          <source srcset="img/dci-logo.svg" media="(min-width: 768px)">
+          <img src="img/dci-logo--icon.svg" alt="DCI Group logo" width="45" height="52">
+        </picture>
+      </a>
+
+      <div class="page-header__btn-group">
+        <button class="btn  btn--icon" type="button" data-toggle="modal" data-target="#phones-modal"  title="Телефони">
+          <svg width="18" height="18" role="img">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone"></use>
+          </svg>
+        </button>
+        <a class="btn  btn--icon" href="#" title="Список переваг">
+          <svg width="18" height="16" role="img">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#heart"></use>
+          </svg>
+        </a>
+        <a class="btn  btn--icon" href="#" title="Вхід - Кабінет користувача">
+          <svg width="18" height="18" role="img">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user"></use>
+          </svg>
+        </a>
+        <a class="btn  btn--icon" href="#" title="Кошик">
+          <svg width="18" height="18" role="img">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#basket"></use>
+          </svg>
+        </a>
+      </div>
+
+      <div class="page-header__btn-group  page-header__btn-group--search">
+        @@include('../../blocks/field-search/field-search.html')
+      </div>
+
+    </div>
+  </div>
+
+  <div class="page-header__bottom">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="page-header__catalog-menu">
+          <a class="" href="#catalog-menu">
+            <span>
+              <svg width="18" height="18" role="img">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-view"></use>
+              </svg>
+            </span>
+            Каталог товарів</a>
+        </div>
+
+        <div class="page-header__main-menu">
+          <a class="" href="#main-menu">Меню
+            <span class="burger"><span></span></span>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
 </header>

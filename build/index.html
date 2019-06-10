@@ -3,13 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Home page</title>
-  <meta name="description" content>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="MobileOptimized" content="320">
-  <meta name="format-detection" content="telephone=no">
-  <link href="css/style.min.css" rel="stylesheet" media="screen">
-<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <meta name="description" content>  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  <meta http-equiv="x-ua-compatible" content="ie=edge">  <meta name="MobileOptimized" content="320">  <!--DEV Edge и ряд мобильных браузеров автоматом преобразуют телефоны в ссылки. Отключим это. -->  <meta name="format-detection" content="telephone=no">  <link href="css/style.min.css" rel="stylesheet" media="screen">  <!--DEV Перед </head> при сборке будут вставлены ссылки на favicon и служебные файлы --><link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
 <link rel="manifest" href="/img/site.webmanifest">
@@ -20,10 +14,123 @@
 <meta name="msapplication-config" content="/img/browserconfig.xml">
 <meta name="theme-color" content="#ffffff"></head>
 <body><noscript>У вас отключен JavaScript. Это делает невозможным использование нашего сайта.</noscript>
-  <div class="page__inner">
+  <div id="page" class="page__inner">
     <div class="page__content">
       <header class="page-header" role="banner">
-        page-header
+        <div class="page-header__top">
+          <div class="container">
+            <div class="row">
+              <div class="service-menu" role="navigation">
+                <ul class="service-menu__list">
+                  <li class="service-menu__item">
+                    <a class="service-menu__link" href="#">Доставка та оплата</a>
+                  </li>
+                  <li class="service-menu__service-link">
+                    <a class="service-menu__link" href="#">Про компанію</a>
+                  </li>
+                  <li class="service-menu__service-link">
+                    <a class="service-menu__link" href="#">Вакансії</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="social-contact" role="navigation">
+                <ul class="social-contact__list">
+                  <li class="social-contact__item">
+                    <a href="#" class="social-contact__link" title="Twitter">
+                      <img src="img/twitter-icon.svg" alt="Twitter" width="24" height="24">
+                    </a>
+                  </li>
+                  <li class="social-contact__item">
+                    <a href="#" class="social-contact__link" title="Viber">
+                      <img src="img/viber-icon.svg" alt="Viber" width="24" height="24">
+                    </a>
+                  </li>
+                  <li class="social-contact__item">
+                    <a href="#" class="social-contact__link" title="WhatsApp">
+                      <img src="img/whatsapp-icon.svg" alt="WhatsApp" width="24" height="24">
+                    </a>
+                  </li>
+                  <li class="social-contact__item">
+                    <a href="#" class="social-contact__link" title="Facebook">
+                      <img src="img/fb-icon.svg" alt="Facebook" width="24" height="24">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="lang-switcher  dropdown">
+                <button class="dropdown-toggle" type="button" id="lang-switcher" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">RU</button>
+                <div class="dropdown-menu" aria-labelledby="lang-switcher">
+                  <a class="dropdown-item" href="#">UA</a>
+                  <a class="dropdown-item" href="#">RU</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-header__main">
+          <div class="container">
+            <a href="/" class="logo" title="DCI Group">
+              <picture>
+                <source srcset="img/dci-logo.svg" media="(min-width: 768px)">
+                <img src="img/dci-logo--icon.svg" alt="DCI Group logo" width="45" height="52">
+              </picture>
+            </a>
+            <div class="page-header__btn-group">
+              <button class="btn  btn--icon" type="button" data-toggle="modal" data-target="#phones-modal" title="Телефони">
+                <svg width="18" height="18" role="img">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone"/>
+                </svg>
+              </button>
+              <a class="btn  btn--icon" href="#" title="Список переваг">
+                <svg width="18" height="16" role="img">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#heart"/>
+                </svg>
+              </a>
+              <a class="btn  btn--icon" href="#" title="Вхід - Кабінет користувача">
+                <svg width="18" height="18" role="img">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user"/>
+                </svg>
+              </a>
+              <a class="btn  btn--icon" href="#" title="Кошик">
+                <svg width="18" height="18" role="img">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#basket"/>
+                </svg>
+              </a>
+            </div>
+            <div class="page-header__btn-group  page-header__btn-group--search">
+              <form id="search-form" class="search-form" action="#" method="post">
+                <div class="search-form__wrapper">
+                  <input class="field-search" type="search" name="search" value placeholder="Пошук">
+                  <button class="btn  btn--icon  search-form__submit" type="submit">
+                    <svg width="18" height="18" role="img">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#lens"/>
+                    </svg>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="page-header__bottom">
+          <div class="container">
+            <div class="row">
+              <div class="page-header__catalog-menu">
+                <a class href="#catalog-menu">
+                  <span>
+                    <svg width="18" height="18" role="img">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-view"/>
+                    </svg>
+                  </span>
+                  Каталог товарів</a>
+              </div>
+              <div class="page-header__main-menu">
+                <a class href="#main-menu">Меню
+                  <span class="burger"><span></span></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </header>
       <main role="main">
       <h1>Заголовок 1</h1>
@@ -72,16 +179,124 @@
       </footer>
     </div>
   </div>
-  <script src="js/picturefill.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.mmenu.all.js"></script>
-  <script src="js/svg4everybody.min.js"></script>
-  <script src="js/isMobile.min.js"></script>
-  <script src="js/nouislider.min.js"></script>
-  <script src="js/ofi.min.js"></script>
-  <script src="js/util.min.js"></script>
-  <script src="js/script.min.js"></script>
-</body>
+  <section id="catalog-menu" class="catalog-menu" role="navigation">
+    <h4 class="visually-hidden">Каталог товарів - меню</h4>
+    <ul class="catalog-menu__list">
+      <li class="catalog-menu__item">
+        <span>Цегла рядова</span>
+        <ul>
+          <li class="catalog-menu__item">
+            <a class="catalog-menu__link" href="#">Цегла рядова М-75</a>
+          </li>
+          <li class="catalog-menu__item">
+            <a class="catalog-menu__link" href="#">Цегла рядова М-100</a>
+          </li>
+          <li class="catalog-menu__item">
+            <a class="catalog-menu__link" href="#">Цегла рядова М-125</a>
+          </li>
+          <li class="catalog-menu__item">
+            <a class="catalog-menu__link" href="#">Цегла рядова М-150</a>
+          </li>
+          <li class="catalog-menu__item">
+            <a class="catalog-menu__link" href="#">Цегла повнотіла</a>
+          </li>
+        </ul>
+      </li>
+      <li class="catalog-menu__item"><span>Кирпич силикатный</span>
+        <ul>
+          <li class="catalog-menu__item">
+            <a class="catalog-menu__link" href="#">Одинарний (Обухів)</a>
+          </li>
+          <li class="catalog-menu__item">
+            <a class="catalog-menu__link" href="#">Полуторний (Обухів)</a>
+          </li>
+          <li class="catalog-menu__item">
+            <a class="catalog-menu__link" href="#">Одинарний (Житомир)</a>
+          </li>
+        </ul>
+      </li>
+      <li class="catalog-menu__item">
+        <span>Керамічні блоки</span>
+        <ul>
+          <li class="catalog-menu__item">
+            <a class="catalog-menu__link" href="#">Русиния</a>
+          </li>
+          <li class="catalog-menu__item">
+            <a class="catalog-menu__link" href="#">Керамкомфорт</a>
+          </li>
+          <li class="catalog-menu__item">
+            <a class="catalog-menu__link" href="#">Кератерм</a>
+          </li>
+          <li class="catalog-menu__item">
+            <a class="catalog-menu__link" href="#">Porotherm</a>
+          </li>
+          <li class="catalog-menu__item">
+            <a class="catalog-menu__link" href="#">Leier</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+  <nav id="main-menu" class="main-menu">
+    <h4 class="visually-hidden">Головне меню сайту</h4>
+    <ul class="main-menu__list">
+      <li class="main-menu__item">
+        <a class="main-menu__link" href="#">Акції</a>
+      </li>
+      <li class="main-menu__item">
+        <a class="main-menu__link" href="#">Бренди</a>
+      </li>
+      <li class="main-menu__item">
+        <a class="main-menu__link" href="#">Калькулятор</a>
+      </li>
+      <li class="main-menu__item">
+        <a class="main-menu__link" href="#">Статті</a>
+      </li>
+      <li class="main-menu__item">
+        <a class="main-menu__link" href="#">Контакти</a>
+      </li>
+      <li class="Divider"></li>
+      <li class="main-menu__item  main-menu__item--mob-only">
+        <a class="main-menu__link" href="#">Доставка та оплата</a>
+      </li>
+      <li class="main-menu__item  main-menu__item--mob-only">
+        <a class="main-menu__link" href="#">Про компанію</a>
+      </li>
+      <li class="main-menu__item  main-menu__item--mob-only">
+        <a class="main-menu__link" href="#">Вакансії</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="modal  phones-modal  fade" id="phones-modal" tabindex="-1" role="dialog" aria-labelledby="phones-modal-title" aria-hidden="true" aria-modal="true">
+    <div class="modal-dialog  modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="phones-modal-title">Телефонуйте нам</h4>
+          <button type="button" class="btn  btn--icon  close" data-dismiss="modal" aria-label="Close">
+            <svg width="20" height="20" aria-hidden="true">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#close"/>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body  phones-modal__body">
+          <ul class="phones-modal__list">
+            <li class="phones-modal__item">
+              <a class="phones-modal__link" href="tel:+380684555544">+38 (068) 455 55 44</a>
+            </li>
+            <li class="phones-modal__item">
+              <a class="phones-modal__link" href="tel:+380684555544">+38 (068) 455 55 44</a>
+            </li>
+            <li class="phones-modal__item">
+              <a class="phones-modal__link" href="tel:+380684555544">+38 (068) 455 55 44</a>
+            </li>
+            <li class="phones-modal__item">
+              <a class="phones-modal__link" href="tel:+380684555544">+38 (068) 455 55 44</a>
+            </li>
+          </ul>
+          <p class="phones-modal__worktime"><span>08:00 - 20:00</span>&emsp;<span>Без выходных</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/picturefill.min.js"></script>  <script src="js/popper.min.js"></script>  <script src="js/jquery.min.js"></script>  <script src="js/owl.carousel.min.js"></script>  <script src="js/jquery.mmenu.all.js"></script>  <script src="js/svg4everybody.min.js"></script>  <script src="js/isMobile.min.js"></script>  <script src="js/nouislider.min.js"></script>  <script src="js/ofi.min.js"></script>  <script src="js/util.min.js"></script>  <script src="js/script.min.js"></script></body>
 </html>

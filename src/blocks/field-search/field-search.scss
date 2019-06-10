@@ -1,0 +1,9 @@
+// В этом файле должны быть стили для БЭМ-блока field-search, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.field-search {
+
+  $block-name:                &; // #{$block-name}__element
+
+}

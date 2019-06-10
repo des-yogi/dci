@@ -1,0 +1,9 @@
+// В этом файле должны быть стили для БЭМ-блока service-menu, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.service-menu {
+
+  $block-name:                &; // #{$block-name}__element
+
+}

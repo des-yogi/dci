@@ -1,42 +1,40 @@
-// В этом файле должны быть стили для БЭМ-блока btn, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .btn {
 
   $block-name:                &; // #{$block-name}__element
 
   box-sizing: border-box;
   display: inline-block;
+  min-width: 38px;
+  min-height: 38px;
   margin: 0;
-  // padding: $field-padding-vertical  $field-padding-horizontal;
+  padding: 5px;
   white-space: nowrap;
   vertical-align: middle;
   user-select: none;
   text-align: center;
-  font-size: 1em;
+  font-size: $font-size;
   font-family: inherit;
   line-height: $line-height;
   text-decoration: none;
   text-transform: none;
-  color: $text-color;
+  color: $icon-color;
   border-radius: $border-radius;
-  border: 1px solid $gray-lighter;
-  background-color: $gray-lightest;
+  border: $border-btn;
+  background-color: $white;
   background-image: none;
   cursor: pointer;
 
   &:hover,
   &:focus {
     text-decoration: none;
-    color: $text-color;
-    // background-color: darken($gray-lightest, 10%);
-    // border-color: darken($gray-lighter, 12%);
+    color: $white;
+    background-color: $main-color;
+    border-color: $main-color;
   }
 
   &:active,
   &:focus {
-    // @include field-focus;
+    box-shadow: $shadow;
   }
 
   &--disabled,
@@ -52,10 +50,20 @@
     }
   }
 
-  // &__icon {
-  //   display: inline-block;
-  //   vertical-align: middle;
-  // }
+  &--icon {
+    position: relative;
+    color: $icon-color;
+
+    svg {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: auto;
+      fill: currentColor;
+    }
+  }
 
 
 

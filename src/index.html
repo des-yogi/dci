@@ -10,7 +10,7 @@
 
 <body><noscript>У вас отключен JavaScript. Это делает невозможным использование нашего сайта.</noscript>
 
-  <div class="page__inner">
+  <div id="page" class="page__inner">
 
     <div class="page__content">
       @@include('blocks/page-header/page-header.html')
@@ -65,6 +65,10 @@
     </div>
 
   </div>
+  @@include('blocks/catalog-menu/catalog-menu.html')
+  @@include('blocks/main-menu/main-menu.html')
+
+  @@include('blocks/phones-modal/phones-modal.html')
 
   @@include('_include/page_bottom.html')
 

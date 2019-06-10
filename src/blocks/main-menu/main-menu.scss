@@ -1,0 +1,8 @@
+.main-menu {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &:not( .mm-menu ) {
+     display: none;
+  }
+}
