@@ -102,55 +102,55 @@ h6 {
 
 .h1,
 h1 {
-  font-size: $font-size--h1;
+  font-size: $font-size--h1-mob;
 
   @media (min-width: $screen-lg) {
-    font-size: $font-size--h1-mob;
+    font-size: $font-size--h1;
   }
 }
 
 .h2,
 h2 {
-  font-size: $font-size--h2;
+  font-size: $font-size--h2-mob;
 
   @media (min-width: $screen-lg) {
-    font-size: $font-size--h2-mob;
+    font-size: $font-size--h2;
   }
 }
 
 .h3,
 h3 {
-  font-size: $font-size--h3;
+  font-size: $font-size--h3-mob;
 
   @media (min-width: $screen-lg) {
-    font-size: $font-size--h3-mob;
+    font-size: $font-size--h3;
   }
 }
 
 .h4,
 h4 {
-  font-size: $font-size--h4;
+  font-size: $font-size--h4-mob;
 
   @media (min-width: $screen-lg) {
-    font-size: $font-size--h4-mob;
+    font-size: $font-size--h4;
   }
 }
 
 .h5,
 h5 {
-  font-size: $font-size--h5;
+  font-size: $font-size--h5-mob;
 
   @media (min-width: $screen-lg) {
-    font-size: $font-size--h5-mob;
+    font-size: $font-size--h5;
   }
 }
 
 .h6,
 h6 {
-  font-size: $font-size--h6;
+  font-size: $font-size--h6-mob;
 
   @media (min-width: $screen-lg) {
-    font-size: $font-size--h6-mob;
+    font-size: $font-size--h6;
   }
 }
 
@@ -196,7 +196,7 @@ li {
   line-height: inherit;
 }
 
-// .small,
+.small,
 small {
   // font-size: $font-size--small;
 }

@@ -15,7 +15,6 @@
   $block-name:                &; // #{$block-name}__element
 
   box-sizing: border-box;
-  font-size: 14px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -ms-overflow-style: scrollbar;
   -ms-text-size-adjust: 100%; // stylelint-disable-line  property-no-vendor-prefix
@@ -148,17 +147,6 @@ a {
   &:visited {
     //color: $second-color;
   }
-
-  /* &[href^="tel:"] {
-
-    // На больших экранах телефоны-ссылки делаем обычным текстом
-    @media (min-width: $screen-xl) {
-      white-space: nowrap;
-      pointer-events: none;
-      text-decoration: inherit;
-      color: inherit;
-    }
-  } */
 }
 
 hr {
@@ -170,3 +158,92 @@ hr {
   border: 0;
   border-top: 1px solid $border-color;
 }
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.container {
+  display: block;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: none;
+
+  @media (min-width: $screen-md) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  @media (min-width: $screen-xl) {
+    $padding-min: 15px; // нужный отступ от краев экрана
+    $half-screen-xl: $screen-xl / 2 - $padding-min;
+    // padding: 1em calc(50% - 600px); //600px - это $screen-xl / 2 - нужный отступ от края экрана
+    padding-left: calc(50% - #{$half-screen-xl});
+    padding-right: calc(50% - #{$half-screen-xl});
+  }
+}
+
+// Родитель. Указаны промежутки между ячейками: XS|SM|MD|LG|XL|XXL;
+// @include row($grid-gutter-width, 10px, 12px, 16px, 20px, 26px);
+.row {
+  @include row(
+    $xs-grid-gutter:  20px,
+    $sm-grid-gutter:  20px,
+    $md-grid-gutter:  $grid-gutter-width,
+    $lg-grid-gutter:  $grid-gutter-width,
+    $xl-grid-gutter:  $grid-gutter-width,
+    $xxl-grid-gutter: $grid-gutter-width
+  );
+}
+
+.col-1-full {
+  @include col(xs, 12, $grid-columns, 20px);
+  @include col(md, 12);
+}
+
+/* &__element {
+  @include col(); // малые ширины — 12 из 12, промежутки по умолчанию
+  @include col(sm, 6, $grid-columns, 10px);  // SM (480 по умолчанию) — 6 из 12, промежутки 10px
+  @include col(md, 4, $grid-columns, 12px);  // MD (768 по умолчанию) — 4 из 12, промежутки 12px
+  @include col(lg, 3, $grid-columns, 16px);  // LG (992 по умолчанию) — 3 из 12, промежутки 16px
+  @include col(xl, 2, $grid-columns, 20px);  // XL (1200 по умолчанию) — 2 из 12, промежутки 20px
+  @include col(xxl, 1, $grid-columns, 26px); // XXL (1800 по умолчанию) — 1 из 12, промежутки 26px
+} */
+
+
+/* .publishedon {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: $main-color;
+
+  @media (min-width: $screen-md) {
+    margin-top: 15px;
+  }
+
+  @media (min-width: $screen-xl) {
+    margin-top: 20px;
+  }
+} */
+
+// background: svg-load('../blocks/phones-modal/bg-img/phone.svg', fill=$main-color, stroke=rgba(255, 255, 255, 0));

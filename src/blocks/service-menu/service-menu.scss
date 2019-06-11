@@ -1,0 +1,35 @@
+.service-menu {
+  display: none;
+
+  @media (min-width: $screen-md) {
+    display: block;
+    @include col(md, 7);
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    height: 100%;
+    margin: 0;
+    padding-left: 0;
+  }
+
+  &__item {
+    margin-right: 25px;
+  }
+
+  &__link {
+    font-size: $font-size--mob;
+    font-weight: 500;
+    color: $text-color;
+  }
+
+  &__service-link {
+
+  }
+}

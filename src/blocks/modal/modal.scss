@@ -88,6 +88,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  position: relative;
   padding: 1rem;
   border-bottom: 1px solid #e9ecef;
   border-top-left-radius: 0.3rem;
@@ -95,12 +96,16 @@
 }
 
 .modal-header .close {
-  padding: 1rem;
-  margin: -1rem -1rem -1rem auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  // padding: 1rem;
+  // margin: -1rem -1rem -1rem auto;
+
 }
 
 .modal-title {
-  margin-bottom: 0;
+  margin: 0;
   line-height: 1.5;
 }
 

@@ -1,8 +1,224 @@
-// В этом файле должны быть стили для БЭМ-блока page-header, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .page-header {
 
   $block-name:                &; // #{$block-name}__element
+
+  &__top {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: $header-top-bg;
+  }
+
+  &__main {
+    background-color: $white;
+  }
+
+  &__logo-col {
+    @include col(xs, 3, $grid-columns, 20px);
+    @include col(md, 3);
+    @include col(xl, 2);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    aling-items: center;
+    margin: 5px 0;
+  }
+
+  &__btns-col {
+    @include col(xs, 9, $grid-columns, 20px);
+    @include col(md, 9);
+    @include col(xl, 10);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    aling-items: center;
+  }
+
+  &__search-col {
+    @include col(xs, 12, $grid-columns, 20px);
+
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+  }
+
+  &__btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    @media (min-width: $screen-md) {
+      justify-content: space-between;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+
+    @media (min-width: $screen-xl) {
+      align-items: flex-start;
+    }
+
+    button[data-target="#phones-modal"] {
+      margin-left: 0;
+
+      @media (min-width: $screen-xl) {
+        display: none;
+      }
+    }
+
+    &--search {
+
+      .search-form {
+        margin-left: 0;
+        border: $border-btn;
+      }
+    }
+
+    & > * {
+      margin-left: 18px;
+    }
+  }
+
+  &__tel-wrapper {
+    display: none;
+
+    @media (min-width: $screen-xl) {
+      display: block;
+      margin-left: 30px;
+      margin-right: 10px;
+    }
+
+    .phones-modal__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 335px;
+    }
+
+    .phones-modal__worktime {
+      margin-top: 5px;
+      font-weight: 500;
+    }
+  }
+
+  &__search-wrapper {
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: block;
+      flex: 1 1;
+      max-width: 340px;
+      margin-right: auto;
+      border: $border-btn;
+
+      & .btn {
+        border: none !important;
+      }
+    }
+  }
+
+  &__basket-info {
+    display: none;
+
+    @media (min-width: $screen-xl) {
+      display: inline-flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  &__total-price,
+  &__total-quantity {
+    font-size: $font-size--mob;
+    font-weight: 500;
+  }
+
+  &__total-quantity {
+    margin-top: 7px;
+    color: $main-color;
+  }
+
+  &__bottom {
+    background: linear-gradient(to right, $main-color, $main-color 50%, $second-color 50%, $second-color);
+  }
+
+  &__catalog-menu {
+    @include col(xs, 8, $grid-columns, 20px);
+    @include col(lg, 4);
+    @include col(xl, 3);
+  }
+
+  &__main-menu {
+    @include col(xs, 4, $grid-columns, 20px);
+    @include col(lg, 8);
+    @include col(xl, 9);
+    background-color: $second-color;
+
+    @media (min-width: $menu-desktop-width) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+  }
+
+  &__catalog-menu-toggler,
+  &__main-menu-toggler {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: $font-size--mob;
+    font-weight: 700;
+    white-space: nowrap;
+    color: $white;
+    cursor: pointer;
+    user-select: none;
+
+    @media (min-width: $screen-sm) {
+      font-size: $font-size;
+    }
+
+    &:hover,
+    &:focus {
+      color: $white;
+    }
+  }
+
+  &__catalog-menu-toggler {
+    justify-content: center;
+    background-color: $main-color;
+
+    span {
+      margin-left: 20px;
+    }
+
+    svg {
+      display: block;
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  &__main-menu-toggler {
+    justify-content: flex-end;
+    background-color: $second-color;
+
+    @media (min-width: $menu-desktop-width) {
+      display: none;
+    }
+
+    .burger {
+      margin-left: 20px;
+      span,
+      span::before,
+      span::after {
+        background-color: currentColor;
+      }
+    }
+  }
 }

@@ -1,0 +1,23 @@
+.search-form {
+  width: 100%;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    // background-color: $white;
+  }
+
+  &__input {
+    flex: 1 1;
+    padding: $field-padding-vertical  $field-padding-horizontal;
+    border: none;
+    //background-color: red;
+  }
+
+  &__submit {
+
+  }
+}

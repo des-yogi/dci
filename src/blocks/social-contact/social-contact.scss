@@ -1,0 +1,49 @@
+.social-contact {
+  @include col(xs, 7, $grid-columns, 20px);
+  @include col(md, 3);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  @media (min-width: $screen-md) {
+    display: inline-flex;
+    max-width: 170px;
+    margin-left: auto;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  &__item {
+    margin-right: 15px;
+
+    &:last-child {
+      @media (min-width: $screen-md) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+
+    &:hover,
+    &:focus {
+      box-shadow: $shadow;
+    }
+
+    img {
+      display: block;
+    }
+  }
+}

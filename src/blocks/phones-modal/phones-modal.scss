@@ -1,0 +1,80 @@
+.phones-modal {
+
+  $block-name:                &; // #{$block-name}__element
+
+  .modal-dialog {
+
+  }
+
+  .close {
+
+    svg {
+      display: block;
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+  }
+
+  &__body {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 55px;
+  }
+
+  &__list {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &::before {
+      display: block;
+      position: absolute;
+      content: "";
+      top: 8px;
+      left: -30px;
+      width: 18px;
+      height: 18px;
+      background: svg-load('../blocks/phones-modal/bg-img/phone.svg', fill=$main-color, stroke=rgba(255, 255, 255, 0));
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &__item {
+
+  }
+
+  &__link,
+  &__worktime {
+    font-size: 14px;
+    font-weight: 700;
+    color: inherit;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 7px 0;
+  }
+
+  &__worktime {
+    position: relative;
+    margin-top: 25px;
+
+    &::before {
+      display: block;
+      position: absolute;
+      content: "";
+      top: -1px;
+      left: -30px;
+      width: 18px;
+      height: 18px;
+      background: svg-load('../blocks/phones-modal/bg-img/time.svg', fill=$main-color, stroke=rgba(255, 255, 255, 0));
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
