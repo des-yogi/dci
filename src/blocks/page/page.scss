@@ -215,6 +215,11 @@ hr {
   );
 }
 
+.col-1-full {
+  @include col(xs, 12, $grid-columns, 20px);
+  @include col(md, 12);
+}
+
 /* &__element {
   @include col(); // малые ширины — 12 из 12, промежутки по умолчанию
   @include col(sm, 6, $grid-columns, 10px);  // SM (480 по умолчанию) — 6 из 12, промежутки 10px
@@ -240,3 +245,5 @@ hr {
     margin-top: 20px;
   }
 } */
+
+// background: svg-load('../blocks/phones-modal/bg-img/phone.svg', fill=$main-color, stroke=rgba(255, 255, 255, 0));

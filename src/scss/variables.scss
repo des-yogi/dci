@@ -63,6 +63,7 @@ $line-height:                 1.35;
 $typo-margin-vertical:        1em;
 
 $font-family:                 -apple-system, BlinkMacSystemFont, 'Rubik', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif;
+$font-family--headings:       $font-family;
 
 
 
@@ -92,17 +93,17 @@ $grid-gutter-width:           25px;
 
 // Разное
 
-$field-padding-vertical:      5px;
+$field-padding-vertical:      10px;
 $field-padding-horizontal:    12px;
 
 $border-btn:                  2px solid $body-bg;
 $border-radius:               0;
 $opacity:                     0.7;
-$transition-time:             0.3s;
+$transition-time:             0.25s;
 $shadow:                      2px 2px 8px rgba(0, 0, 0, 0.15);
 $shadow--header:              0px 4px 6px rgba(0, 0, 0, 0.25);
 
-$menu-desktop-width:          $screen-xl;
+$menu-desktop-width:          $screen-lg;
 $toggler-part-height:         2px;
 $toggler-part-bg-color:       #000;
 

@@ -1,11 +1,18 @@
 $(document).ready(function() {
+
+  let title = {
+    uk: 'Каталог товарів',
+    ru: 'Каталог товаров',
+    en: 'Catalog'
+  };
+
   $('#catalog-menu').mmenu({
      'extensions': [
         'pagedim-black'
       ],
       navbar: {
         add: true,
-        title: 'Каталог товарів'
+        title: translateTitle(title)
       }
   }, {
      // configuration
@@ -14,3 +21,5 @@ $(document).ready(function() {
      }
   });
 });
+
+

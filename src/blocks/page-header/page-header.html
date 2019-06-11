@@ -18,10 +18,10 @@
             <li class="service-menu__item">
               <a class="service-menu__link" href="#">Доставка та оплата</a>
             </li>
-            <li class="service-menu__service-link">
+            <li class="service-menu__item">
               <a class="service-menu__link" href="#">Про компанію</a>
             </li>
-            <li class="service-menu__service-link">
+            <li class="service-menu__item">
               <a class="service-menu__link" href="#">Вакансії</a>
             </li>
           </ul>
@@ -52,11 +52,11 @@
           </ul>
         </div>
 
-        <div class="lang-switcher  dropdown">
-          <button class="dropdown-toggle" type="button" id="lang-switcher" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">RU</button>
+        <div class="lang-switcher  dropdown" id="lang-switcher">
+          <button class="dropdown-toggle" type="button" id="lang-switcher-toggler" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">RU</button>
           <div class="dropdown-menu" aria-labelledby="lang-switcher">
-            <a class="dropdown-item" href="#">UA</a>
-            <a class="dropdown-item" href="#">RU</a>
+            <a class="dropdown-item" href="#1">UA</a>
+            <a class="dropdown-item" href="#2">RU</a>
           </div>
         </div>
 
@@ -68,38 +68,84 @@
   <div class="page-header__main">
     <div class="container">
 
-      <a href="/" class="logo" title="DCI Group">
-        <picture>
-          <source srcset="img/dci-logo.svg" media="(min-width: 768px)">
-          <img src="img/dci-logo--icon.svg" alt="DCI Group logo" width="45" height="52">
-        </picture>
-      </a>
+      <div class="row">
 
-      <div class="page-header__btn-group">
-        <button class="btn  btn--icon" type="button" data-toggle="modal" data-target="#phones-modal"  title="Телефони">
-          <svg width="18" height="18" role="img">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone"></use>
-          </svg>
-        </button>
-        <a class="btn  btn--icon" href="#" title="Список переваг">
-          <svg width="18" height="16" role="img">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#heart"></use>
-          </svg>
-        </a>
-        <a class="btn  btn--icon" href="#" title="Вхід - Кабінет користувача">
-          <svg width="18" height="18" role="img">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user"></use>
-          </svg>
-        </a>
-        <a class="btn  btn--icon" href="#" title="Кошик">
-          <svg width="18" height="18" role="img">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#basket"></use>
-          </svg>
-        </a>
-      </div>
+        <div class="page-header__logo-col">
 
-      <div class="page-header__btn-group  page-header__btn-group--search">
-        @@include('../../blocks/field-search/field-search.html')
+          <a href="/" class="logo" title="DCI Group">
+            <picture>
+              <source srcset="img/dci-logo.svg" media="(min-width: 768px)">
+              <img src="img/dci-logo--icon.svg" alt="DCI Group logo" width="45" height="52">
+            </picture>
+          </a>
+
+        </div>
+
+        <div class="page-header__btns-col">
+
+          <div class="page-header__btn-group">
+
+            <button class="btn  btn--icon" type="button" data-toggle="modal" data-target="#phones-modal"  title="Телефони">
+              <svg width="18" height="18" role="img">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone"></use>
+              </svg>
+            </button>
+
+            <div class="page-header__tel-wrapper">
+              <ul class="phones-modal__list">
+                <li class="phones-modal__item">
+                  <a class="phones-modal__link" href="tel:+380684555544">+38 (068) 455 55 44</a>
+                </li>
+                <li class="phones-modal__item">
+                  <a class="phones-modal__link" href="tel:+380684555544">+38 (068) 455 55 44</a>
+                </li>
+                <li class="phones-modal__item">
+                  <a class="phones-modal__link" href="tel:+380684555544">+38 (068) 455 55 44</a>
+                </li>
+                <li class="phones-modal__item">
+                  <a class="phones-modal__link" href="tel:+380684555544">+38 (068) 455 55 44</a>
+                </li>
+              </ul>
+              <p class="phones-modal__worktime"><span>08:00 - 20:00</span>&emsp;<span>Без выходных</span></p>
+            </div>
+
+            <div class="page-header__search-wrapper">
+              @@include('../../blocks/search-form/search-form.html')
+            </div>
+
+            <a class="btn  btn--icon" href="#" title="Список переваг">
+              <svg width="18" height="16" role="img">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#heart"></use>
+              </svg>
+            </a>
+
+            <a class="btn  btn--icon" href="#" title="Вхід - Кабінет користувача">
+              <svg width="18" height="18" role="img">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user"></use>
+              </svg>
+            </a>
+
+            <a class="btn  btn--icon" href="#" title="Кошик">
+              <svg width="18" height="18" role="img">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#basket"></use>
+              </svg>
+            </a>
+
+            <div class="page-header__basket-info">
+              <span class="page-header__total-price">1 526 000 грн.</span>
+              <span class="page-header__total-quantity">13 товаров</span>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="page-header__search-col">
+          <div class="page-header__btn-group  page-header__btn-group--search">
+            @@include('../../blocks/search-form/search-form.html')
+          </div>
+        </div>
+
       </div>
 
     </div>
@@ -111,19 +157,49 @@
       <div class="row">
 
         <div class="page-header__catalog-menu">
-          <a class="" href="#catalog-menu">
-            <span>
-              <svg width="18" height="18" role="img">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-view"></use>
-              </svg>
-            </span>
-            Каталог товарів</a>
+          <a class="page-header__catalog-menu-toggler" href="#catalog-menu">
+            <svg width="22" height="22" role="img">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-view"></use>
+            </svg>
+            <span>Каталог товарів</span>
+          </a>
+
         </div>
 
         <div class="page-header__main-menu">
-          <a class="" href="#main-menu">Меню
+          <a class="page-header__main-menu-toggler" href="#main-menu">Меню
             <span class="burger"><span></span></span>
           </a>
+          <nav class="main-menu  main-menu--desktop">
+            <h4 class="visually-hidden">Головне меню сайту</h4>
+            <ul class="main-menu__list">
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="#">Акції</a>
+              </li>
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="#">Бренди</a>
+              </li>
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="#">Калькулятор</a>
+              </li>
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="#">Статті</a>
+              </li>
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="#">Контакти</a>
+              </li>
+              <li class="Divider"></li>
+              <li class="main-menu__item  main-menu__item--mob-only">
+                <a class="main-menu__link" href="#">Доставка та оплата</a>
+              </li>
+              <li class="main-menu__item  main-menu__item--mob-only">
+                <a class="main-menu__link" href="#">Про компанію</a>
+              </li>
+              <li class="main-menu__item  main-menu__item--mob-only">
+                <a class="main-menu__link" href="#">Вакансії</a>
+              </li>
+            </ul>
+          </nav>
         </div>
 
       </div>
