@@ -1,4 +1,12 @@
 .page-header {
+  position: relative;
+  z-index: 2;
+  //margin-bottom: 20px;
+  box-shadow: $shadow--header;
+
+/*@media (min-width: $screen-md) {
+  margin-bottom: 25px;
+} */
 
   $block-name:                &; // #{$block-name}__element
 

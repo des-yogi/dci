@@ -1,9 +1,50 @@
-// В этом файле должны быть стили для БЭМ-блока article-block, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .article-block {
+  background-color: $white;
+  box-shadow: $shadow;
 
   $block-name:                &; // #{$block-name}__element
 
+  &__title {
+    padding: 15px;
+    margin: 0;
+    border-bottom: 4px solid $main-color;
+
+    @media (min-width: $screen-md) {
+      padding: 20px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding: 25px 50px;
+    }
+  }
+
+  &__content {
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: block;
+      padding: 20px 20px 10px;
+    }
+
+    @media (min-width: $screen-lg) {
+      display: block;
+      padding: 25px 50px 10px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 10px 15px;
+
+    @media (min-width: $screen-md) {
+      padding: 0 20px 10px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding: 0 50px 15px;
+    }
+  }
 }

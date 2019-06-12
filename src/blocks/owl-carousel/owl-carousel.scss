@@ -1,10 +1,117 @@
-// В этом файле должны быть стили для БЭМ-блока owl-carousel, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .owl-carousel {
-  // По умолчанию в сборку берется стилевой файл этого блока, предоставляемый
-  // автором пакета (см. файл настройки проекта, там подключается
-  // node_modules/owl.carousel/dist/assets/owl.carousel.css).
-  // Надо стилизовать — копипастить из исходника и убирать исходник из сборки.
+
+  .owl-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-top: $border-btn;
+    border-bottom: $border-btn;
+
+    .owl-prev,
+    .owl-next {
+      box-sizing: border-box;
+      display: inline-block;
+      vertical-align: middle;
+      min-width: 38px;
+      min-height: 38px;
+      margin: 0;
+      padding: 5px;
+      white-space: nowrap;
+      text-align: center;
+      border-radius: $border-radius;
+      background-color: $white;
+      // border: $border-btn !important;
+      // border-color: $icon-color !important;
+      user-select: none;
+      cursor: pointer;
+
+      span {
+        position: relative;
+        display: block;
+        min-width: inherit;
+        min-height: inherit;
+        @include text-hide;
+
+        &::before {
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          content: "";
+          width: 8px;
+          height: 15px;
+          //background-color: red;
+        }
+      }
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: $white;
+        background-color: $main-color;
+        //border-color: $main-color !important;
+      }
+
+      &:active,
+      &:focus {
+        box-shadow: $shadow;
+      }
+    }
+
+    .owl-prev {
+
+      &:hover span::before,
+      &:focus span::before {
+        background: svg-load('../blocks/sprite-svg/svg/left-arrow-s.svg', fill=$white, stroke=rgba(255, 255, 255, 0));
+      }
+
+      span::before {
+        background: svg-load('../blocks/sprite-svg/svg/left-arrow-s.svg', fill=$text-muted, stroke=rgba(255, 255, 255, 0));
+      }
+    }
+
+    .owl-next {
+
+      &:hover span::before,
+      &:focus span::before {
+        background: svg-load('../blocks/sprite-svg/svg/right-arrow-s.svg', fill=$white, stroke=rgba(255, 255, 255, 0));
+      }
+
+      span::before {
+        background: svg-load('../blocks/sprite-svg/svg/right-arrow-s.svg', fill=$text-muted, stroke=rgba(255, 255, 255, 0));
+      }
+    }
+  }
+
+  .owl-dots {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: calc(18px + 25px);
+    left: 0;
+    width: 100%;
+    padding: 0 55px;
+
+    .owl-dot {
+      width: 8px;
+      height: 8px;
+      margin: 0 8px;
+      background-color: $icon-color;
+
+      &:hover,
+      &:focus {
+        background-color: $main-color;
+      }
+
+      &.active {
+        background-color: $main-color;
+      }
+    }
+  }
 }
