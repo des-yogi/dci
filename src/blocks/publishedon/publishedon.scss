@@ -1,0 +1,27 @@
+.publishedon {
+  display: block;
+  position: relative;
+  font-size: 14px;
+  font-weight: 500;
+  color: $text-muted;
+
+  span {
+    position: relative;
+    top: 1px;
+  }
+
+  &::before {
+    display: inline-block;
+    vertical-align: text-bottom;
+    content: "";
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    background: svg-load('../blocks/phones-modal/bg-img/time.svg', fill=$text-muted, stroke=rgba(255, 255, 255, 0));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+}

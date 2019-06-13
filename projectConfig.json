@@ -63,7 +63,8 @@
     "copyrights": [],
     "phones-modal": [],
     "service-menu": [],
-    "search-form": []
+    "search-form": [],
+    "publishedon": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

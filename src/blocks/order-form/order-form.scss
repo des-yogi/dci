@@ -1,9 +1,137 @@
-// В этом файле должны быть стили для БЭМ-блока order-form, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .order-form {
+  margin: 50px 0;
+  background-color: $white;
 
   $block-name:                &; // #{$block-name}__element
 
+  .container {
+    padding-top: 45px;
+    padding-bottom: 45px;
+    background-image: url(../img/zigzag-vert-long.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    @media (min-width: $screen-md) {
+      background-position: calc(100% - 30px) center;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-top: 65px;
+      padding-bottom: 65px;
+      background-position: calc(50% + 535px) center;
+    }
+  }
+
+  &__inner-bg {
+    background-color: $white;
+    box-shadow: $shadow;
+  }
+
+  &__info-col {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col(md, 12);
+    @include col(lg, 4);
+    //@include col(xl, 3);
+    background-color: $main-color;
+
+    @media (min-width: $screen-md) {
+      background: none;
+    }
+  }
+
+  &__form-col {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col(md, 12);
+    @include col(lg, 8);
+    background-color: $white;
+
+    @media (min-width: $screen-md) {
+      background: none;
+    }
+  }
+
+  &__inner-col {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col(md, 6);
+  }
+
+  &__info {
+    padding: 20px 0;
+    color: $white;
+
+    @media (min-width: $screen-md) {
+      padding: 25px;
+      background: $main-color;
+    }
+
+    @media (min-width: $screen-lg) {
+      height: 100%;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding: 50px;
+    }
+  }
+
+  &__info-title {
+    margin-top: 0;
+    color: inherit;
+  }
+
+  &__list {
+    margin: 1em 0;
+    font-weight: 500;
+  }
+
+  &__list-item {
+
+  }
+
+  &__form {
+    padding: 25px 0;
+
+    @media (min-width: $screen-md) {
+      padding: 25px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      padding-right: 50px;
+    }
+
+    textarea {
+
+      @media (min-width: $screen-md) {
+        min-height: 80px;
+      }
+    }
+
+    .field-checkbox {
+
+      @media (min-width: $screen-md) {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    .field-actions {
+      margin-top: 0;
+    }
+
+    .field-text:last-of-type,
+    button[type=submit] {
+
+      @media (min-width: $screen-md) {
+        margin-bottom: 0;
+      }
+    }
+  }
 }

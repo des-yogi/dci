@@ -4,7 +4,7 @@
   width: 100%;
   min-height: calc(#{$line-height}em + #{$field-padding-vertical} + #{$field-padding-vertical} + 2px); // Привет, IE
   margin: 0;
-  border: 1px solid $border-color;
+  border-bottom: 2px solid $border-color;
   border-radius: $border-radius;
   padding: $field-padding-vertical  $field-padding-horizontal;
   line-height: $line-height;
@@ -14,6 +14,7 @@
   -moz-appearance: textfield; // stylelint-disable-line
   appearance: textfield;
 
+  &:hover,
   &:focus {
     @include field-focus;
   }
@@ -21,7 +22,7 @@
   &[disabled],
   &[readonly] {
     cursor: not-allowed;
-    background-color: $gray-lighter;
+    background-color: $body-bg;
   }
 
   &::-webkit-search-cancel-button,
@@ -45,9 +46,9 @@
 @mixin field-help-text {
   display: block;
   padding-top: 0.4em;
-  font-size: $font-size * 0.75;
+  font-size: $font-size--sm;
   line-height: 1.2em;
-  color: $text-muted;
+  color: $error-color;
 
   &:empty { // stylelint-disable-line
     display: none;
@@ -57,13 +58,14 @@
 
 @mixin field-focus {
   outline: 0;
-  box-shadow: 0 0 0 2px rgba($main-color, $opacity);
+  border-color: $main-color;
+  //box-shadow: 0 0 0 2px rgba($main-color, $opacity);
 }
 
 
 @mixin field-name {
   display: block;
-  margin-bottom: 0.4em;
+  //margin-bottom: 0.4em;
   line-height: $line-height;
   font-weight: 700;
 }
