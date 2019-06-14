@@ -1,4 +1,5 @@
 .search-form {
+  box-sizing: border-box;
   width: 100%;
 
   $block-name:                &; // #{$block-name}__element
@@ -15,9 +16,10 @@
     padding: $field-padding-vertical  $field-padding-horizontal;
     border: none;
     //background-color: red;
+    border: $border-btn;
   }
 
   &__submit {
-
+    background-color: $body-bg;
   }
 }

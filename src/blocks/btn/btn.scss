@@ -14,6 +14,7 @@
   text-align: center;
   font-size: $font-size;
   font-family: inherit;
+  font-weight: 700;
   line-height: $line-height;
   text-decoration: none;
   text-transform: none;
@@ -23,6 +24,11 @@
   background-color: $white;
   background-image: none;
   cursor: pointer;
+
+  @media (min-width: $screen-xl) {
+    min-width: 42px;
+    min-height: 42px;
+  }
 
   &:hover,
   &:focus {
@@ -65,25 +71,78 @@
     }
   }
 
+  &--main {
+    position: relative;
+    padding-top: 9px;
+    padding-bottom: 8px;
+    padding-left: 30px;
+    padding-right: 45px;
+    text-align: left;
+    color: $white;
+    background-color: $main-color;
+    border-color: $main-color;
 
+    &::after {
+      display: block;
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      content: "";
+      width: 13px;
+      height: 15px;
+      background: svg-load('../blocks/sprite-svg/svg/right-arrow.svg', fill=$white, stroke=rgba(255, 255, 255, 0));
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
 
-  // &--main {
-  //   color: #fff;
-  //   background-color: $color-main;
-  //   border: 1px solid $color-main;
+    &:hover,
+    &:focus {
+      //color: $main-color;
+      background-color: $main-color--hover;
+      border-color: $main-color--hover;
+    }
 
-  //   &:hover,
-  //   &:focus {
-  //     color: #fff;
-  //     background-color: darken($color-main, 10%);
-  //     border-color: darken($color-main, 12%);
-  //   }
+    &--disabled,
+    &:disabled {
+      color: $text-muted !important;
+      background-color: $body-bg !important;
+      border-color: $body-bg !important;
+    }
+  }
 
-  //   &--disabled,
-  //   &:disabled {
-  //     color: #fff;
-  //     background-color: $color-main;
-  //     border-color: $color-main;
-  //   }
-  // }
+  &--readmore {
+    position: relative;
+    padding-top: 9px;
+    padding-bottom: 8px;
+    padding-left: 30px;
+    padding-right: 45px;
+    text-align: left;
+    color: $title-color;
+    background-color: $white;
+    border-color: $white;
+
+    &::after {
+      display: block;
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      content: "";
+      width: 13px;
+      height: 15px;
+      background: svg-load('../blocks/sprite-svg/svg/right-arrow.svg', fill=$main-color, stroke=rgba(255, 255, 255, 0));
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    &:hover,
+    &:focus {
+      color: $main-color;
+      background-color: $white;
+      border-color: $white;
+    }
+  }
 }

@@ -34,3 +34,11 @@
    image-rendering: -moz-crisp-edges; /* Firefox */
    -ms-interpolation-mode: nearest-neighbor; /* IE */
 }
+
+@mixin mmenu-header {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: 700;
+  line-height: 1.2;
+  //color: $title-color !important;
+}

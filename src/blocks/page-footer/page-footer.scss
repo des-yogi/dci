@@ -1,8 +1,223 @@
-// В этом файле должны быть стили для БЭМ-блока page-footer, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .page-footer {
+  color: $white;
 
   $block-name:                &; // #{$block-name}__element
+
+  h2, h3, h4, h5, h6, a {
+    color: inherit;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  a {
+    display: inline-block;
+    vertical-align: baseline;
+  }
+
+  &__top {
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    // border-bottom: 2px solid $white;
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 20px);
+      height: 2px;
+      background-color: $white;
+
+      @media (min-width: $screen-md) {
+        width: calc(100% - 25px);
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      padding-top: 50px;
+      padding-bottom: 30px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-bottom: 30px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-bottom: 50px;
+    }
+
+    h5 {
+
+      @media (min-width: $screen-md) {
+        margin-top: 0.5em;
+      }
+    }
+  }
+
+  &__top-col-logo {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col(md, 4);
+    @include col(xl, 2);
+  }
+
+  &__top-col-subscription {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col-offset(md, 2);
+    @include col(md, 6);
+    @include col-offset(xl, 0);
+    @include col(xl, 3);
+
+    @media (min-width: $screen-xl) {
+      padding-left: 25px;
+    }
+  }
+
+  &__top-col-contacts {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col(md, 12);
+    @include col-offset(xl, 1);
+    @include col(xl, 6);
+  }
+
+  &__contacts {
+
+    h4 {
+      margin-top: 10px;
+
+      @media (min-width: $screen-md) {
+        margin-top: 1.5em;
+      }
+
+      @media (min-width: $screen-xl) {
+        margin-top: 14px;
+      }
+    }
+  }
+
+  &__address {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col(md, 6);
+    @include col(xl, 4);
+  }
+
+  &__address-info {
+    margin-bottom: 1em;
+
+    @media (min-width: $screen-md) {
+      padding: 5px 0;
+    }
+  }
+
+  &__address-info,
+  &__worktime,
+  &__phones-link {
+    color: $icon-color !important;
+  }
+
+  &__phones {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col(md, 6);
+    @include col(xl, 8);
+  }
+
+  &__phones-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+  }
+
+  &__phones-item {
+    flex-basis: calc(50% - 15px);
+    margin-bottom: 10px;
+
+    &:nth-child(odd) {
+      margin-right: 25px;
+    }
+  }
+
+  &__phones-link {
+    padding: 5px 0;
+  }
+
+  &__main {
+    padding-top: 20px; // 30
+    padding-bottom: 15px;
+  }
+
+  &__menu-col {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col(md, 6);
+
+    #{$block-name}__menu-link {
+      font-weight: 500;
+
+      &:hover,
+      &:focus {
+        color: $main-color;
+      }
+    }
+  }
+
+  &__catalog-col {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col(md, 6);
+
+    #{$block-name}__menu-link {
+      color: $icon-color;
+    }
+  }
+
+  &__menu {
+
+
+  }
+
+  &__menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+
+    &--menu {
+
+      @media (min-width: $screen-xl) {
+
+      }
+    }
+
+    &--catalog {
+
+    }
+
+  }
+
+  &__menu-item {
+    flex-basis: calc(50% - 15px);
+    margin-bottom: 10px;
+
+    &:nth-child(odd) {
+      margin-right: 25px;
+    }
+
+    &--long {
+      flex-basis: 100%;
+    }
+  }
+
+  &__menu-link {
+    padding: 5px 0;
+  }
+
+  &__bottom {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
 }

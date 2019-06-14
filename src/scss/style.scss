@@ -9,7 +9,7 @@
 @import './src/scss/functions.scss';
 @import '../../node_modules/owl.carousel/dist/assets/owl.carousel.css';
 @import '../../node_modules/nouislider/distribute/nouislider.css';
-@import '../../node_modules/jquery.mmenu/dist/jquery.mmenu.all.css';
+@import './src/blocks/mmenu/mmenu.scss';
 @import './src/blocks/accordion/accordion.scss';
 @import './src/blocks/breadcrumbs/breadcrumbs.scss';
 @import './src/blocks/btn/btn.scss';
@@ -69,4 +69,5 @@
 @import './src/blocks/phones-modal/phones-modal.scss';
 @import './src/blocks/service-menu/service-menu.scss';
 @import './src/blocks/search-form/search-form.scss';
+@import './src/blocks/publishedon/publishedon.scss';
 @import './src/scss/print.scss';

@@ -14,7 +14,12 @@ $(document).ready(function() {
       ],
       navbar: {
         title: translateTitle(title)
-      }
+      },
+      navbars: [
+        {
+          content: [ 'prev', 'breadcrumbs', 'close' ]
+        }
+      ]
   }, {
       // configuration
       offCanvas: {

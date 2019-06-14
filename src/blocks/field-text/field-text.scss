@@ -15,7 +15,7 @@ $border-radius:               3px !default;
   $block-name:                &; // #{$block-name}__element
 
   display: block;
-  margin-bottom: ($line-height / 2);
+  margin-bottom: 1.5em;
 
   &__name {
     @include field-name;
@@ -35,11 +35,15 @@ $border-radius:               3px !default;
     line-height: $line-height;
     font-size: 1em;
     font-family: inherit;
-    background-color: #fff;
-    border: 1px solid $border-color;
+    background-color: $white;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid $border-color;
     border-radius: $border-radius;
     appearance: textfield;
 
+    &:hover,
     &:focus {
       @include field-focus;
     }
@@ -66,13 +70,12 @@ $border-radius:               3px !default;
     }
 
     &::placeholder {
-      color: $text-color--muted;
+      color: $text-muted;
       opacity: 1;
     }
 
     @at-root textarea#{&} {
-      $textarea-height: ($line-height * 2) + ($field-padding-vertical * 2);
-
+      $textarea-height: 50px !default;
       height: auto;
       min-height: calc(#{$textarea-height} + 2px);
       resize: vertical;

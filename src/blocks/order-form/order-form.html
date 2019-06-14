@@ -1,14 +1,111 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/order-form/order-form.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="order-form">content</div>
-
 -->
+
+<article class="order-form">
+  <div class="container">
+
+    <div class="order-form__inner-bg">
+
+      <h2 class="visually-hidden">Форма обратной связи</h2>
+
+      <div class="row">
+
+        <div class="order-form__info-col">
+          <div class="order-form__info">
+            <p class="h3  order-form__info-title">Залиште заявку і ми зв'яжемося з вами для:</p>
+            <ul class="order-form__list">
+              <li class="order-form__list-item">Консультації у підборі необхідного матеріалу</li>
+              <li class="order-form__list-item">Допомоги з розрахунком</li>
+              <li class="order-form__list-item">Оформленням замовлення</li>
+            </ul>
+            <span class="small">*&thinsp;Поля, обязательные для заполнения</span>
+          </div>
+        </div>
+
+        <div class="order-form__form-col">
+
+          <form id="callback-form" class="order-form__form" action="#" method="post">
+
+            <div class="row">
+
+              <div class="order-form__inner-col">
+
+                <div class="order-form__form-group">
+
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" name="name" value="" placeholder="Ваше имя">
+                      <span class="field-text__help-text"></span>
+                    </span>
+                  </label>
+
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="email" name="email" value="" placeholder="Введите email&thinsp;*">
+                      <span class="field-text__help-text"></span>
+                    </span>
+                  </label>
+
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="email" name="email" value="" placeholder="Введите телефон&thinsp;*">
+                      <span class="field-text__help-text"></span>
+                    </span>
+                  </label>
+
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <textarea class="field-text__input" name="message" placeholder="Текст сообщения"></textarea>
+                      <span class="field-text__help-text"></span>
+                    </span>
+                  </label>
+
+                </div>
+
+              </div>
+
+              <div class="order-form__inner-col">
+                <div class="order-form__form-group">
+
+                  <div class="field-file">
+                    <label class="field-file__input-wrap">
+                      <input class="field-file__input" type="file" data-multiple-caption="файлов выбрано: {count}" multiple>
+                      <div class="field-file__name-text" data-button-text="Прикрепить файл(ы)">Прикрепленных файлов нет…</div>
+                      <div class="field-file__help-text"></div>
+                    </label>
+                    <div class="small  field-file__name">Вы можете приложить к сообщению файл&thinsp;(ы) <strong>до 5 Мб</strong> каждый</div>
+                  </div>
+
+                  <div class="field-file">
+                    <img src="img/reCaptcha.gif" alt="" width="300">
+                  </div>
+
+                  <div class="field-actions">
+                    <button class="btn  btn--main" type="submit">Отправить</button>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="col-1-full">
+                <div class="field-checkbox">
+                  <label class="field-checkbox__name">
+                    <input id="agreement" class="field-checkbox__input  agreement" type="checkbox" checked>
+                    <span class="small  field-checkbox__name-text">Даю согласие на обработку персональных данных и политикой конфиденциальности</span>
+                  </label>
+                </div>
+              </div>
+
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</article>

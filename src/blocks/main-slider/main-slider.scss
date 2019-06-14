@@ -1,9 +1,207 @@
-// В этом файле должны быть стили для БЭМ-блока main-slider, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .main-slider {
+  // background-color: $white;
 
   $block-name:                &; // #{$block-name}__element
 
+  .owl-nav {
+
+    @media (min-width: $screen-md) {
+      padding-left: 25%;
+      padding-right: 25%;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-left: 30%;
+      padding-right: 30%;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-left: 35%;
+      padding-right: 35%;
+    }
+  }
+
+  .owl-dots {
+
+    @media (min-width: $screen-md) {
+      padding-left: calc(25% + 55px);
+      padding-right: calc(25% + 55px);
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-left: calc(30% + 55px);
+      padding-right: calc(30% + 55px);
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-left: calc(35% + 55px);
+      padding-right: calc(35% + 55px);
+    }
+  }
+
+  .owl-stage-outer {
+    padding-top: 25px;
+    //padding-bottom: 25px;
+
+    @media (min-width: $screen-md) {
+      padding-bottom: 25px;
+      background-image: url(../img/slider-bg-md.svg);
+      background-repeat: no-repeat;
+      background-position: 17% center;
+      background-size: contain;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      background-position: 37% center;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-top: 35px;
+      padding-bottom: 35px;
+      background-position: 46% center;
+    }
+  }
+
+  &__item {
+
+  }
+
+  &__img-col {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col(md, 6);
+    @include col(lg, 5);
+    //@include col(xl, 5);
+    // box-shadow: 15px 25px 55px rgba(101, 101, 101, 0.65);
+  }
+
+  &__text-col {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col(md, 6);
+    @include col-offset(lg, 1);
+    @include col(lg, 6);
+    @include col-offset(xl, 2);
+    @include col(xl, 5);
+  }
+
+  &__img-wrapper {
+    //width: 100%;
+    // overflow: hidden;
+
+    img {
+      display: block;
+      object-fit: cover;
+      object-position: center;
+      /* $width: 100vw;
+      width: 100%;
+      height: calc(100vw / 4 * 3 - 20px);
+      object-fit: cover;
+      object-position: center;
+
+      @media (min-width: $screen-md) {
+        height: calc(50vw / 4 * 3 - 20px);
+      }
+
+      @media (min-width: $screen-lg) {
+        height: calc(40vw / 4 * 3 - 20px);
+      }
+
+      @media (min-width: $screen-xl) {
+        height: 350px;
+      } */
+    }
+  }
+
+  &__text {
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      height: 100%;
+    }
+  }
+
+  &__title {
+    margin-top: 25px;
+
+    @media (min-width: $screen-md) {
+      margin-top: 0;
+    }
+
+    &::first-letter {
+      float: left;
+      padding: 2px 10px;
+      margin-right: 7px;
+      font-size: 1.7em;
+      color: $white;
+      background-color: $main-color;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  &__descr {
+
+  }
+
+  &__btn-wrapper {
+    margin-top: 20px;
+
+    @media (min-width: $screen-md) {
+      margin-top: auto;
+      padding-top: 20px;
+    }
+  }
+
+  &__btn-wrapper-col {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col(md, 9);
+    @include col(lg, 7);
+    @include col(xl, 7);
+    margin-bottom: 15px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
+
+    a {
+      width: 100%;
+    }
+  }
+
+  &__logo-wrapper-col {
+    @include col-offset(xs, 3);
+    @include col(xs, 6, $grid-columns, 20px);
+    @include col-offset(sm, 4);
+    @include col(sm, 4, $grid-columns, 20px);
+    @include col-offset(md, 0);
+    @include col(md, 3);
+    @include col-offset(lg, 1);
+    @include col(lg, 4);
+    @include col-offset(xl, 1);
+    @include col(xl, 4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 15px;
+
+    @media (min-width: $screen-md) {
+      padding-left: 0;
+      margin-bottom: 0;
+    }
+
+    img {
+      width: 100%;
+      max-width: 150px;
+      height: 100%;
+      object-fit: contain;
+      object-positon: center;
+    }
+  }
 }

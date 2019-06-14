@@ -31,3 +31,16 @@
 //   });
 
 // });
+
+$(document).ready(function(){
+  // Главный слайдер
+  $(".main-slider").owlCarousel({
+    items: 1,
+    margin: 10,
+    lazyLoad: true,
+    nav: true,
+    loop: true,
+    center: true
+  });
+
+});
