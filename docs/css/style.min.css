@@ -2110,6 +2110,17 @@ body.modal-open .mm-slideout {
   font-weight: 500; }
 .mm-btn_next::after {
   border-color: #03a49b; }
+.mm-btn_close::before {
+  display: none; }
+.mm-btn_close::after {
+  width: 20px;
+  height: 20px;
+  -webkit-transform: none;
+          transform: none;
+  border: none;
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='%23cdcdcd'%3E%3Cpath d='M19 20a1 1 0 0 1-.71-.29L10 11.41l-8.29 8.3a1 1 0 0 1-1.42-1.42L8.59 10 .29 1.71A1 1 0 0 1 1.71.29L10 8.59l8.29-8.3A1 1 0 0 1 19.7 1.7L11.41 10l8.29 8.29A1 1 0 0 1 19 20z'/%3E%3C/svg%3E"); }
+.mm-btn_close:hover::after, .mm-btn_close:focus::after {
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='white'%3E%3Cpath d='M19 20a1 1 0 0 1-.71-.29L10 11.41l-8.29 8.3a1 1 0 0 1-1.42-1.42L8.59 10 .29 1.71A1 1 0 0 1 1.71.29L10 8.59l8.29-8.3A1 1 0 0 1 19.7 1.7L11.41 10l8.29 8.29A1 1 0 0 1 19 20z'/%3E%3C/svg%3E"); }
 .accordion__item {
   border: 0px solid #999999;
   border-bottom-width: 1px; }
@@ -5008,6 +5019,17 @@ body.modal-open .mm-slideout {
   font-weight: 500; }
 .mm-btn_next::after {
   border-color: #03a49b; }
+.mm-btn_close::before {
+  display: none; }
+.mm-btn_close::after {
+  width: 20px;
+  height: 20px;
+  -webkit-transform: none;
+          transform: none;
+  border: none;
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='%23cdcdcd'%3E%3Cpath d='M19 20a1 1 0 0 1-.71-.29L10 11.41l-8.29 8.3a1 1 0 0 1-1.42-1.42L8.59 10 .29 1.71A1 1 0 0 1 1.71.29L10 8.59l8.29-8.3A1 1 0 0 1 19.7 1.7L11.41 10l8.29 8.29A1 1 0 0 1 19 20z'/%3E%3C/svg%3E"); }
+.mm-btn_close:hover::after, .mm-btn_close:focus::after {
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='white'%3E%3Cpath d='M19 20a1 1 0 0 1-.71-.29L10 11.41l-8.29 8.3a1 1 0 0 1-1.42-1.42L8.59 10 .29 1.71A1 1 0 0 1 1.71.29L10 8.59l8.29-8.3A1 1 0 0 1 19.7 1.7L11.41 10l8.29 8.29A1 1 0 0 1 19 20z'/%3E%3C/svg%3E"); }
 .modal-open {
   overflow: hidden; }
 .modal-open .modal {
