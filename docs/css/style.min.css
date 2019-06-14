@@ -2100,6 +2100,8 @@ body.modal-open .mm-slideout {
   color: white; }
 .mm-navbar__btn::before {
     border-color: white; }
+.mm-navbar__breadcrumbs {
+    overflow-x: hidden; }
 .mm-navbar__title {
   font-family: -apple-system, BlinkMacSystemFont, "Rubik", "Ubuntu", "Droid Sans", "Helvetica Neue", "Arial", sans-serif;
   font-size: 16px;
@@ -5009,6 +5011,8 @@ body.modal-open .mm-slideout {
   color: white; }
 .mm-navbar__btn::before {
     border-color: white; }
+.mm-navbar__breadcrumbs {
+    overflow-x: hidden; }
 .mm-navbar__title {
   font-family: -apple-system, BlinkMacSystemFont, "Rubik", "Ubuntu", "Droid Sans", "Helvetica Neue", "Arial", sans-serif;
   font-size: 16px;
