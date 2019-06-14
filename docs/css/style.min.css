@@ -6922,7 +6922,6 @@ blockquote {
             -ms-flex: 1 1;
                 flex: 1 1;
         width: 340px;
-        max-width: 340px;
         margin-right: auto; }
         .page-header__search-wrapper .btn {
           border: none !important; }
