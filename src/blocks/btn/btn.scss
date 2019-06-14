@@ -25,6 +25,11 @@
   background-image: none;
   cursor: pointer;
 
+  @media (min-width: $screen-xl) {
+    min-width: 42px;
+    min-height: 42px;
+  }
+
   &:hover,
   &:focus {
     text-decoration: none;

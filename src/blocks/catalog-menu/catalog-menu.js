@@ -13,7 +13,12 @@ $(document).ready(function() {
       navbar: {
         add: true,
         title: translateTitle(title)
-      }
+      },
+      navbars: [
+        {
+          content: [ 'prev', 'breadcrumbs', 'close' ]
+        }
+      ]
   }, {
      // configuration
      offCanvas: {

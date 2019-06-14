@@ -15,7 +15,7 @@
     <div class="page__content">
       @@include('blocks/page-header/page-header.html')
 
-      <main role="main">
+      <main class="main-content" role="main">
 
         <div class="container  container--bg-white">
           <div class="row">
@@ -30,9 +30,9 @@
                     <div class="main-slider__img-col">
                       <div class="main-slider__img-wrapper  embed-responsive  embed-responsive--4-3">
                         <picture>
-                          <source srcset="img/main-slider-img.jpg" media="(min-width: 768px)">
-                            <source srcset="img/main-slider-img.jpg" media="(min-width: 480px)">
-                          <img src="img/main-slider-img.jpg" alt="Название слайда" width="400" height="300">
+                          <source class="owl-lazy" data-srcset="img/main-slider-img.jpg" media="(min-width: 768px)">
+                            <source class="owl-lazy" data-srcset="img/main-slider-img.jpg" media="(min-width: 480px)">
+                          <img class="owl-lazy" data-src="img/main-slider-img.jpg" alt="Название слайда" width="400" height="300">
                         </picture>
                       </div>
                     </div>
@@ -67,9 +67,9 @@
                     <div class="main-slider__img-col">
                       <div class="main-slider__img-wrapper  embed-responsive  embed-responsive--4-3">
                         <picture>
-                          <source srcset="img/main-slider-img.jpg" media="(min-width: 768px)"><!-- 510x382 -->
-                          <source srcset="img/main-slider-img.jpg" media="(min-width: 480px)"> <!-- получить 600x450 -->
-                          <img src="img/main-slider-img.jpg" alt="Название слайда" width="480" height="360">
+                          <source class="owl-lazy" data-srcset="img/main-slider-img.jpg" media="(min-width: 768px)">
+                            <source class="owl-lazy" data-srcset="img/main-slider-img.jpg" media="(min-width: 480px)">
+                          <img class="owl-lazy" data-src="img/main-slider-img.jpg" alt="Название слайда" width="400" height="300">
                         </picture>
                       </div>
                     </div>
@@ -104,9 +104,9 @@
                     <div class="main-slider__img-col">
                       <div class="main-slider__img-wrapper  embed-responsive  embed-responsive--4-3">
                         <picture>
-                          <source srcset="img/main-slider-img.jpg" media="(min-width: 768px)">
-                            <source srcset="img/main-slider-img.jpg" media="(min-width: 480px)">
-                          <img src="img/main-slider-img.jpg" alt="Название слайда" width="400" height="300">
+                          <source class="owl-lazy" data-srcset="img/main-slider-img.jpg" media="(min-width: 768px)">
+                            <source class="owl-lazy" data-srcset="img/main-slider-img.jpg" media="(min-width: 480px)">
+                          <img class="owl-lazy" data-src="img/main-slider-img.jpg" alt="Название слайда" width="400" height="300">
                         </picture>
                       </div>
                     </div>
@@ -217,7 +217,9 @@
         <div class="container">
 
           <section>
-            <h2>Категории товаров</h2>
+            <h2>
+              <a href="#">Категории товаров</a>
+            </h2>
 
             <ul class="row  list-nostyled">
 
@@ -275,7 +277,7 @@
 
           <section>
 
-            <h2>Статьи</h2>
+            <h2><a href="#">Статьи</a></h2>
 
             <div class="row">
 

@@ -1,9 +1,56 @@
-// В этом файле должны быть стили для БЭМ-блока subscription-block, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .subscription-block {
 
   $block-name:                &; // #{$block-name}__element
 
+  h4 {
+
+    @media (min-width: $screen-md) {
+      margin-top: 14px;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__form {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  &__form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .field-text {
+      flex: 1 1;
+
+      @media (min-width: $screen-md) {
+        margin-bottom: 0;
+      }
+    }
+
+    .field-text__input {
+
+      @media (min-width: $screen-lg) {
+        padding-top: 9px;
+        padding-bottom: 8px;
+      }
+
+      @media (min-width: $screen-xl) {
+        padding: 10px;
+        padding-bottom: 9px;
+      }
+    }
+
+    .btn,
+    .btn--main {
+      width: 40px;
+      //max-width: 42px;
+      height: 40px;
+      padding: 10px;
+
+      &::after {
+        right: 11px;
+      }
+    }
+  }
 }
