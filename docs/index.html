@@ -1,4 +1,18 @@
-<!DOCTYPE html><html class="no-js  page" lang="uk"><head>  <meta charset="utf-8">  <title>Home page</title>  <meta name="description" content>  <!--DEV Такой комментарий не попадет в собранный HTML  <meta name="viewport" content="width=1000">  -->  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  <meta http-equiv="x-ua-compatible" content="ie=edge">  <meta name="MobileOptimized" content="320">  <!--DEV Edge и ряд мобильных браузеров автоматом преобразуют телефоны в ссылки. Отключим это. -->  <meta name="format-detection" content="telephone=no">  <link href="css/style.min.css" rel="stylesheet" media="screen">  <!--DEV Перед </head> при сборке будут вставлены ссылки на favicon и служебные файлы --><link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk">
+<head>
+  <meta charset="utf-8">
+  <title>Home page</title>
+  <meta name="description" content>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="MobileOptimized" content="320">
+
+  <meta name="format-detection" content="telephone=no">
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
 <link rel="manifest" href="/img/site.webmanifest">
@@ -7,9 +21,635 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/img/mstile-144x144.png">
 <meta name="msapplication-config" content="/img/browserconfig.xml">
-<meta name="theme-color" content="#ffffff"></head><body><noscript>У вас отключен JavaScript. Это делает невозможным использование нашего сайта.</noscript>  <div id="page" class="page__inner">    <div class="page__content">      <!--DEV      Нужно убрать пробел между @-ами:      @ @include('blocks/page-header/page-header.html')      -->      <header class="page-header" role="banner">        <div class="page-header__top">          <div class="container">            <div class="row">              <div class="service-menu" role="navigation">                <ul class="service-menu__list">                  <li class="service-menu__item">                    <a class="service-menu__link" href="#">Доставка та оплата</a>                  </li>                  <li class="service-menu__item">                    <a class="service-menu__link" href="#">Про компанію</a>                  </li>                  <li class="service-menu__item">                    <a class="service-menu__link" href="#">Вакансії</a>                  </li>                </ul>              </div>              <div class="social-contact" role="navigation">                <ul class="social-contact__list">                  <li class="social-contact__item">                    <a href="#" class="social-contact__link" title="Twitter">                      <img src="img/twitter-icon.svg" alt="Twitter" width="24" height="24">                    </a>                  </li>                  <li class="social-contact__item">                    <a href="#" class="social-contact__link" title="Viber">                      <img src="img/viber-icon.svg" alt="Viber" width="24" height="24">                    </a>                  </li>                  <li class="social-contact__item">                    <a href="#" class="social-contact__link" title="WhatsApp">                      <img src="img/whatsapp-icon.svg" alt="WhatsApp" width="24" height="24">                    </a>                  </li>                  <li class="social-contact__item">                    <a href="#" class="social-contact__link" title="Facebook">                      <img src="img/fb-icon.svg" alt="Facebook" width="24" height="24">                    </a>                  </li>                </ul>              </div>              <div class="lang-switcher  dropdown" id="lang-switcher">                <button class="dropdown-toggle" type="button" id="lang-switcher-toggler" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">RU</button>                <div class="dropdown-menu" aria-labelledby="lang-switcher">                  <a class="dropdown-item" href="#">UA</a>                  <a class="dropdown-item" href="#">RU</a>                </div>              </div>            </div>          </div>        </div>        <div class="page-header__main">          <div class="container">            <div class="row">              <div class="page-header__logo-col">                <a href="index.html" class="logo" title="DCI Group">                  <picture>                    <source srcset="img/dci-logo.svg" media="(min-width: 768px)">                    <img src="img/dci-logo--icon.svg" alt="DCI Group logo" width="45" height="52">                  </picture>                </a>              </div>              <div class="page-header__btns-col">                <div class="page-header__btn-group">                  <button class="btn  btn--icon" type="button" data-toggle="modal" data-target="#phones-modal" title="Телефони">                    <svg width="18" height="18" role="img">                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone"/>                    </svg>                  </button>                  <div class="page-header__tel-wrapper">                    <ul class="phones-modal__list">                      <li class="phones-modal__item">                        <a class="phones-modal__link" href="tel:+380684555544">+38 (068) 455 55 44</a>                      </li>                      <li class="phones-modal__item">                        <a class="phones-modal__link" href="tel:+380684555544">+38 (068) 455 55 44</a>                      </li>                      <li class="phones-modal__item">                        <a class="phones-modal__link" href="tel:+380684555544">+38 (068) 455 55 44</a>                      </li>                      <li class="phones-modal__item">                        <a class="phones-modal__link" href="tel:+380684555544">+38 (068) 455 55 44</a>                      </li>                    </ul>                    <p class="phones-modal__worktime"><span>08:00 - 20:00</span>&emsp;<span>Без выходных</span></p>                  </div>                  <div class="page-header__search-wrapper">                    <!--DEV                    @ @include('blocks/search-form/search-form.html')                    -->                    <form id="search-form" class="search-form" action="#" method="post">                      <div class="search-form__wrapper">                        <input class="search-form__input" type="search" name="search" value placeholder="Пошук">                        <button class="btn  btn--icon  search-form__submit" type="submit">                          <svg width="18" height="18" role="img">                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#lens"/>                          </svg>                        </button>                      </div>                    </form>                  </div>                  <a class="btn  btn--icon" href="#" title="Список переваг">                    <svg width="18" height="16" role="img">                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#heart"/>                    </svg>                  </a>                  <a class="btn  btn--icon" href="#" title="Вхід - Кабінет користувача">                    <svg width="18" height="18" role="img">                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user"/>                    </svg>                  </a>                  <a class="btn  btn--icon" href="#" title="Кошик">                    <svg width="18" height="18" role="img">                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#basket"/>                    </svg>                  </a>                  <div class="page-header__basket-info">                    <span class="page-header__total-price">1 526 000 грн.</span>                    <span class="page-header__total-quantity">                      <a href="#">13 товаров</a>                    </span>                  </div>                </div>              </div>              <div class="page-header__search-col">                <div class="page-header__btn-group  page-header__btn-group--search">                  <!--DEV                  @ @include('blocks/search-form/search-form.html')                  -->                  <form id="search-form" class="search-form" action="#" method="post">                    <div class="search-form__wrapper">                      <input class="search-form__input" type="search" name="search" value placeholder="Пошук">                      <button class="btn  btn--icon  search-form__submit" type="submit">                        <svg width="18" height="18" role="img">                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#lens"/>                        </svg>                      </button>                    </div>                  </form>                </div>              </div>            </div>          </div>        </div>        <div class="page-header__bottom">          <div class="container">            <div class="row">              <div class="page-header__catalog-menu">                <a class="page-header__catalog-menu-toggler" href="#catalog-menu">                  <svg width="22" height="22" role="img">                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-view"/>                  </svg>                  <span>Каталог товарів</span>                </a>              </div>              <div class="page-header__main-menu">                <a class="page-header__main-menu-toggler" href="#main-menu">Меню                  <span class="burger"><span></span></span>                </a>                <nav class="main-menu  main-menu--desktop">                  <h4 class="visually-hidden">Головне меню сайту</h4>                  <ul class="main-menu__list">                    <li class="main-menu__item">                      <a class="main-menu__link" href="#">Акції</a>                    </li>                    <li class="main-menu__item">                      <a class="main-menu__link" href="#">Бренди</a>                    </li>                    <li class="main-menu__item">                      <a class="main-menu__link" href="#">Калькулятор</a>                    </li>                    <li class="main-menu__item">                      <a class="main-menu__link" href="#">Статті</a>                    </li>                    <li class="main-menu__item">                      <a class="main-menu__link" href="#">Контакти</a>                    </li>                    <li class="Divider"></li>                    <li class="main-menu__item  main-menu__item--mob-only">                      <a class="main-menu__link" href="#">Доставка та оплата</a>                    </li>                    <li class="main-menu__item  main-menu__item--mob-only">                      <a class="main-menu__link" href="#">Про компанію</a>                    </li>                    <li class="main-menu__item  main-menu__item--mob-only">                      <a class="main-menu__link" href="#">Вакансії</a>                    </li>                  </ul>                </nav>              </div>            </div>          </div>        </div>      </header>      <main class="main-content" role="main">        <div class="container  container--bg-white">          <div class="row">            <div class="col-1-full  col-1-full--bg">              <div class="owl-carousel  main-slider">                <article class="main-slider__item">                  <div class="row">                    <div class="main-slider__img-col">                      <div class="main-slider__img-wrapper  embed-responsive  embed-responsive--4-3">                        <picture>                          <source class="owl-lazy" data-srcset="img/main-slider-img.jpg" media="(min-width: 768px)">                            <source class="owl-lazy" data-srcset="img/main-slider-img.jpg" media="(min-width: 480px)">                          <img class="owl-lazy" data-src="img/main-slider-img.jpg" alt="Название слайда" width="400" height="300">                        </picture>                      </div>                    </div>                    <div class="main-slider__text-col">                      <div class="main-slider__text">                        <h3 class="h1  main-slider__title">                          <a href="#">Построй дом своей мечты вместе с Нами!</a>                        </h3>                        <p class="main-slider__descr">Каждая цифра после литеры “D” означает плотность в килограммах на метр кубический.</p>                        <div class="main-slider__btn-wrapper">                          <div class="row">                            <div class="main-slider__btn-wrapper-col">                              <a href="#" class="btn  btn--main">Смотреть в каталоге</a>                            </div>                            <div class="main-slider__logo-wrapper-col">                              <img src="img/aeroc-logo.jpg" alt="Aeroc" width="115">                            </div>                          </div>                        </div>                      </div>                    </div>                  </div>                </article>                <article class="main-slider__item">                  <div class="row">                    <div class="main-slider__img-col">                      <div class="main-slider__img-wrapper  embed-responsive  embed-responsive--4-3">                        <picture>                          <source class="owl-lazy" data-srcset="img/main-slider-img.jpg" media="(min-width: 768px)">                            <source class="owl-lazy" data-srcset="img/main-slider-img.jpg" media="(min-width: 480px)">                          <img class="owl-lazy" data-src="img/main-slider-img.jpg" alt="Название слайда" width="400" height="300">                        </picture>                      </div>                    </div>                    <div class="main-slider__text-col">                      <div class="main-slider__text">                        <h3 class="h1  main-slider__title">                          <a href="#">Построй дом своей мечты вместе с Нами!</a>                        </h3>                        <p class="main-slider__descr">Каждая цифра после литеры “D” означает плотность в килограммах на метр кубический.</p>                        <div class="main-slider__btn-wrapper">                          <div class="row">                            <div class="main-slider__btn-wrapper-col">                              <a href="#" class="btn  btn--main">Смотреть в каталоге</a>                            </div>                            <div class="main-slider__logo-wrapper-col">                              <img src="img/aeroc-logo.jpg" alt="Aeroc" width="115">                            </div>                          </div>                        </div>                      </div>                    </div>                  </div>                </article>                <article class="main-slider__item">                  <div class="row">                    <div class="main-slider__img-col">                      <div class="main-slider__img-wrapper  embed-responsive  embed-responsive--4-3">                        <picture>                          <source class="owl-lazy" data-srcset="img/main-slider-img.jpg" media="(min-width: 768px)">                            <source class="owl-lazy" data-srcset="img/main-slider-img.jpg" media="(min-width: 480px)">                          <img class="owl-lazy" data-src="img/main-slider-img.jpg" alt="Название слайда" width="400" height="300">                        </picture>                      </div>                    </div>                    <div class="main-slider__text-col">                      <div class="main-slider__text">                        <h3 class="h1  main-slider__title">                          <a href="#">Построй дом своей мечты вместе с Нами!</a>                        </h3>                        <p class="main-slider__descr">Каждая цифра после литеры “D” означает плотность в килограммах на метр кубический.</p>                        <div class="main-slider__btn-wrapper">                          <div class="row">                            <div class="main-slider__btn-wrapper-col">                              <a href="#" class="btn  btn--main">Смотреть в каталоге</a>                            </div>                            <div class="main-slider__logo-wrapper-col">                              <img src="img/aeroc-logo.jpg" alt="Aeroc" width="115">                            </div>                          </div>                        </div>                      </div>                    </div>                  </div>                </article>                <article class="main-slider__item">                  <div class="row">                    <div class="main-slider__img-col">                      <div class="main-slider__img-wrapper  embed-responsive  embed-responsive--4-3">                        <picture>                          <source srcset="img/main-slider-img.jpg" media="(min-width: 768px)">                          <source srcset="img/main-slider-img.jpg" media="(min-width: 480px)">                          <img src="img/main-slider-img.jpg" alt="Название слайда" width="400" height="300">                        </picture>                      </div>                    </div>                    <div class="main-slider__text-col">                      <div class="main-slider__text">                        <h3 class="h1  main-slider__title">                          <a href="#">Построй дом своей мечты вместе с Нами!</a>                        </h3>                        <p class="main-slider__descr">Каждая цифра после литеры “D” означает плотность в килограммах на метр кубический.</p>                        <div class="main-slider__btn-wrapper">                          <div class="row">                            <div class="main-slider__btn-wrapper-col">                              <a href="#" class="btn  btn--main">Смотреть в каталоге</a>                            </div>                            <div class="main-slider__logo-wrapper-col">                              <img src="img/aeroc-logo.jpg" alt="Aeroc" width="115">                            </div>                          </div>                        </div>                      </div>                    </div>                  </div>                </article>              </div>            </div>          </div>        </div>        <section class="features-block">          <div class="container">            <h2 class="visually-hidden">Наши преимущества</h2>            <ul class="row  features-block__list">              <li class="col-1-3-3  features-block__item">                <div class="features-block__content">                  <div class="features-block__img">                    <img src="img/price-icon.svg" alt="Цена ниже чем у производителя" class width="46" height="46">                  </div>                  <h4 class="h5  features-block__title">Цена ниже чем у производителя</h4>                </div>              </li>              <li class="col-1-3-3  features-block__item">                <div class="features-block__content">                  <div class="features-block__img">                    <img src="img/delivery-time-icon.svg" alt="Гарантия сроков доставки" class width="60" height="46">                  </div>                  <h4 class="h5  features-block__title">Гарантия сроков доставки</h4>                </div>              </li>              <li class="col-1-3-3  features-block__item">                <div class="features-block__content">                  <div class="features-block__img">                    <img src="img/delivery-icon.svg" alt="Доставка товара по всей Украине" class width="74" height="46">                  </div>                  <h4 class="h5  features-block__title">Доставка товара по всей Украине</h4>                </div>              </li>            </ul>          </div>        </section>        <div class="container">          <section>            <h2>              <a href="#">Категории товаров</a>            </h2>            <ul class="row  list-nostyled">              <li class="col-1-2-3-4">                <!--DEV                @ @include('blocks/category-block/category-block.html')                -->                <div class="category-block">                  <a href="#" class="category-block__link" title="Название категории">                    <div class="category-block__img-wrapper">                      <img src="img/brick-ordinary.svg" alt="Название категории">                    </div>                    <h4 class="category-block__title">Кирпич рядовой</h4>                  </a>                </div>              </li>              <li class="col-1-2-3-4">                <!--DEV                @ @include('blocks/category-block/category-block.html')                -->                <div class="category-block">                  <a href="#" class="category-block__link" title="Название категории">                    <div class="category-block__img-wrapper">                      <img src="img/brick-ordinary.svg" alt="Название категории">                    </div>                    <h4 class="category-block__title">Кирпич рядовой</h4>                  </a>                </div>              </li>              <li class="col-1-2-3-4">                <!--DEV                @ @include('blocks/category-block/category-block.html')                -->                <div class="category-block">                  <a href="#" class="category-block__link" title="Название категории">                    <div class="category-block__img-wrapper">                      <img src="img/brick-ordinary.svg" alt="Название категории">                    </div>                    <h4 class="category-block__title">Кирпич рядовой</h4>                  </a>                </div>              </li>              <li class="col-1-2-3-4">                <!--DEV                @ @include('blocks/category-block/category-block.html')                -->                <div class="category-block">                  <a href="#" class="category-block__link" title="Название категории">                    <div class="category-block__img-wrapper">                      <img src="img/brick-ordinary.svg" alt="Название категории">                    </div>                    <h4 class="category-block__title">Кирпич рядовой</h4>                  </a>                </div>              </li>              <li class="col-1-2-3-4">                <!--DEV                @ @include('blocks/category-block/category-block.html')                -->                <div class="category-block">                  <a href="#" class="category-block__link" title="Название категории">                    <div class="category-block__img-wrapper">                      <img src="img/brick-ordinary.svg" alt="Название категории">                    </div>                    <h4 class="category-block__title">Кирпич рядовой</h4>                  </a>                </div>              </li>              <li class="col-1-2-3-4">                <!--DEV                @ @include('blocks/category-block/category-block.html')                -->                <div class="category-block">                  <a href="#" class="category-block__link" title="Название категории">                    <div class="category-block__img-wrapper">                      <img src="img/brick-ordinary.svg" alt="Название категории">                    </div>                    <h4 class="category-block__title">Кирпич рядовой</h4>                  </a>                </div>              </li>              <li class="col-1-2-3-4">                <!--DEV                @ @include('blocks/category-block/category-block.html')                -->                <div class="category-block">                  <a href="#" class="category-block__link" title="Название категории">                    <div class="category-block__img-wrapper">                      <img src="img/brick-ordinary.svg" alt="Название категории">                    </div>                    <h4 class="category-block__title">Кирпич рядовой</h4>                  </a>                </div>              </li>              <li class="col-1-2-3-4">                <!--DEV                @ @include('blocks/category-block/category-block.html')                -->                <div class="category-block">                  <a href="#" class="category-block__link" title="Название категории">                    <div class="category-block__img-wrapper">                      <img src="img/brick-ordinary.svg" alt="Название категории">                    </div>                    <h4 class="category-block__title">Кирпич рядовой</h4>                  </a>                </div>              </li>              <li class="col-1-2-3-4">                <!--DEV                @ @include('blocks/category-block/category-block.html')                -->                <div class="category-block">                  <a href="#" class="category-block__link" title="Название категории">                    <div class="category-block__img-wrapper">                      <img src="img/brick-ordinary.svg" alt="Название категории">                    </div>                    <h4 class="category-block__title">Кирпич рядовой</h4>                  </a>                </div>              </li>              <li class="col-1-2-3-4">                <!--DEV                @ @include('blocks/category-block/category-block.html')                -->                <div class="category-block">                  <a href="#" class="category-block__link" title="Название категории">                    <div class="category-block__img-wrapper">                      <img src="img/brick-ordinary.svg" alt="Название категории">                    </div>                    <h4 class="category-block__title">Кирпич рядовой</h4>                  </a>                </div>              </li>              <li class="col-1-2-3-4">                <!--DEV                @ @include('blocks/category-block/category-block.html')                -->                <div class="category-block">                  <a href="#" class="category-block__link" title="Название категории">                    <div class="category-block__img-wrapper">                      <img src="img/brick-ordinary.svg" alt="Название категории">                    </div>                    <h4 class="category-block__title">Кирпич рядовой</h4>                  </a>                </div>              </li>              <li class="col-1-2-3-4">                <!--DEV                @ @include('blocks/category-block/category-block.html')                -->                <div class="category-block">                  <a href="#" class="category-block__link" title="Название категории">                    <div class="category-block__img-wrapper">                      <img src="img/brick-ordinary.svg" alt="Название категории">                    </div>                    <h4 class="category-block__title">Кирпич рядовой</h4>                  </a>                </div>              </li>            </ul>          </section>          <section>            <h2><a href="#">Статьи</a></h2>            <div class="row">              <div class="col-1-full  col-1-full--mb">                <article class="article-block">                  <h3 class="article-block__title">Как определяется марка бетона?</h3>                  <div class="article-block__content">                    <p>Бетон используется в любом строительном проекте - от кладки садовой печи (здесь бетон нужен для заливки фундамента) до строительства мостов и тоннелей метро (из ЖБИ на основе бетона). При строительстве высотки без бетона тоже не обойтись - его используют в заливке фундамента, он входит в состав железобетонных плит перекрытий и стеновых блоков.</p>                    <p>Естественно, что неопытные строители задают много вопросов об использовании бетона той или иной марки. Каждая марка бетона имеет свою плотность, прочность, класс бетона, свою морозоустойчивость, коэффициент водопоглощения и другие характеристики. Если заранее разобраться в марке бетона, а также в том, как ее определить, Вы избежите ненужных затрат на неподходящий раствор. Определив марку бетона, Вам будет проще принять решение о его эффективности. Марку бетона определяют в лаборатории. Рассмотрим, как это происходит.</p>                  </div>                  <div class="article-block__bottom">                    <!--DEV                    @ @include('blocks/publishedon/publishedon.html')                    -->                    <div class="publishedon"><span>Март 18, 2019</span></div>                    <a href="#" class="btn  btn--readmore">Читать</a>                  </div>                </article>              </div>              <div class="col-1-full">                <article class="article-block">                  <h3 class="article-block__title">Как определяется марка бетона?</h3>                  <div class="article-block__content">                    <p>Бетон используется в любом строительном проекте - от кладки садовой печи (здесь бетон нужен для заливки фундамента) до строительства мостов и тоннелей метро (из ЖБИ на основе бетона). При строительстве высотки без бетона тоже не обойтись - его используют в заливке фундамента, он входит в состав железобетонных плит перекрытий и стеновых блоков.</p>                    <p>Естественно, что неопытные строители задают много вопросов об использовании бетона той или иной марки. Каждая марка бетона имеет свою плотность, прочность, класс бетона, свою морозоустойчивость, коэффициент водопоглощения и другие характеристики. Если заранее разобраться в марке бетона, а также в том, как ее определить, Вы избежите ненужных затрат на неподходящий раствор. Определив марку бетона, Вам будет проще принять решение о его эффективности. Марку бетона определяют в лаборатории. Рассмотрим, как это происходит.</p>                  </div>                  <div class="article-block__bottom">                    <!--DEV                    @ @include('blocks/publishedon/publishedon.html')                    -->                    <div class="publishedon"><span>Март 18, 2019</span></div>                    <a href="#" class="btn  btn--readmore">Читать</a>                  </div>                </article>              </div>              <div class="col-btn-article">                <a href="#" class="btn  btn--main">Все статьи</a>              </div>            </div>          </section>        </div>        <!--DEV        @ @include('blocks/order-form/order-form.html')        -->        <article class="order-form">          <div class="container">            <div class="order-form__inner-bg">              <h2 class="visually-hidden">Форма обратной связи</h2>              <div class="row">                <div class="order-form__info-col">                  <div class="order-form__info">                    <p class="h3  order-form__info-title">Залиште заявку і ми зв'яжемося з вами для:</p>                    <ul class="order-form__list">                      <li class="order-form__list-item">Консультації у підборі необхідного матеріалу</li>                      <li class="order-form__list-item">Допомоги з розрахунком</li>                      <li class="order-form__list-item">Оформленням замовлення</li>                    </ul>                    <span class="small">*&thinsp;Поля, обязательные для заполнения</span>                  </div>                </div>                <div class="order-form__form-col">                  <form id="callback-form" class="order-form__form" action="#" method="post">                    <div class="row">                      <div class="order-form__inner-col">                        <div class="order-form__form-group">                          <label class="field-text">                            <span class="field-text__input-wrap">                              <input class="field-text__input" type="text" name="name" value placeholder="Ваше имя">                              <span class="field-text__help-text"></span>                            </span>                          </label>                          <label class="field-text">                            <span class="field-text__input-wrap">                              <input class="field-text__input" type="email" name="email" value placeholder="Введите email&thinsp;*">                              <span class="field-text__help-text"></span>                            </span>                          </label>                          <label class="field-text">                            <span class="field-text__input-wrap">                              <input class="field-text__input" type="email" name="email" value placeholder="Введите телефон&thinsp;*">                              <span class="field-text__help-text"></span>                            </span>                          </label>                          <label class="field-text">                            <span class="field-text__input-wrap">                              <textarea class="field-text__input" name="message" placeholder="Текст сообщения"></textarea>                              <span class="field-text__help-text"></span>                            </span>                          </label>                        </div>                      </div>                      <div class="order-form__inner-col">                        <div class="order-form__form-group">                          <div class="field-file">                            <label class="field-file__input-wrap">                              <input class="field-file__input" type="file" data-multiple-caption="файлов выбрано: {count}" multiple>                              <div class="field-file__name-text" data-button-text="Прикрепить файл(ы)">Прикрепленных файлов нет…</div>                              <div class="field-file__help-text"></div>                            </label>                            <div class="small  field-file__name">Вы можете приложить к сообщению файл&thinsp;(ы) <strong>до 5 Мб</strong> каждый</div>                          </div>                          <div class="field-file">                            <img src="img/reCaptcha.gif" alt width="300">                          </div>                          <div class="field-actions">                            <button class="btn  btn--main" type="submit">Отправить</button>                          </div>                        </div>                      </div>                      <div class="col-1-full">                        <div class="field-checkbox">                          <label class="field-checkbox__name">                            <input id="agreement" class="field-checkbox__input  agreement" type="checkbox" checked>                            <span class="small  field-checkbox__name-text">Даю согласие на обработку персональных данных и политикой конфиденциальности</span>                          </label>                        </div>                      </div>                    </div>                  </form>                </div>              </div>            </div>          </div>        </article>        <div class="container">          <article class="seo-text">            <h2>Заголовок SEO текста</h2>            <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Составитель своих пустился щеке. Ему заманивший оксмокс парадигматическая семь его повстречался, журчит текста, свой строчка силуэт реторический? Знаках, своих строчка? Гор над ему, строчка рекламных.</p>            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, blanditiis dolore, labore enim placeat ex assumenda, ad aut aliquam obcaecati aperiam distinctio voluptates. Error necessitatibus impedit fugit dolor et, esse totam sunt distinctio dolorum aspernatur saepe, repellendus?</p>            <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Осталось заманивший, подзаголовок сбить вопроса океана лучше составитель ее большого семь возвращайся текст, своего что свой над, точках дорогу вопрос, предупреждал залетают но его до страну пустился. Последний семантика ведущими ее своего меня назад моей толку, парадигматическая свою по всей грустный необходимыми безопасную великий вершину страну, от всех, щеке жаренные океана.</p>          </article>        </div>      </main>    </div>    <div class="page__footer-wrapper">      <div class="container">        <!--DEV
-        @ @include('blocks/page-footer/page-footer.html')
-        -->
+<meta name="theme-color" content="#ffffff"></head>
+<body><noscript>У вас отключен JavaScript. Это делает невозможным использование нашего сайта.</noscript>
+  <div id="page" class="page__inner">
+    <div class="page__content">
+      <header class="page-header" role="banner">
+        <div class="page-header__top">
+          <div class="container">
+            <div class="row">
+              <div class="service-menu" role="navigation">
+                <ul class="service-menu__list">
+                  <li class="service-menu__item">
+                    <a class="service-menu__link" href="#">Доставка та оплата</a>
+                  </li>
+                  <li class="service-menu__item">
+                    <a class="service-menu__link" href="#">Про компанію</a>
+                  </li>
+                  <li class="service-menu__item">
+                    <a class="service-menu__link" href="#">Вакансії</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="social-contact" role="navigation">
+                <ul class="social-contact__list">
+                  <li class="social-contact__item">
+                    <a href="#" class="social-contact__link" title="Twitter">
+                      <img src="img/twitter-icon.svg" alt="Twitter" width="24" height="24">
+                    </a>
+                  </li>
+                  <li class="social-contact__item">
+                    <a href="#" class="social-contact__link" title="Viber">
+                      <img src="img/viber-icon.svg" alt="Viber" width="24" height="24">
+                    </a>
+                  </li>
+                  <li class="social-contact__item">
+                    <a href="#" class="social-contact__link" title="WhatsApp">
+                      <img src="img/whatsapp-icon.svg" alt="WhatsApp" width="24" height="24">
+                    </a>
+                  </li>
+                  <li class="social-contact__item">
+                    <a href="#" class="social-contact__link" title="Facebook">
+                      <img src="img/fb-icon.svg" alt="Facebook" width="24" height="24">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="lang-switcher  dropdown" id="lang-switcher">
+                <button class="dropdown-toggle" type="button" id="lang-switcher-toggler" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">RU</button>
+                <div class="dropdown-menu" aria-labelledby="lang-switcher">
+                  <a class="dropdown-item" href="#">UA</a>
+                  <a class="dropdown-item" href="#">RU</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-header__main">
+          <div class="container">
+            <div class="row">
+              <div class="page-header__logo-col">
+                <a href="index.html" class="logo" title="DCI Group">
+                  <picture>
+                    <source srcset="img/dci-logo.svg" media="(min-width: 768px)">
+                    <img src="img/dci-logo--icon.svg" alt="DCI Group logo" width="45" height="52">
+                  </picture>
+                </a>
+              </div>
+              <div class="page-header__btns-col">
+                <div class="page-header__btn-group">
+                  <button class="btn  btn--icon" type="button" data-toggle="modal" data-target="#phones-modal" title="Телефони">
+                    <svg width="18" height="18" role="img">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone"/>
+                    </svg>
+                  </button>
+                  <div class="page-header__tel-wrapper">
+                    <ul class="phones-modal__list">
+                      <li class="phones-modal__item">
+                        <a class="phones-modal__link" href="tel:+380684555544">+38 (068) 455 55 44</a>
+                      </li>
+                      <li class="phones-modal__item">
+                        <a class="phones-modal__link" href="tel:+380684555544">+38 (068) 455 55 44</a>
+                      </li>
+                      <li class="phones-modal__item">
+                        <a class="phones-modal__link" href="tel:+380684555544">+38 (068) 455 55 44</a>
+                      </li>
+                      <li class="phones-modal__item">
+                        <a class="phones-modal__link" href="tel:+380684555544">+38 (068) 455 55 44</a>
+                      </li>
+                    </ul>
+                    <p class="phones-modal__worktime"><span>08:00 - 20:00</span>&emsp;<span>Без выходных</span></p>
+                  </div>
+                  <div class="page-header__search-wrapper">
+
+                    <form id="search-form" class="search-form" action="#" method="post">
+                      <div class="search-form__wrapper">
+                        <input class="search-form__input" type="search" name="search" value placeholder="Пошук">
+                        <button class="btn  btn--icon  search-form__submit" type="submit">
+                          <svg width="18" height="18" role="img">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#lens"/>
+                          </svg>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                  <a class="btn  btn--icon" href="#" title="Список переваг">
+                    <svg width="18" height="16" role="img">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#heart"/>
+                    </svg>
+                  </a>
+                  <a class="btn  btn--icon" href="#" title="Вхід - Кабінет користувача">
+                    <svg width="18" height="18" role="img">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user"/>
+                    </svg>
+                  </a>
+                  <a class="btn  btn--icon" href="#" title="Кошик">
+                    <svg width="18" height="18" role="img">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#basket"/>
+                    </svg>
+                  </a>
+                  <div class="page-header__basket-info">
+                    <span class="page-header__total-price">1 526 000 грн.</span>
+                    <span class="page-header__total-quantity">
+                      <a href="#">13 товаров</a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="page-header__search-col">
+                <div class="page-header__btn-group  page-header__btn-group--search">
+
+                  <form id="search-form" class="search-form" action="#" method="post">
+                    <div class="search-form__wrapper">
+                      <input class="search-form__input" type="search" name="search" value placeholder="Пошук">
+                      <button class="btn  btn--icon  search-form__submit" type="submit">
+                        <svg width="18" height="18" role="img">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#lens"/>
+                        </svg>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-header__bottom">
+          <div class="container">
+            <div class="row">
+              <div class="page-header__catalog-menu">
+                <a class="page-header__catalog-menu-toggler" href="#catalog-menu">
+                  <svg width="22" height="22" role="img">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-view"/>
+                  </svg>
+                  <span>Каталог товарів</span>
+                </a>
+              </div>
+              <div class="page-header__main-menu">
+                <a class="page-header__main-menu-toggler" href="#main-menu">Меню
+                  <span class="burger"><span></span></span>
+                </a>
+                <nav class="main-menu  main-menu--desktop">
+                  <h4 class="visually-hidden">Головне меню сайту</h4>
+                  <ul class="main-menu__list">
+                    <li class="main-menu__item">
+                      <a class="main-menu__link" href="#">Акції</a>
+                    </li>
+                    <li class="main-menu__item">
+                      <a class="main-menu__link" href="#">Бренди</a>
+                    </li>
+                    <li class="main-menu__item">
+                      <a class="main-menu__link" href="#">Калькулятор</a>
+                    </li>
+                    <li class="main-menu__item">
+                      <a class="main-menu__link" href="#">Статті</a>
+                    </li>
+                    <li class="main-menu__item">
+                      <a class="main-menu__link" href="#">Контакти</a>
+                    </li>
+                    <li class="Divider"></li>
+                    <li class="main-menu__item  main-menu__item--mob-only">
+                      <a class="main-menu__link" href="#">Доставка та оплата</a>
+                    </li>
+                    <li class="main-menu__item  main-menu__item--mob-only">
+                      <a class="main-menu__link" href="#">Про компанію</a>
+                    </li>
+                    <li class="main-menu__item  main-menu__item--mob-only">
+                      <a class="main-menu__link" href="#">Вакансії</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main-content" role="main">
+        <div class="container  container--bg-white">
+          <div class="row">
+            <div class="col-1-full  col-1-full--bg">
+              <div class="owl-carousel  main-slider">
+                <article class="main-slider__item">
+                  <div class="row">
+                    <div class="main-slider__img-col">
+                      <div class="main-slider__img-wrapper  embed-responsive  embed-responsive--4-3">
+                        <picture>
+                          <source class="owl-lazy" data-srcset="img/main-slider-img.jpg" media="(min-width: 768px)">
+                            <source class="owl-lazy" data-srcset="img/main-slider-img.jpg" media="(min-width: 480px)">
+                          <img class="owl-lazy" data-src="img/main-slider-img.jpg" alt="Название слайда" width="400" height="300">
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="main-slider__text-col">
+                      <div class="main-slider__text">
+                        <h3 class="h1  main-slider__title">
+                          <a href="#">Построй дом своей мечты вместе с Нами!</a>
+                        </h3>
+                        <p class="main-slider__descr">Каждая цифра после литеры “D” означает плотность в килограммах на метр кубический.</p>
+                        <div class="main-slider__btn-wrapper">
+                          <div class="row">
+                            <div class="main-slider__btn-wrapper-col">
+                              <a href="#" class="btn  btn--main">Смотреть в каталоге</a>
+                            </div>
+                            <div class="main-slider__logo-wrapper-col">
+                              <img src="img/aeroc-logo.jpg" alt="Aeroc" width="115">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="main-slider__item">
+                  <div class="row">
+                    <div class="main-slider__img-col">
+                      <div class="main-slider__img-wrapper  embed-responsive  embed-responsive--4-3">
+                        <picture>
+                          <source class="owl-lazy" data-srcset="img/main-slider-img.jpg" media="(min-width: 768px)">
+                            <source class="owl-lazy" data-srcset="img/main-slider-img.jpg" media="(min-width: 480px)">
+                          <img class="owl-lazy" data-src="img/main-slider-img.jpg" alt="Название слайда" width="400" height="300">
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="main-slider__text-col">
+                      <div class="main-slider__text">
+                        <h3 class="h1  main-slider__title">
+                          <a href="#">Построй дом своей мечты вместе с Нами!</a>
+                        </h3>
+                        <p class="main-slider__descr">Каждая цифра после литеры “D” означает плотность в килограммах на метр кубический.</p>
+                        <div class="main-slider__btn-wrapper">
+                          <div class="row">
+                            <div class="main-slider__btn-wrapper-col">
+                              <a href="#" class="btn  btn--main">Смотреть в каталоге</a>
+                            </div>
+                            <div class="main-slider__logo-wrapper-col">
+                              <img src="img/aeroc-logo.jpg" alt="Aeroc" width="115">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="main-slider__item">
+                  <div class="row">
+                    <div class="main-slider__img-col">
+                      <div class="main-slider__img-wrapper  embed-responsive  embed-responsive--4-3">
+                        <picture>
+                          <source class="owl-lazy" data-srcset="img/main-slider-img.jpg" media="(min-width: 768px)">
+                            <source class="owl-lazy" data-srcset="img/main-slider-img.jpg" media="(min-width: 480px)">
+                          <img class="owl-lazy" data-src="img/main-slider-img.jpg" alt="Название слайда" width="400" height="300">
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="main-slider__text-col">
+                      <div class="main-slider__text">
+                        <h3 class="h1  main-slider__title">
+                          <a href="#">Построй дом своей мечты вместе с Нами!</a>
+                        </h3>
+                        <p class="main-slider__descr">Каждая цифра после литеры “D” означает плотность в килограммах на метр кубический.</p>
+                        <div class="main-slider__btn-wrapper">
+                          <div class="row">
+                            <div class="main-slider__btn-wrapper-col">
+                              <a href="#" class="btn  btn--main">Смотреть в каталоге</a>
+                            </div>
+                            <div class="main-slider__logo-wrapper-col">
+                              <img src="img/aeroc-logo.jpg" alt="Aeroc" width="115">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="main-slider__item">
+                  <div class="row">
+                    <div class="main-slider__img-col">
+                      <div class="main-slider__img-wrapper  embed-responsive  embed-responsive--4-3">
+                        <picture>
+                          <source srcset="img/main-slider-img.jpg" media="(min-width: 768px)">
+                          <source srcset="img/main-slider-img.jpg" media="(min-width: 480px)">
+                          <img src="img/main-slider-img.jpg" alt="Название слайда" width="400" height="300">
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="main-slider__text-col">
+                      <div class="main-slider__text">
+                        <h3 class="h1  main-slider__title">
+                          <a href="#">Построй дом своей мечты вместе с Нами!</a>
+                        </h3>
+                        <p class="main-slider__descr">Каждая цифра после литеры “D” означает плотность в килограммах на метр кубический.</p>
+                        <div class="main-slider__btn-wrapper">
+                          <div class="row">
+                            <div class="main-slider__btn-wrapper-col">
+                              <a href="#" class="btn  btn--main">Смотреть в каталоге</a>
+                            </div>
+                            <div class="main-slider__logo-wrapper-col">
+                              <img src="img/aeroc-logo.jpg" alt="Aeroc" width="115">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="features-block">
+          <div class="container">
+            <h2 class="visually-hidden">Наши преимущества</h2>
+            <ul class="row  features-block__list">
+              <li class="col-1-3-3  features-block__item">
+                <div class="features-block__content">
+                  <div class="features-block__img">
+                    <img src="img/price-icon.svg" alt="Цена ниже чем у производителя" class width="46" height="46">
+                  </div>
+                  <h4 class="h5  features-block__title">Цена ниже чем у производителя</h4>
+                </div>
+              </li>
+              <li class="col-1-3-3  features-block__item">
+                <div class="features-block__content">
+                  <div class="features-block__img">
+                    <img src="img/delivery-time-icon.svg" alt="Гарантия сроков доставки" class width="60" height="46">
+                  </div>
+                  <h4 class="h5  features-block__title">Гарантия сроков доставки</h4>
+                </div>
+              </li>
+              <li class="col-1-3-3  features-block__item">
+                <div class="features-block__content">
+                  <div class="features-block__img">
+                    <img src="img/delivery-icon.svg" alt="Доставка товара по всей Украине" class width="74" height="46">
+                  </div>
+                  <h4 class="h5  features-block__title">Доставка товара по всей Украине</h4>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <div class="container">
+          <section>
+            <h2>
+              <a href="#">Категории товаров</a>
+            </h2>
+            <ul class="row  list-nostyled">
+              <li class="col-1-2-3-4">
+
+                <div class="category-block">
+                  <a href="#" class="category-block__link" title="Название категории">
+                    <div class="category-block__img-wrapper">
+                      <img src="img/brick-ordinary.svg" alt="Название категории">
+                    </div>
+                    <h4 class="category-block__title">Кирпич рядовой</h4>
+                  </a>
+                </div>
+              </li>
+              <li class="col-1-2-3-4">
+
+                <div class="category-block">
+                  <a href="#" class="category-block__link" title="Название категории">
+                    <div class="category-block__img-wrapper">
+                      <img src="img/brick-ordinary.svg" alt="Название категории">
+                    </div>
+                    <h4 class="category-block__title">Кирпич рядовой</h4>
+                  </a>
+                </div>
+              </li>
+              <li class="col-1-2-3-4">
+
+                <div class="category-block">
+                  <a href="#" class="category-block__link" title="Название категории">
+                    <div class="category-block__img-wrapper">
+                      <img src="img/brick-ordinary.svg" alt="Название категории">
+                    </div>
+                    <h4 class="category-block__title">Кирпич рядовой</h4>
+                  </a>
+                </div>
+              </li>
+              <li class="col-1-2-3-4">
+
+                <div class="category-block">
+                  <a href="#" class="category-block__link" title="Название категории">
+                    <div class="category-block__img-wrapper">
+                      <img src="img/brick-ordinary.svg" alt="Название категории">
+                    </div>
+                    <h4 class="category-block__title">Кирпич рядовой</h4>
+                  </a>
+                </div>
+              </li>
+              <li class="col-1-2-3-4">
+
+                <div class="category-block">
+                  <a href="#" class="category-block__link" title="Название категории">
+                    <div class="category-block__img-wrapper">
+                      <img src="img/brick-ordinary.svg" alt="Название категории">
+                    </div>
+                    <h4 class="category-block__title">Кирпич рядовой</h4>
+                  </a>
+                </div>
+              </li>
+              <li class="col-1-2-3-4">
+
+                <div class="category-block">
+                  <a href="#" class="category-block__link" title="Название категории">
+                    <div class="category-block__img-wrapper">
+                      <img src="img/brick-ordinary.svg" alt="Название категории">
+                    </div>
+                    <h4 class="category-block__title">Кирпич рядовой</h4>
+                  </a>
+                </div>
+              </li>
+              <li class="col-1-2-3-4">
+
+                <div class="category-block">
+                  <a href="#" class="category-block__link" title="Название категории">
+                    <div class="category-block__img-wrapper">
+                      <img src="img/brick-ordinary.svg" alt="Название категории">
+                    </div>
+                    <h4 class="category-block__title">Кирпич рядовой</h4>
+                  </a>
+                </div>
+              </li>
+              <li class="col-1-2-3-4">
+
+                <div class="category-block">
+                  <a href="#" class="category-block__link" title="Название категории">
+                    <div class="category-block__img-wrapper">
+                      <img src="img/brick-ordinary.svg" alt="Название категории">
+                    </div>
+                    <h4 class="category-block__title">Кирпич рядовой</h4>
+                  </a>
+                </div>
+              </li>
+              <li class="col-1-2-3-4">
+
+                <div class="category-block">
+                  <a href="#" class="category-block__link" title="Название категории">
+                    <div class="category-block__img-wrapper">
+                      <img src="img/brick-ordinary.svg" alt="Название категории">
+                    </div>
+                    <h4 class="category-block__title">Кирпич рядовой</h4>
+                  </a>
+                </div>
+              </li>
+              <li class="col-1-2-3-4">
+
+                <div class="category-block">
+                  <a href="#" class="category-block__link" title="Название категории">
+                    <div class="category-block__img-wrapper">
+                      <img src="img/brick-ordinary.svg" alt="Название категории">
+                    </div>
+                    <h4 class="category-block__title">Кирпич рядовой</h4>
+                  </a>
+                </div>
+              </li>
+              <li class="col-1-2-3-4">
+
+                <div class="category-block">
+                  <a href="#" class="category-block__link" title="Название категории">
+                    <div class="category-block__img-wrapper">
+                      <img src="img/brick-ordinary.svg" alt="Название категории">
+                    </div>
+                    <h4 class="category-block__title">Кирпич рядовой</h4>
+                  </a>
+                </div>
+              </li>
+              <li class="col-1-2-3-4">
+
+                <div class="category-block">
+                  <a href="#" class="category-block__link" title="Название категории">
+                    <div class="category-block__img-wrapper">
+                      <img src="img/brick-ordinary.svg" alt="Название категории">
+                    </div>
+                    <h4 class="category-block__title">Кирпич рядовой</h4>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2><a href="#">Статьи</a></h2>
+            <div class="row">
+              <div class="col-1-full  col-1-full--mb">
+                <article class="article-block">
+                  <h3 class="article-block__title">Как определяется марка бетона?</h3>
+                  <div class="article-block__content">
+                    <p>Бетон используется в любом строительном проекте - от кладки садовой печи (здесь бетон нужен для заливки фундамента) до строительства мостов и тоннелей метро (из ЖБИ на основе бетона). При строительстве высотки без бетона тоже не обойтись - его используют в заливке фундамента, он входит в состав железобетонных плит перекрытий и стеновых блоков.</p>
+                    <p>Естественно, что неопытные строители задают много вопросов об использовании бетона той или иной марки. Каждая марка бетона имеет свою плотность, прочность, класс бетона, свою морозоустойчивость, коэффициент водопоглощения и другие характеристики. Если заранее разобраться в марке бетона, а также в том, как ее определить, Вы избежите ненужных затрат на неподходящий раствор. Определив марку бетона, Вам будет проще принять решение о его эффективности. Марку бетона определяют в лаборатории. Рассмотрим, как это происходит.</p>
+                  </div>
+                  <div class="article-block__bottom">
+
+                    <div class="publishedon"><span>Март 18, 2019</span></div>
+                    <a href="#" class="btn  btn--readmore">Читать</a>
+                  </div>
+                </article>
+              </div>
+              <div class="col-1-full">
+                <article class="article-block">
+                  <h3 class="article-block__title">Как определяется марка бетона?</h3>
+                  <div class="article-block__content">
+                    <p>Бетон используется в любом строительном проекте - от кладки садовой печи (здесь бетон нужен для заливки фундамента) до строительства мостов и тоннелей метро (из ЖБИ на основе бетона). При строительстве высотки без бетона тоже не обойтись - его используют в заливке фундамента, он входит в состав железобетонных плит перекрытий и стеновых блоков.</p>
+                    <p>Естественно, что неопытные строители задают много вопросов об использовании бетона той или иной марки. Каждая марка бетона имеет свою плотность, прочность, класс бетона, свою морозоустойчивость, коэффициент водопоглощения и другие характеристики. Если заранее разобраться в марке бетона, а также в том, как ее определить, Вы избежите ненужных затрат на неподходящий раствор. Определив марку бетона, Вам будет проще принять решение о его эффективности. Марку бетона определяют в лаборатории. Рассмотрим, как это происходит.</p>
+                  </div>
+                  <div class="article-block__bottom">
+
+                    <div class="publishedon"><span>Март 18, 2019</span></div>
+                    <a href="#" class="btn  btn--readmore">Читать</a>
+                  </div>
+                </article>
+              </div>
+              <div class="col-btn-article">
+                <a href="#" class="btn  btn--main">Все статьи</a>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <article class="order-form">
+          <div class="container">
+            <div class="order-form__inner-bg">
+              <h2 class="visually-hidden">Форма обратной связи</h2>
+              <div class="row">
+                <div class="order-form__info-col">
+                  <div class="order-form__info">
+                    <p class="h3  order-form__info-title">Залиште заявку і ми зв'яжемося з вами для:</p>
+                    <ul class="order-form__list">
+                      <li class="order-form__list-item">Консультації у підборі необхідного матеріалу</li>
+                      <li class="order-form__list-item">Допомоги з розрахунком</li>
+                      <li class="order-form__list-item">Оформленням замовлення</li>
+                    </ul>
+                    <span class="small">*&thinsp;Поля, обязательные для заполнения</span>
+                  </div>
+                </div>
+                <div class="order-form__form-col">
+                  <form id="callback-form" class="order-form__form" action="#" method="post">
+                    <div class="row">
+                      <div class="order-form__inner-col">
+                        <div class="order-form__form-group">
+                          <label class="field-text">
+                            <span class="field-text__input-wrap">
+                              <input class="field-text__input" type="text" name="name" value placeholder="Ваше имя">
+                              <span class="field-text__help-text"></span>
+                            </span>
+                          </label>
+                          <label class="field-text">
+                            <span class="field-text__input-wrap">
+                              <input class="field-text__input" type="email" name="email" value placeholder="Введите email&thinsp;*">
+                              <span class="field-text__help-text"></span>
+                            </span>
+                          </label>
+                          <label class="field-text">
+                            <span class="field-text__input-wrap">
+                              <input class="field-text__input" type="email" name="email" value placeholder="Введите телефон&thinsp;*">
+                              <span class="field-text__help-text"></span>
+                            </span>
+                          </label>
+                          <label class="field-text">
+                            <span class="field-text__input-wrap">
+                              <textarea class="field-text__input" name="message" placeholder="Текст сообщения"></textarea>
+                              <span class="field-text__help-text"></span>
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="order-form__inner-col">
+                        <div class="order-form__form-group">
+                          <div class="field-file">
+                            <label class="field-file__input-wrap">
+                              <input class="field-file__input" type="file" data-multiple-caption="файлов выбрано: {count}" multiple>
+                              <div class="field-file__name-text" data-button-text="Прикрепить файл(ы)">Прикрепленных файлов нет…</div>
+                              <div class="field-file__help-text"></div>
+                            </label>
+                            <div class="small  field-file__name">Вы можете приложить к сообщению файл&thinsp;(ы) <strong>до 5 Мб</strong> каждый</div>
+                          </div>
+                          <div class="field-file">
+                            <img src="img/reCaptcha.gif" alt width="300">
+                          </div>
+                          <div class="field-actions">
+                            <button class="btn  btn--main" type="submit">Отправить</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-1-full">
+                        <div class="field-checkbox">
+                          <label class="field-checkbox__name">
+                            <input id="agreement" class="field-checkbox__input  agreement" type="checkbox" checked>
+                            <span class="small  field-checkbox__name-text">Даю согласие на обработку персональных данных и политикой конфиденциальности</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="container">
+          <article class="seo-text">
+            <h2>Заголовок SEO текста</h2>
+            <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Составитель своих пустился щеке. Ему заманивший оксмокс парадигматическая семь его повстречался, журчит текста, свой строчка силуэт реторический? Знаках, своих строчка? Гор над ему, строчка рекламных.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, blanditiis dolore, labore enim placeat ex assumenda, ad aut aliquam obcaecati aperiam distinctio voluptates. Error necessitatibus impedit fugit dolor et, esse totam sunt distinctio dolorum aspernatur saepe, repellendus?</p>
+            <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Осталось заманивший, подзаголовок сбить вопроса океана лучше составитель ее большого семь возвращайся текст, своего что свой над, точках дорогу вопрос, предупреждал залетают но его до страну пустился. Последний семантика ведущими ее своего меня назад моей толку, парадигматическая свою по всей грустный необходимыми безопасную великий вершину страну, от всех, щеке жаренные океана.</p>
+          </article>
+        </div>
+      </main>
+    </div>
+    <div class="page__footer-wrapper">
+      <div class="container">
+
         <footer class="page-footer" role="contentinfo">
           <div class="row  page-footer__top">
             <div class="page-footer__top-col-logo">
@@ -186,4 +826,149 @@
             </div>
           </div>
         </footer>
-      </div>    </div>  </div>  <!-- Навигация: Каталог и Главное меню. Общие для всего сайта -->  <!--DEV  @ @include('blocks/catalog-menu/catalog-menu.html')  -->  <section id="catalog-menu" class="catalog-menu" role="navigation">    <h4 class="visually-hidden">Каталог товарів - меню</h4>    <ul class="catalog-menu__list">      <li class="catalog-menu__item">        <span>Цегла рядова</span>        <ul>          <li class="catalog-menu__item">            <span>Handmade©</span>            <ul>              <li class="catalog-menu__item">                <a class="catalog-menu__link" href="#">Цегла рядова М-75</a>              </li>              <li class="catalog-menu__item">                <a class="catalog-menu__link" href="#">Цегла рядова М-100</a>              </li>            </ul>          </li>          <li class="catalog-menu__item">            <a class="catalog-menu__link" href="#">Цегла рядова М-100</a>          </li>          <li class="catalog-menu__item">            <a class="catalog-menu__link" href="#">Цегла рядова М-125</a>          </li>          <li class="catalog-menu__item">            <a class="catalog-menu__link" href="#">Цегла рядова М-150</a>          </li>          <li class="catalog-menu__item">            <a class="catalog-menu__link" href="#">Цегла повнотіла</a>          </li>        </ul>      </li>      <li class="catalog-menu__item"><span>Кирпич силикатный</span>        <ul>          <li class="catalog-menu__item">            <a class="catalog-menu__link" href="#">Одинарний (Обухів)</a>          </li>          <li class="catalog-menu__item">            <a class="catalog-menu__link" href="#">Полуторний (Обухів)</a>          </li>          <li class="catalog-menu__item">            <a class="catalog-menu__link" href="#">Одинарний (Житомир)</a>          </li>        </ul>      </li>      <li class="catalog-menu__item">        <span>Керамічні блоки</span>        <ul>          <li class="catalog-menu__item">            <a class="catalog-menu__link" href="#">Русиния</a>          </li>          <li class="catalog-menu__item">            <a class="catalog-menu__link" href="#">Керамкомфорт</a>          </li>          <li class="catalog-menu__item">            <a class="catalog-menu__link" href="#">Кератерм</a>          </li>          <li class="catalog-menu__item">            <a class="catalog-menu__link" href="#">Porotherm</a>          </li>          <li class="catalog-menu__item">            <a class="catalog-menu__link" href="#">Leier</a>          </li>        </ul>      </li>    </ul>  </section>  <!--DEV  @ @include('blocks/main-menu/main-menu.html')  -->  <nav id="main-menu" class="main-menu">    <h4 class="visually-hidden">Головне меню сайту</h4>    <ul class="main-menu__list">      <li class="main-menu__item">        <a class="main-menu__link" href="#">Акції</a>      </li>      <li class="main-menu__item">        <a class="main-menu__link" href="#">Бренди</a>      </li>      <li class="main-menu__item">        <a class="main-menu__link" href="#">Калькулятор</a>      </li>      <li class="main-menu__item">        <a class="main-menu__link" href="#">Статті</a>      </li>      <li class="main-menu__item">        <a class="main-menu__link" href="#">Контакти</a>      </li>      <li class="main-menu__item  main-menu__item--mob-only">        <a class="main-menu__link" href="#">Доставка та оплата</a>      </li>      <li class="main-menu__item  main-menu__item--mob-only">        <a class="main-menu__link" href="#">Про компанію</a>      </li>      <li class="main-menu__item  main-menu__item--mob-only">        <a class="main-menu__link" href="#">Вакансії</a>      </li>    </ul>  </nav>  <!-- Навигация: Каталог и Главное меню. Общие для всего сайта -->  <!-- Модалки общие для всего сайта -->  <!--DEV  @ @include('blocks/phones-modal/phones-modal.html')  -->  <div class="modal  phones-modal  fade" id="phones-modal" tabindex="-1" role="dialog" aria-labelledby="phones-modal-title" aria-hidden="true" aria-modal="true">    <div class="modal-dialog  modal-dialog-centered" role="document">      <div class="modal-content">        <div class="modal-header">          <h4 class="modal-title" id="phones-modal-title">Телефонуйте нам</h4>          <button type="button" class="btn  btn--icon  close" data-dismiss="modal" aria-label="Close">            <svg width="20" height="20" aria-hidden="true">              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#close"/>            </svg>          </button>        </div>        <div class="modal-body  phones-modal__body">          <ul class="phones-modal__list">            <li class="phones-modal__item">              <a class="phones-modal__link" href="tel:+380684555544">+38 (068) 455 55 44</a>            </li>            <li class="phones-modal__item">              <a class="phones-modal__link" href="tel:+380684555544">+38 (068) 455 55 44</a>            </li>            <li class="phones-modal__item">              <a class="phones-modal__link" href="tel:+380684555544">+38 (068) 455 55 44</a>            </li>            <li class="phones-modal__item">              <a class="phones-modal__link" href="tel:+380684555544">+38 (068) 455 55 44</a>            </li>          </ul>          <p class="phones-modal__worktime"><span>08:00 - 20:00</span>&emsp;<span>Без выходных</span></p>        </div>      </div>    </div>  </div>  <!-- Модалки общие для всего сайта -->  <script src="js/picturefill.min.js"></script>  <script src="js/popper.min.js"></script>  <script src="js/jquery.min.js"></script>  <script src="js/owl.carousel.min.js"></script>  <script src="js/jquery.mmenu.all.js"></script>  <script src="js/svg4everybody.min.js"></script>  <script src="js/isMobile.min.js"></script>  <script src="js/nouislider.min.js"></script>  <script src="js/ofi.min.js"></script>  <script src="js/util.min.js"></script>  <script src="js/script.min.js"></script></body></html>
+      </div>
+    </div>
+  </div>
+
+  <section id="catalog-menu" class="catalog-menu" role="navigation">
+    <h4 class="visually-hidden">Каталог товарів - меню</h4>
+    <ul class="catalog-menu__list">
+      <li class="catalog-menu__item">
+        <span>Цегла рядова</span>
+        <ul>
+          <li class="catalog-menu__item">
+            <span>Handmade©</span>
+            <ul>
+              <li class="catalog-menu__item">
+                <a class="catalog-menu__link" href="#">Цегла рядова М-75</a>
+              </li>
+              <li class="catalog-menu__item">
+                <a class="catalog-menu__link" href="#">Цегла рядова М-100</a>
+              </li>
+            </ul>
+          </li>
+          <li class="catalog-menu__item">
+            <a class="catalog-menu__link" href="#">Цегла рядова М-100</a>
+          </li>
+          <li class="catalog-menu__item">
+            <a class="catalog-menu__link" href="#">Цегла рядова М-125</a>
+          </li>
+          <li class="catalog-menu__item">
+            <a class="catalog-menu__link" href="#">Цегла рядова М-150</a>
+          </li>
+          <li class="catalog-menu__item">
+            <a class="catalog-menu__link" href="#">Цегла повнотіла</a>
+          </li>
+        </ul>
+      </li>
+      <li class="catalog-menu__item"><span>Кирпич силикатный</span>
+        <ul>
+          <li class="catalog-menu__item">
+            <a class="catalog-menu__link" href="#">Одинарний (Обухів)</a>
+          </li>
+          <li class="catalog-menu__item">
+            <a class="catalog-menu__link" href="#">Полуторний (Обухів)</a>
+          </li>
+          <li class="catalog-menu__item">
+            <a class="catalog-menu__link" href="#">Одинарний (Житомир)</a>
+          </li>
+        </ul>
+      </li>
+      <li class="catalog-menu__item">
+        <span>Керамічні блоки</span>
+        <ul>
+          <li class="catalog-menu__item">
+            <a class="catalog-menu__link" href="#">Русиния</a>
+          </li>
+          <li class="catalog-menu__item">
+            <a class="catalog-menu__link" href="#">Керамкомфорт</a>
+          </li>
+          <li class="catalog-menu__item">
+            <a class="catalog-menu__link" href="#">Кератерм</a>
+          </li>
+          <li class="catalog-menu__item">
+            <a class="catalog-menu__link" href="#">Porotherm</a>
+          </li>
+          <li class="catalog-menu__item">
+            <a class="catalog-menu__link" href="#">Leier</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <nav id="main-menu" class="main-menu">
+    <h4 class="visually-hidden">Головне меню сайту</h4>
+    <ul class="main-menu__list">
+      <li class="main-menu__item">
+        <a class="main-menu__link" href="#">Акції</a>
+      </li>
+      <li class="main-menu__item">
+        <a class="main-menu__link" href="#">Бренди</a>
+      </li>
+      <li class="main-menu__item">
+        <a class="main-menu__link" href="#">Калькулятор</a>
+      </li>
+      <li class="main-menu__item">
+        <a class="main-menu__link" href="#">Статті</a>
+      </li>
+      <li class="main-menu__item">
+        <a class="main-menu__link" href="#">Контакти</a>
+      </li>
+      <li class="main-menu__item  main-menu__item--mob-only">
+        <a class="main-menu__link" href="#">Доставка та оплата</a>
+      </li>
+      <li class="main-menu__item  main-menu__item--mob-only">
+        <a class="main-menu__link" href="#">Про компанію</a>
+      </li>
+      <li class="main-menu__item  main-menu__item--mob-only">
+        <a class="main-menu__link" href="#">Вакансії</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="modal  phones-modal  fade" id="phones-modal" tabindex="-1" role="dialog" aria-labelledby="phones-modal-title" aria-hidden="true" aria-modal="true">
+    <div class="modal-dialog  modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="phones-modal-title">Телефонуйте нам</h4>
+          <button type="button" class="btn  btn--icon  close" data-dismiss="modal" aria-label="Close">
+            <svg width="20" height="20" aria-hidden="true">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#close"/>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body  phones-modal__body">
+          <ul class="phones-modal__list">
+            <li class="phones-modal__item">
+              <a class="phones-modal__link" href="tel:+380684555544">+38 (068) 455 55 44</a>
+            </li>
+            <li class="phones-modal__item">
+              <a class="phones-modal__link" href="tel:+380684555544">+38 (068) 455 55 44</a>
+            </li>
+            <li class="phones-modal__item">
+              <a class="phones-modal__link" href="tel:+380684555544">+38 (068) 455 55 44</a>
+            </li>
+            <li class="phones-modal__item">
+              <a class="phones-modal__link" href="tel:+380684555544">+38 (068) 455 55 44</a>
+            </li>
+          </ul>
+          <p class="phones-modal__worktime"><span>08:00 - 20:00</span>&emsp;<span>Без выходных</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/picturefill.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.mmenu.all.js"></script>
+  <script src="js/svg4everybody.min.js"></script>
+  <script src="js/isMobile.min.js"></script>
+  <script src="js/nouislider.min.js"></script>
+  <script src="js/ofi.min.js"></script>
+  <script src="js/util.min.js"></script>
+  <script src="js/script.min.js"></script>
+</body>
+</html>
