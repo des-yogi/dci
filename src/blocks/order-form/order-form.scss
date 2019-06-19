@@ -1,6 +1,11 @@
 .order-form {
-  margin: 50px 0;
+  margin: 30px 0;
   background-color: $white;
+
+  @media (min-width: $screen-md) {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 

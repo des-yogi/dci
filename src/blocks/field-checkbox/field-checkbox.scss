@@ -53,9 +53,9 @@ $line-height:                 1.375em !default;
     &:before {
       content: '';
       position: absolute;
-      top: 50%;
+      top: 8px;
       left: 25px;
-      transform: translateY(-55%);
+      // transform: translateY(-55%);
       width: 22px;
       height: 22px;
       background-image: svg-load('../blocks/field-checkbox/img_to_bg/checkbox.svg', fill=$icon-color);

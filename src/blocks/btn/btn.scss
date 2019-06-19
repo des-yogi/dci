@@ -18,7 +18,7 @@
   line-height: $line-height;
   text-decoration: none;
   text-transform: none;
-  color: $icon-color;
+  color: $main-color;
   border-radius: $border-radius;
   border: $border-btn;
   background-color: $white;
@@ -58,7 +58,8 @@
 
   &--icon {
     position: relative;
-    color: $icon-color;
+    color: $main-color;
+    border: none;
 
     svg {
       display: block;
