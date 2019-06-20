@@ -333,6 +333,11 @@ hr {
   @include col(xs, 12, $grid-columns, 20px);
   @include col(md, 6);
   @include col(lg, 4);
+  margin-bottom: 15px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 25px;
+  }
 }
 
 .list-nostyled {
