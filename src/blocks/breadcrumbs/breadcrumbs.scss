@@ -3,6 +3,7 @@ $line-height:                 1.375em !default;
 $text-color:                  hsl(0, 0%, 10%) !default;
 
 .breadcrumbs {
+  margin-bottom: 25px;
 
   $block-name:                &;
   // #{$block-name}__element

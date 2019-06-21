@@ -35,4 +35,11 @@
       object-position: center;
     }
   }
+
+  &--nolink {
+    &:hover,
+    &:focus {
+      box-shadow: $shadow;
+    }
+  }
 }

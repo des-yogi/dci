@@ -69,7 +69,11 @@
     "sf-menu": [],
     "category-item": [],
     "aside-nav": [],
-    "brand-card": []
+    "brand-card": [],
+    "brand-intro": [],
+    "products-container": [],
+    "product-card": [],
+    "filter-controls-block": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
