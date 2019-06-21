@@ -5,4 +5,27 @@
   &:not( .mm-menu ) {
      display: none;
   }
+
+  &__catalog-menu-toggler {
+
+    @media (min-width: $screen-xl) {
+      display: none !important;
+    }
+  }
+}
+
+
+#mm-catalog-menu {
+  display: none !important;
+
+  @media (min-width: $screen-xl) {
+    display: block !important;
+  }
+}
+
+#catalog-menu {
+
+  @media (min-width: $screen-xl) {
+    display: none !important;
+  }
 }

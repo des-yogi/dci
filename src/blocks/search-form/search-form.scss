@@ -17,9 +17,12 @@
     border: none;
     //background-color: red;
     border: $border-btn;
+    border-right: 0;
   }
 
   &__submit {
     background-color: $body-bg;
+    border: $border-btn;
+    border-left: 0;
   }
 }

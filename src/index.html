@@ -8,7 +8,7 @@
   @@include('_include/page_head.html')
 </head>
 
-<body><noscript>У вас отключен JavaScript. Это делает невозможным использование нашего сайта.</noscript>
+<body><noscript>У вас отключен JavaScript. Это делает затруднительным использование нашего сайта.</noscript>
 
   <div id="page" class="page__inner">
 
@@ -30,9 +30,15 @@
                     <div class="main-slider__img-col">
                       <div class="main-slider__img-wrapper  embed-responsive  embed-responsive--4-3">
                         <picture>
+                          <source class="owl-lazy" data-srcset="img/main-slider-img.webp" media="(min-width: 768px)" type="image/webp">
                           <source class="owl-lazy" data-srcset="img/main-slider-img.jpg" media="(min-width: 768px)">
-                            <source class="owl-lazy" data-srcset="img/main-slider-img.jpg" media="(min-width: 480px)">
+                          <!-- От 768 и выше: 510x382 -->
+                          <source class="owl-lazy" data-srcset="img/main-slider-img.webp" media="(min-width: 480px)" type="image/webp">
+                          <source class="owl-lazy" data-srcset="img/main-slider-img.jpg" media="(min-width: 480px)">
+                          <!-- От 480 до 768: 620x465 -->
+                          <source class="owl-lazy" data-src="img/main-slider-img.webp" type="image/webp">
                           <img class="owl-lazy" data-src="img/main-slider-img.jpg" alt="Название слайда" width="400" height="300">
+                          <!-- Изначальное изображение 480x360px -->
                         </picture>
                       </div>
                     </div>
@@ -49,7 +55,12 @@
                               <a href="#" class="btn  btn--main">Смотреть в каталоге</a>
                             </div>
                             <div class="main-slider__logo-wrapper-col">
-                              <img src="img/aeroc-logo.jpg" alt="Aeroc" width="115">
+                              <a href="#" title="Aeroc">
+                                <picture>
+                                  <source srcset="img/aeroc-logo.webp" type="image/webp">
+                                  <img src="img/aeroc-logo.jpg" alt="Aeroc" width="115">
+                                </picture>
+                              </a>
                             </div>
                           </div>
                         </div>
@@ -67,9 +78,15 @@
                     <div class="main-slider__img-col">
                       <div class="main-slider__img-wrapper  embed-responsive  embed-responsive--4-3">
                         <picture>
+                          <source class="owl-lazy" data-srcset="img/main-slider-img.webp" media="(min-width: 768px)" type="image/webp">
                           <source class="owl-lazy" data-srcset="img/main-slider-img.jpg" media="(min-width: 768px)">
-                            <source class="owl-lazy" data-srcset="img/main-slider-img.jpg" media="(min-width: 480px)">
+                          <!-- От 768 и выше: 510x382 -->
+                          <source class="owl-lazy" data-srcset="img/main-slider-img.webp" media="(min-width: 480px)" type="image/webp">
+                          <source class="owl-lazy" data-srcset="img/main-slider-img.jpg" media="(min-width: 480px)">
+                          <!-- От 480 до 768: 620x465 -->
+                          <source class="owl-lazy" data-src="img/main-slider-img.webp" type="image/webp">
                           <img class="owl-lazy" data-src="img/main-slider-img.jpg" alt="Название слайда" width="400" height="300">
+                          <!-- Изначальное изображение 480x360px -->
                         </picture>
                       </div>
                     </div>
@@ -86,7 +103,12 @@
                               <a href="#" class="btn  btn--main">Смотреть в каталоге</a>
                             </div>
                             <div class="main-slider__logo-wrapper-col">
-                              <img src="img/aeroc-logo.jpg" alt="Aeroc" width="115">
+                              <a href="#" title="Aeroc">
+                                <picture>
+                                  <source srcset="img/aeroc-logo.webp" type="image/webp">
+                                  <img src="img/aeroc-logo.jpg" alt="Aeroc" width="115">
+                                </picture>
+                              </a>
                             </div>
                           </div>
                         </div>
@@ -104,9 +126,15 @@
                     <div class="main-slider__img-col">
                       <div class="main-slider__img-wrapper  embed-responsive  embed-responsive--4-3">
                         <picture>
+                          <source class="owl-lazy" data-srcset="img/main-slider-img.webp" media="(min-width: 768px)" type="image/webp">
                           <source class="owl-lazy" data-srcset="img/main-slider-img.jpg" media="(min-width: 768px)">
-                            <source class="owl-lazy" data-srcset="img/main-slider-img.jpg" media="(min-width: 480px)">
+                          <!-- От 768 и выше: 510x382 -->
+                          <source class="owl-lazy" data-srcset="img/main-slider-img.webp" media="(min-width: 480px)" type="image/webp">
+                          <source class="owl-lazy" data-srcset="img/main-slider-img.jpg" media="(min-width: 480px)">
+                          <!-- От 480 до 768: 620x465 -->
+                          <source class="owl-lazy" data-src="img/main-slider-img.webp" type="image/webp">
                           <img class="owl-lazy" data-src="img/main-slider-img.jpg" alt="Название слайда" width="400" height="300">
+                          <!-- Изначальное изображение 480x360px -->
                         </picture>
                       </div>
                     </div>
@@ -123,7 +151,12 @@
                               <a href="#" class="btn  btn--main">Смотреть в каталоге</a>
                             </div>
                             <div class="main-slider__logo-wrapper-col">
-                              <img src="img/aeroc-logo.jpg" alt="Aeroc" width="115">
+                              <a href="#" title="Aeroc">
+                                <picture>
+                                  <source srcset="img/aeroc-logo.webp" type="image/webp">
+                                  <img src="img/aeroc-logo.jpg" alt="Aeroc" width="115">
+                                </picture>
+                              </a>
                             </div>
                           </div>
                         </div>
@@ -141,9 +174,15 @@
                     <div class="main-slider__img-col">
                       <div class="main-slider__img-wrapper  embed-responsive  embed-responsive--4-3">
                         <picture>
-                          <source srcset="img/main-slider-img.jpg" media="(min-width: 768px)">
-                          <source srcset="img/main-slider-img.jpg" media="(min-width: 480px)">
-                          <img src="img/main-slider-img.jpg" alt="Название слайда" width="400" height="300">
+                          <source class="owl-lazy" data-srcset="img/main-slider-img.webp" media="(min-width: 768px)" type="image/webp">
+                          <source class="owl-lazy" data-srcset="img/main-slider-img.jpg" media="(min-width: 768px)">
+                          <!-- От 768 и выше: 510x382 -->
+                          <source class="owl-lazy" data-srcset="img/main-slider-img.webp" media="(min-width: 480px)" type="image/webp">
+                          <source class="owl-lazy" data-srcset="img/main-slider-img.jpg" media="(min-width: 480px)">
+                          <!-- От 480 до 768: 620x465 -->
+                          <source class="owl-lazy" data-src="img/main-slider-img.webp" type="image/webp">
+                          <img class="owl-lazy" data-src="img/main-slider-img.jpg" alt="Название слайда" width="400" height="300">
+                          <!-- Изначальное изображение 480x360px -->
                         </picture>
                       </div>
                     </div>
@@ -160,7 +199,12 @@
                               <a href="#" class="btn  btn--main">Смотреть в каталоге</a>
                             </div>
                             <div class="main-slider__logo-wrapper-col">
-                              <img src="img/aeroc-logo.jpg" alt="Aeroc" width="115">
+                              <a href="#" title="Aeroc">
+                                <picture>
+                                  <source srcset="img/aeroc-logo.webp" type="image/webp">
+                                  <img src="img/aeroc-logo.jpg" alt="Aeroc" width="115">
+                                </picture>
+                              </a>
                             </div>
                           </div>
                         </div>
@@ -323,7 +367,7 @@
 
         <div class="container">
 
-          <article class="seo-text">
+          <article class="seo-text-block">
             <h2>Заголовок SEO текста</h2>
             <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Составитель своих пустился щеке. Ему заманивший оксмокс парадигматическая семь его повстречался, журчит текста, свой строчка силуэт реторический? Знаках, своих строчка? Гор над ему, строчка рекламных.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, blanditiis dolore, labore enim placeat ex assumenda, ad aut aliquam obcaecati aperiam distinctio voluptates. Error necessitatibus impedit fugit dolor et, esse totam sunt distinctio dolorum aspernatur saepe, repellendus?</p>
@@ -347,11 +391,11 @@
   <!-- Навигация: Каталог и Главное меню. Общие для всего сайта -->
   @@include('blocks/catalog-menu/catalog-menu.html')
   @@include('blocks/main-menu/main-menu.html')
-  <!-- Навигация: Каталог и Главное меню. Общие для всего сайта -->
+
 
   <!-- Модалки общие для всего сайта -->
   @@include('blocks/phones-modal/phones-modal.html')
-  <!-- Модалки общие для всего сайта -->
+
 
   @@include('_include/page_bottom.html')
 

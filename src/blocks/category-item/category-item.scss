@@ -1,0 +1,27 @@
+.category-item {
+  display: block;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__img-wrapper {
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__link {
+    color: $title-color;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  &__title {
+    margin-top: 20px;
+    color: currentColor;
+  }
+}

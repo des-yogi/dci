@@ -423,7 +423,7 @@ gulp.task('img:opt', function (callback) {
   const pngquant = require('imagemin-pngquant');
   if(folder){
     console.log('---------- Оптимизация картинок');
-    return gulp.src(folder + '/*.{jpg,jpeg,gif,png,svg}')
+    return gulp.src(folder + '/*.{jpg,jpeg,gif,png,svg,webp}')
       .pipe(imagemin({
         progressive: true,
         svgoPlugins: [{removeViewBox: false}],
@@ -590,7 +590,7 @@ function getFilesList(config){
       }
 
       // Картинки (тупо от всех блоков, без проверки)
-      res.img.push(config.dirs.srcPath + config.dirs.blocksDirName + '/' + blockName + '/img/*.{jpg,jpeg,gif,png,svg}');
+      res.img.push(config.dirs.srcPath + config.dirs.blocksDirName + '/' + blockName + '/img/*.{jpg,jpeg,gif,png,svg,webp}');
 
       // Список директорий
       res.blocksDirs.push(config.dirs.blocksDirName + '/' + blockName + '/');

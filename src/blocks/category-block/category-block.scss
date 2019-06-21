@@ -13,6 +13,12 @@
     padding-right: 25px;
   }
 
+  &:hover,
+  &:focus {
+    outline: none;
+    box-shadow: $shadow--hover;
+  }
+
   $block-name:                &; // #{$block-name}__element
 
   &__link {

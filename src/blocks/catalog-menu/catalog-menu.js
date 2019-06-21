@@ -22,6 +22,7 @@ $(document).ready(function() {
   }, {
      // configuration
      offCanvas: {
+        clone: true,
         pageSelector: '#page'
      }
   });
