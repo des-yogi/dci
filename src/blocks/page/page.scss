@@ -238,6 +238,61 @@ hr {
     }
   }
 
+  &--article {
+
+    .aside-col {
+      order: 1;
+
+      @media (min-width: $screen-lg) {
+        order: 0;
+      }
+    }
+
+    .breadcrumbs {
+
+      &__item,
+      &__link {
+        color: $white !important;
+
+        &::after {
+          color: inherit;
+        }
+      }
+
+      &__item {
+
+        &:last-child {
+          opacity: 0.75;
+
+          a:hover,
+          a:focus {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 95px;
+      background-color: $main-color;
+      background-image: url(../img/main-content-bg-mobile@1x.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
+      @media (min-width: $screen-md) {
+        height: 195px;
+        background-image: url(../img/main-content-bg-tablet@1x.jpg);
+      }
+    }
+  }
 }
 
 // Родитель. Указаны промежутки между ячейками: XS|SM|MD|LG|XL|XXL;
@@ -251,6 +306,15 @@ hr {
     $xl-grid-gutter:  $grid-gutter-width,
     $xxl-grid-gutter: $grid-gutter-width
   );
+
+  /* &--fullwidth {
+    $xs-grid-gutter:  10px,
+    $sm-grid-gutter:  10px,
+    $md-grid-gutter:  $grid-gutter-width,
+    $lg-grid-gutter:  $grid-gutter-width,
+    $xl-grid-gutter:  $grid-gutter-width,
+    $xxl-grid-gutter: $grid-gutter-width
+  } */
 }
 
 .col-1-full {
@@ -329,6 +393,16 @@ hr {
   @include col(md, 12);
   @include col(lg, 8);
   @include col(xl, 9);
+
+  &--fullwidth {
+    @include col(lg, 12);
+    @include col(xl, 12);
+    margin-bottom: 15px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 25px;
+    }
+  }
 }
 
 .content-item-col {
@@ -353,6 +427,14 @@ hr {
 
   @media (min-width: $screen-md) {
     margin-bottom: 25px;
+  }
+
+  &--fullwidth {
+
+    @media (min-width: $screen-xl) {
+      flex-basis: 100%;
+      max-width: none;
+    }
   }
 }
 

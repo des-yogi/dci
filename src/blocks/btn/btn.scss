@@ -47,7 +47,7 @@
   &:disabled {
     // opacity: $opacity;
     cursor: not-allowed;
-    color: $text-color;
+    color: $text-muted;
     background-color: $gray-lightest;
     border-color: $gray-lighter;
 
@@ -69,6 +69,20 @@
       transform: translate(-50%, -50%);
       margin: auto;
       fill: currentColor;
+    }
+
+    &--disabled {
+      cursor: not-allowed;
+      color: $text-muted;
+      background-color: $gray-lightest;
+      border-color: $gray-lighter;
+
+      &:hover,
+      &:focus {
+        color: $text-muted;
+        background-color: $gray-lightest;
+        border-color: $gray-lighter;
+      }
     }
   }
 
@@ -144,6 +158,17 @@
       color: $main-color;
       background-color: $white;
       border-color: $white;
+    }
+  }
+
+  &--crumbs {
+    font-weight: 500;
+    line-height: 28px;
+    color: $text-color;
+    border: none;
+
+    @media (min-width: $screen-xl) {
+      line-height: 32px;
     }
   }
 }

@@ -73,7 +73,10 @@
     "brand-intro": [],
     "products-container": [],
     "product-card": [],
-    "filter-controls-block": []
+    "filter-controls-block": [],
+    "more-news-block": [],
+    "article": [],
+    "social-share": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

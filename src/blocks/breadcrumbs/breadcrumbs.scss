@@ -20,7 +20,7 @@ $text-color:                  hsl(0, 0%, 10%) !default;
     margin-right: 0.6em;
     white-space: nowrap;
 
-    &:not(:last-child):after {
+    &:not(:last-child)::after {
       content: '|';
       display: inline-block;
       margin-left: 0.8em;
@@ -45,7 +45,7 @@ $text-color:                  hsl(0, 0%, 10%) !default;
     &:hover,
     &:focus {
       color: $main-color;
-      text-decoration: none;
+      //text-decoration: none;
     }
   }
 }
