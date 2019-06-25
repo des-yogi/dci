@@ -8,7 +8,6 @@
 @import './src/scss/mixins.scss';
 @import './src/scss/functions.scss';
 @import '../../node_modules/owl.carousel/dist/assets/owl.carousel.css';
-@import '../../node_modules/nouislider/distribute/nouislider.css';
 @import './src/blocks/mmenu/mmenu.scss';
 @import './src/blocks/accordion/accordion.scss';
 @import './src/blocks/breadcrumbs/breadcrumbs.scss';
@@ -82,4 +81,6 @@
 @import './src/blocks/more-news-block/more-news-block.scss';
 @import './src/blocks/article/article.scss';
 @import './src/blocks/social-share/social-share.scss';
+@import './src/blocks/brands-logo-block/brands-logo-block.scss';
+@import './src/blocks/prod-filters-block/prod-filters-block.scss';
 @import './src/scss/print.scss';

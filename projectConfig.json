@@ -76,14 +76,15 @@
     "filter-controls-block": [],
     "more-news-block": [],
     "article": [],
-    "social-share": []
+    "social-share": [],
+    "brands-logo-block": [],
+    "prod-filters-block": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
     "./src/scss/mixins.scss",
     "./src/scss/functions.scss",
     "../../node_modules/owl.carousel/dist/assets/owl.carousel.css",
-    "../../node_modules/nouislider/distribute/nouislider.css",
     "./src/blocks/mmenu/mmenu.scss"
   ],
   "addCssAfter": [
@@ -100,6 +101,7 @@
   "copiedCss": [],
   "copiedJs": [
     "./node_modules/picturefill/dist/picturefill.min.js",
+    "./node_modules/nouislider/distribute/nouislider.min.js",
     "./src/js/libs/popper.min.js",
     "./node_modules/jquery/dist/jquery.min.js",
     "./node_modules/owl.carousel/dist/owl.carousel.min.js",
@@ -107,7 +109,6 @@
     "./node_modules/superfish/dist/js/hoverIntent.js",
     "./node_modules/svg4everybody/dist/svg4everybody.min.js",
     "./node_modules/ismobilejs/dist/isMobile.min.js",
-    "./node_modules/nouislider/distribute/nouislider.min.js",
     "./node_modules/blazy/blazy.min.js",
     "./node_modules/object-fit-images/dist/ofi.min.js",
     "./src/js/libs/util.min.js"

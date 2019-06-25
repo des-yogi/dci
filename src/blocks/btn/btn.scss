@@ -127,6 +127,81 @@
     }
   }
 
+  &--outline {
+    position: relative;
+    min-width: 42px;
+    min-height: 42px;
+
+    @media (min-width: $screen-md) {
+      width: calc(50% - 12px);
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+
+    &:hover,
+    &:focus {
+
+      &::after {
+        background: svg-load('../blocks/sprite-svg/svg/right-arrow.svg', fill=$white);
+      }
+    }
+
+    &::after {
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      content: "";
+      width: 13px;
+      height: 15px;
+      background: svg-load('../blocks/sprite-svg/svg/right-arrow.svg', fill=$main-color);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    & > span {
+      display: none;
+
+      @media (min-width: $screen-md) {
+        display: inline-block;
+        vertical-align: middle;
+        transform: translateY(2px);
+      }
+    }
+
+    &--left {
+
+      @media (min-width: $screen-md) {
+        text-align: right;
+      }
+
+      &::after {
+        left: 12px;
+        transform: translateY(-50%) rotate(180deg);
+
+        @media (min-width: $screen-md) {
+          left: 15px;
+        }
+      }
+    }
+
+    &--right {
+
+      @media (min-width: $screen-md) {
+        text-align: left;
+      }
+
+      &::after {
+        right: 12px;
+
+        @media (min-width: $screen-md) {
+          right: 15px;
+        }
+      }
+    }
+  }
+
   &--readmore {
     position: relative;
     padding-top: 9px;

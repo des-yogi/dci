@@ -283,6 +283,7 @@ hr {
       height: 95px;
       background-color: $main-color;
       background-image: url(../img/main-content-bg-mobile@1x.jpg);
+      background-image: url(../img/main-content-bg-mobile@1x.webp);
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -290,6 +291,7 @@ hr {
       @media (min-width: $screen-md) {
         height: 195px;
         background-image: url(../img/main-content-bg-tablet@1x.jpg);
+        background-image: url(../img/main-content-bg-tablet@1x.webp);
       }
     }
   }
@@ -306,15 +308,6 @@ hr {
     $xl-grid-gutter:  $grid-gutter-width,
     $xxl-grid-gutter: $grid-gutter-width
   );
-
-  /* &--fullwidth {
-    $xs-grid-gutter:  10px,
-    $sm-grid-gutter:  10px,
-    $md-grid-gutter:  $grid-gutter-width,
-    $lg-grid-gutter:  $grid-gutter-width,
-    $xl-grid-gutter:  $grid-gutter-width,
-    $xxl-grid-gutter: $grid-gutter-width
-  } */
 }
 
 .col-1-full {
@@ -398,9 +391,17 @@ hr {
     @include col(lg, 12);
     @include col(xl, 12);
     margin-bottom: 15px;
+    background-color: $white;
+    box-shadow: $shadow;
 
     @media (min-width: $screen-md) {
       margin-bottom: 25px;
+      background-color: rgba(255, 255, 255, 0);
+      box-shadow: none;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 0;
     }
   }
 }

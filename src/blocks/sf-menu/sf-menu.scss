@@ -58,6 +58,10 @@
   padding: 15px 25px;
   text-decoration: none;
   zoom: 1; /* IE7 */
+
+  &:first-child {
+    border: none;
+  }
 }
 .sf-menu a {
   color: inherit;
