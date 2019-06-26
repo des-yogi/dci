@@ -461,6 +461,39 @@ hr {
   list-style: none;
 }
 
+.owl-dots {
+  pointer-events: none;
+
+  .owl-dot {
+    pointer-events: auto;
+  }
+}
+
+.dot {
+
+  @media (min-width: $screen-sm) {
+    display: none;
+  }
+}
+
+.part {
+  display: none;
+
+  @media (min-width: $screen-sm) {
+    display: inline;
+  }
+}
+
+*:not(img)::selection {
+  color: $white;
+  background-color: $main-color; /* Safari, Chrome, Opera */
+}
+
+*:not(img)::-moz-selection {
+  color: $white;
+  background-color: $main-color; /* FireFox */
+}
+
 /* &__element {
   @include col(); // малые ширины — 12 из 12, промежутки по умолчанию
   @include col(sm, 6, $grid-columns, 10px);  // SM (480 по умолчанию) — 6 из 12, промежутки 10px
