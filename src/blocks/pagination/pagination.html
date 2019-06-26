@@ -1,22 +1,37 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/pagination/pagination.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="pagination">
-  <a href="" class="pagination__item">1</a>
-  <span class="pagination__item">...</span>
-  <a href="" class="pagination__item">5</a>
-  <a href="" class="pagination__item  pagination__item--active">6</a>
-  <a href="" class="pagination__item">123</a>
-  <span class="pagination__item">...</span>
-  <a href="" class="pagination__item">999</a>
-</div>
-
 -->
+
+<div class="pagination" aria-label="Breadcrumb" role="navigation">
+  <ol class="pagination__list">
+
+    <li class="pagination__item">
+      <a class="btn  btn--icon  btn--icon--disabled" aria-label="Предыдущая страница">
+        <svg width="13" height="15" role="img">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#left-arrow"></use>
+        </svg>
+      </a>
+    </li>
+
+    <li class="pagination__item  active">
+      <a class="btn  btn--crumbs  pagination__link">1</a>
+    </li>
+
+    <li class="pagination__item">
+      <a href="#" class="btn  btn--crumbs  pagination__link">2</a>
+    </li>
+
+    <li class="pagination__item">
+      <a href="#" class="btn  btn--crumbs  pagination__link">3</a>
+    </li>
+
+    <li class="pagination__item">
+      <a href="#" class="btn  btn--icon" aria-label="Следующая страница">
+        <svg width="13" height="15" role="img">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#right-arrow"></use>
+        </svg>
+      </a>
+    </li>
+
+  </ol>
+</div>

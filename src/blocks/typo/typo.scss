@@ -105,6 +105,7 @@ h6 {
 
     &:hover,
     &:focus {
+      color: $main-color;
       text-decoration: none;
     }
   }
