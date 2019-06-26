@@ -17,8 +17,16 @@ $text-color:                  hsl(0, 0%, 10%) !default;
 
   &__item {
     display: inline-block;
+    vertical-align: baseline;
+    max-width: 100%;
     margin-right: 0.6em;
-    white-space: nowrap;
+    margin-bottom: 0.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
 
     &:not(:last-child)::after {
       content: '|';
@@ -31,16 +39,19 @@ $text-color:                  hsl(0, 0%, 10%) !default;
     &:last-child {
 
       #{$block-name}__link {
+        text-decoration: none;
         color: $main-color;
       }
     }
   }
 
   &__link {
+    max-width: 100%;
     font-size: 14px;
     font-weight: 500;
     color: $text-muted;
     text-decoration: none;
+    white-space: nowrap;
 
     &:hover,
     &:focus {

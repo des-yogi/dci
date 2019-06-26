@@ -71,6 +71,7 @@
     "yaspeller": "^5.0.1"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "blazy": "^1.8.2",
     "ismobilejs": "^0.5.2",
     "jquery": "^3.4.1",

@@ -78,13 +78,16 @@
     "article": [],
     "social-share": [],
     "brands-logo-block": [],
-    "prod-filters-block": []
+    "prod-filters-block": [],
+    "product-slider": [],
+    "product-tabs": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
     "./src/scss/mixins.scss",
     "./src/scss/functions.scss",
     "../../node_modules/owl.carousel/dist/assets/owl.carousel.css",
+    "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css",
     "./src/blocks/mmenu/mmenu.scss"
   ],
   "addCssAfter": [
@@ -104,6 +107,7 @@
     "./node_modules/nouislider/distribute/nouislider.min.js",
     "./src/js/libs/popper.min.js",
     "./node_modules/jquery/dist/jquery.min.js",
+    "./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js",
     "./node_modules/owl.carousel/dist/owl.carousel.min.js",
     "./node_modules/jquery.mmenu/dist/jquery.mmenu.all.js",
     "./node_modules/superfish/dist/js/hoverIntent.js",
