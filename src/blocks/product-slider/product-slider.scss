@@ -14,6 +14,7 @@
   }
 
   &__slider-col {
+    position: relative;
     @include col(xs, 12, $grid-columns, 20px);
     @include col(md, 12);
     @include col(xl, 4);
@@ -34,6 +35,18 @@
   &__container {
     background-color: $white;
     box-shadow: $shadow;
+
+    /* &::before {
+      display: block;
+      content: "Новинка";
+      z-index: 10;
+      position: absolute;
+      left: 0;
+      top: 20px;
+      width: auto;
+      padding: 10px;
+      background-color: yellow;
+    } */
   }
 
   &__item {
@@ -276,5 +289,11 @@
     &:focus {
       background-color: $main-color--hover;
     }
+  }
+
+  &__special-mark {
+    z-index: 5;
+    top: 30px;
+    left: 10px;
   }
 }

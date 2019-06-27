@@ -69,6 +69,7 @@ $block-name:                &; // #{$block-name}__element
   }
 
   &__gallery-item {
+    cursor: zoom-in;
 
     img {
       object-fit: contain;
