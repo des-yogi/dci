@@ -43,4 +43,13 @@ $(document).ready(function(){
     center: true
   });
 
+  $("#product-slider").owlCarousel({
+    items: 1,
+    margin: 10,
+    lazyLoad: true,
+    nav: true,
+    loop: false,
+    center: true
+  });
+
 });

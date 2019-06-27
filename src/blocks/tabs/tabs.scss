@@ -1,231 +1,200 @@
-/* colors */
-$blue: #428BFF;
-$red: #FF4A53;
-$dark: #333;
+$gray-lightest:               hsl(0, 0%, 90%) !default;
 
-$accent: $blue;
-$accent-inactive: desaturate($accent, 85%);
-$secondary: $accent-inactive;
+$text-color:                  hsl(0, 0%, 10%) !default;
+$text-color--muted:           hsl(0, 0%, 50%) !default;
 
+$border-color:                hsl(0, 0%, 60%) !default;
 
-/* tab setting */
-$tab-count: 4;
-$indicator-width: 50px;
-$indicator-height: 4px;
+$line-height:                 1.375em !default;
 
-/* breakpoints */
-$breakpoints: (
-  medium: #{$tab-count*250px},
-  small: #{$tab-count*150px}
-);
-
-
-/* selectors relative to radio inputs */
-$label-selector: "~ ul > li";
-$slider-selector: "~ .slider";
-$content-selector: "~ .content > section";
-
-@mixin tabs(
-  $label-selector: $label-selector,
-  $slider-selector: $slider-selector,
-  $content-selector: $content-selector) {
-
-  @for $i from 1 through $tab-count {
-    &:nth-of-type(#{$i}):checked {
-      #{$label-selector}:nth-child(#{$i}) {
-        @content;
-      }
-
-      #{$slider-selector} {
-        transform: translateX(#{100% * ($i - 1)});
-      }
-
-      #{$content-selector}:nth-child(#{$i}) {
-        display: block;
-      }
-    }
-  }
-}
-
-input[name="tab-control"] {
-  @include tabs {
-    > label {
-      cursor: default;
-      color: $accent;
-
-      /* svg {
-        fill: $accent;
-      } */
-
-      @media (max-width: map-get($breakpoints, small)) {
-        background: rgba(0, 0, 0, 0.08);
-      }
-    }
-  }
-}
-
-@keyframes content {
-  from {
-    opacity: 0;
-    transform: translateY(5%);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-}
+$field-padding-vertical:      0.3em !default;
+$field-padding-horizontal:    0.7em !default;
 
 .tabs {
-  left: 50%;
-  transform: translateX(-50%);
-  position: relative;
-  background: white;
-  padding: 50px;
-  padding-bottom: 80px;
-  width: 70%;
-  height: 250px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  border-radius: 5px;
-  min-width: #{$tab-count * 60px};
-  input[name="tab-control"] {
-    display: none;
-  }
 
   $block-name:                &; // #{$block-name}__element
 
-  &__list {
-    list-style-type: none;
-    padding-left: 0;
+  // margin-top: $line-height;
+  // margin-bottom: $line-height;
+
+  &__links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
     display: flex;
-    flex-direction: row;
-    margin-bottom: 10px;
-    justify-content: space-between;
-    align-items: flex-end;
     flex-wrap: wrap;
+    justify-content: space-between;
+    //align-items: flex-end;
+
+    @media (min-width: $screen-md) {
+      justify-content: flex-start;
+      padding-top: 15px;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-bottom: 2px solid $body-bg;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding: 15px 25px 0;
+    }
+
+    .no-js & {
+      display: none;
+    }
+
+    /* &:after {
+      content: '';
+      flex-grow: 1;
+      height: 1px;
+      background-color: $border-color;
+    } */
   }
 
-  &__item {
-    box-sizing: border-box;
-    flex: 1;
-    width: #{100%/$tab-count};
-    padding: 0 10px;
-    text-align: center;
+  &__link-wrap {
+    //flex-grow: 1;
+    position: relative;
+    width: calc(50% - 7px);
+    margin-bottom: 15px !important;
+
+    @media (min-width: $screen-md) {
+      width: auto;
+      margin-bottom: 0 !important;
+    }
+
+    &:not(:last-child) {
+      border-right: none;
+    }
 
     &--active {
 
-    }
+      &::after {
 
+        @media (min-width: $screen-md) {
+          display: block;
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: -3px;
+          width: 100%;
+          height: 4px;
+          background-color: $main-color;
+        }
+      }
+
+      #{$block-name}__link {
+        color: $white;
+        background-color: $main-color;
+
+        @media (min-width: $screen-md) {
+          color: $title-color;
+          background-color: $white;
+          box-shadow: none;
+        }
+      }
+    }
   }
 
-  &__control {
-    transition: all 0.3s ease-in-out;
-    color: $secondary;
-    padding: 5px auto;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  &__link {
     display: block;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
+    //$font-size: 12px;
+    font-size: 12px;
+    line-height: $font-size * 2;
+    text-decoration: none;
     white-space: nowrap;
-    -webkit-touch-callout: none;
-    user-select: none;
+    cursor: pointer;
 
     &:hover,
     &:focus,
     &:active {
-      outline: 0;
-      color: lighten($secondary, 15%);
+
+      @media (min-width: $screen-md) {
+        color: $title-color;
+        background-color: $white;
+        box-shadow: none;
+      }
     }
-  }
 
-  &__slider {
-    position: relative;
-    width: #{100%/$tab-count};
-    transition: all 0.33s cubic-bezier(0.38, 0.8, 0.32, 1.07);
-  }
+    @media (min-width: $screen-sm) {
+      font-size: 14px;
+    }
 
-  &__indicator {
-    position: relative;
-    width: $indicator-width;
-    max-width: 100%;
-    margin: 0 auto;
-    height: $indicator-height;
-    background: $accent;
-    border-radius: 1px;
-  }
-
-  &__content {
-    margin-top: 30px;
-
-    section h2,
-    ul li label {
-      font-family: sans-serif;
-      font-weight: bold;
+    @media (min-width: $screen-md) {
+      padding-top: 5px;
+      padding-bottom: 7px;
+      padding-left: 25px;
+      padding-right: 25px;
       font-size: 18px;
-      color: $accent;
+      border: none;
+      color: $text-muted;
     }
 
-    h2 {
-      color: $accent;
-      display: none;
-      &::after {
-        content: "";
-        position: relative;
-        display: block;
-        width: 30px;
-        height: 3px;
-        background: $accent;
-        margin-top: 5px;
-        left: 1px;
-      }
+    @media (min-width: $screen-xl) {
+      padding-bottom: 12px;
     }
   }
 
-  &__panel {
-    display: none;
-    line-height: 1.4;
-    animation: {
-      name: content;
-      direction: normal;
-      duration: 0.3s;
-      timing-function: ease-in-out;
-      iteration-count: 1;
+  &__content-wrapper {
+    display: block;
+    padding: 15px 10px 15px;
+
+    @media (min-width: $screen-md) {
+      padding: 20px 20px 25px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding: 40px 25px 25px;
     }
   }
 
-  @media (max-width: map-get($breakpoints, medium)) {
-    ul li label {
-      white-space: initial;
+  &__content-item {
 
-      /* br {
-        display: initial;
-      }
-
-      svg {
-        height: 1.5em;
-      } */
-    }
-  }
-
-  @media (max-width: map-get($breakpoints, small)) {
-    ul li label {
-      padding: 5px;
-      border-radius: 5px;
-
-      span {
-        display: none;
-      }
+    h3 {
+      margin-top: 0;
     }
 
-    #{$block-name}__slider {
+    .js & {
       display: none;
     }
 
-    #{$block-name}__content {
-      margin-top: 20px;
-      section h2 {
+    &--active {
+
+      .js & {
         display: block;
       }
+    }
+  }
+
+  &__col-left {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col(md, 4);
+    margin-bottom: 15px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
+
+    &--equal {
+      @include col(md, 6);
+    }
+  }
+
+  &__col-right {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col(md, 8);
+
+    &--equal {
+      @include col(md, 6);
+    }
+  }
+
+  &__col-gallery {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col(md, 4);
+    margin-bottom: 15px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 25px;
     }
   }
 }

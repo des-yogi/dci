@@ -46,7 +46,6 @@
     "table": [],
     "table-mobile-scroll": [],
     "table-responsive": [],
-    "tabs": [],
     "typo": [],
     "social-contact": [],
     "lang-switcher": [],
@@ -80,7 +79,8 @@
     "brands-logo-block": [],
     "prod-filters-block": [],
     "product-slider": [],
-    "product-tabs": []
+    "product-tabs": [],
+    "tabs": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
