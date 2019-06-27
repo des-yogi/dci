@@ -1,5 +1,7 @@
 .publishedon {
-  display: block;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   position: relative;
   font-size: 14px;
   font-weight: 500;

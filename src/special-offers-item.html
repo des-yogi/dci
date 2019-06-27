@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk">
+
+<head>
+  <meta charset="utf-8">
+  <title>Акция Name | “Тайл” </title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body><noscript>У вас отключен JavaScript. Это делает затруднительным использование нашего сайта.</noscript>
+
+  <div id="page" class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      <main class="main-content  main-content--noindex" role="main">
+
+        <div class="container">
+
+          @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+          <section class="row  special-offer-item">
+
+              <div class="special-offer-item__img-col">
+                <div class="embed-responsive  embed-responsive--4-3  special-offer-item__img">
+                  <picture>
+                    <source data-srcset="img/special-offer-img-1.webp" media="(min-width: 992px)" type="image/webp">
+                    <source data-srcset="img/special-offer-img-1.jpg" media="(min-width: 992px)">
+                      <!-- От 992: 5100x382 -->
+                    <source data-srcset="img/special-offer-img-3.webp" media="(min-width: 768px)" type="image/webp">
+                    <source data-srcset="img/special-offer-img-3.jpg" media="(min-width: 768px)">
+                      <!-- От 768 до 992: 400x300 -->
+                    <source data-srcset="img/special-offer-img-2.webp" media="(min-width: 480px)" type="image/webp">
+                    <source data-srcset="img/special-offer-img-2.jpg" media="(min-width: 480px)">
+                      <!-- От 480 до 768: 580x435 -->
+                    <source data-srcset="img/special-offer-img-1.webp" type="image/webp">
+                    <img class="b-lazy" data-src="img/special-offer-img-1.jpg" alt="Название акции" width="460" height="345">
+                  </picture>
+                </div>
+              </div>
+
+              <div class="special-offer-item__text-col">
+                <div class="special-offer-item__descr">
+                  <h1 class="special-offer-item__title" id="special-offer-item-page">АКЦИЯ НА паркетную доску "БАРЛИНЕК"&shy;<span class="brand-intro__quantity">Товаров:&nbsp;<span>11</span></span></h1>
+                  <p>При единовременном заказе модифицированных смесей с суммарной массой упаковок более 10 тонн доставка по территории Москвы осуществляется бесплатно.</p>
+
+                  <div class="special-offer-item__bottom">
+                    @@include('blocks/publishedon/publishedon.html')
+                  </div>
+                </div>
+              </div>
+
+          </section>
+
+          <div class="row">
+
+            <div class="aside-col">
+              <aside class="aside-nav  dropdown">
+                <button class="btn  dropdown-toggle  aside-nav__toggler" type="button" id="asideMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Товары компании
+                </button>
+                <div class="dropdown-menu  aside-nav__menu" aria-labelledby="asideMenuButton" role="navigation">
+                  <h4 class="aside-nav__title">Товары компании</h4>
+                  <ul class="aside-nav__list">
+                    <li class="aside-nav__item">
+                      <a class="aside-nav__link" href="#">Кирпич (<span>6</span>)</a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a class="aside-nav__link" href="#">Плиточный клей Кнауф (<span>6</span>)</a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a class="aside-nav__link" href="#">Ровнитель для пола Кнауф (<span>2</span>)</a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a class="aside-nav__link" href="#">Шпатлевка Кнауф (<span>11</span>)</a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a class="aside-nav__link" href="#">Гидроизоляционная смесь (<span>1</span>)</a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a class="aside-nav__link" href="#">Штукатурка Кнауф (<span>12</span>)</a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a class="aside-nav__link" href="#">Пазогребневые плиты (<span>2</span>)</a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a class="aside-nav__link" href="#">Аквапанель Кнауф (<span>2</span>)</a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a class="aside-nav__link" href="#">Монтажный клей Кнауф (<span>1</span>)</a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a class="aside-nav__link" href="#">Гипсокартон Кнауф (<span>7</span>)</a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a class="aside-nav__link" href="#">Пенопласт (<span>5</span>)</a>
+                    </li>
+                    <li class="aside-nav__item">
+                      <a class="aside-nav__link" href="#">Минеральная вата (<span>1</span>)</a>
+                    </li>
+                  </ul>
+                </div>
+              </aside>
+
+            </div>
+
+            <div class="content-col">
+
+              <section class="products-container" aria-labelledby="brand-page">
+
+                <div class="filter-controls-block">
+
+                  <div class="filter-controls-block__sort">
+
+                    <div class="field-select  field-select--sort">
+                      <label for="filter-sort" class="field-select__name">Сортировать по:</label>
+                      <span class="field-select__select-wrap">
+                        <select id="filter-sort" class="field-select__select">
+                          <option value="По популярности" selected>По популярности</option>
+                          <option value="Цена ниже">Цена ниже</option>
+                          <option value="Цена выше">Цена выше</option>
+                        </select>
+                      </span>
+                    </div>
+
+                  </div>
+
+                  <div class="filter-controls-block__display">
+
+                    <button class="btn  btn--icon  btn-list-view  filter-controls-block__btn-view" type="button" title="Отображать списком">
+                      <svg width="18" height="18" role="img">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#list-view"></use>
+                      </svg>
+                    </button>
+
+                    <button class="btn  btn--icon  btn-card-view  filter-controls-block__btn-view  filter-controls-block__btn-view--selected" type="button" title="Отображать карточками">
+                      <svg width="22" height="22" role="img">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-view"></use>
+                      </svg>
+
+                    </button>
+                  </div>
+
+                </div>
+
+                <div class="row">
+
+                  <div class="brands-item-col">
+                    @@include('blocks/product-card/product-card.html')
+                  </div>
+
+                  <div class="brands-item-col">
+                    @@include('blocks/product-card/product-card.html')
+                  </div>
+
+                  <div class="brands-item-col">
+                    @@include('blocks/product-card/product-card.html')
+                  </div>
+
+                  <div class="brands-item-col">
+                    @@include('blocks/product-card/product-card.html')
+                  </div>
+
+                  <div class="brands-item-col">
+                    @@include('blocks/product-card/product-card.html')
+                  </div>
+
+                </div>
+
+              </section>
+
+              @@include('blocks/pagination/pagination.html')
+
+            </div>
+
+          </div>
+
+        </div>
+
+        @@include('blocks/order-form/order-form.html')
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      <div class="container">
+        @@include('blocks/page-footer/page-footer.html')
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Навигация: Каталог и Главное меню. Общие для всего сайта -->
+  @@include('blocks/catalog-menu/catalog-menu.html')
+  @@include('blocks/main-menu/main-menu.html')
+
+
+  <!-- Модалки общие для всего сайта -->
+  @@include('blocks/phones-modal/phones-modal.html')
+
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>
