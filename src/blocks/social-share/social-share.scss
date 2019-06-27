@@ -1,0 +1,46 @@
+.social-share {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+    display: none;
+
+    @media (min-width: $screen-sm) {
+      display: inline-block;
+      vertical-align: baseline;
+      margin-right: 20px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    li + li {
+      margin-left: 15px;
+    }
+  }
+
+  &__item {
+
+  }
+
+  &__link {
+    display: inline-block;
+    vertical-align: baseline;
+    color: $text-muted;
+
+    svg {
+      display: block;
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+  }
+}

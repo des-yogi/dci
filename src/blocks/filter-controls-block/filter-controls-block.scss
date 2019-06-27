@@ -1,0 +1,58 @@
+.filter-controls-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 25px;
+
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__sort {
+    width: 100%;
+
+    @media (min-width: $screen-xl) {
+      width: 60%;
+    }
+  }
+
+  &__display {
+    display: none;
+
+
+    @media (min-width: $screen-xl) {
+      display: block;
+    }
+
+    button + button {
+      margin-left: 10px;
+    }
+  }
+
+  &__btn-view {
+
+    &:hover,
+    &:focus {
+      background-color: $main-color;
+      color: $white;
+
+      svg {
+        fill: currentColor;
+      }
+    }
+
+    svg {
+      fill: $text-muted;
+    }
+
+    &--selected {
+      background-color: $main-color;
+      color: $white;
+      user-select: none;
+      pointer-events: none;
+
+      svg {
+        fill: currentColor;
+      }
+    }
+  }
+}
