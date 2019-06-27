@@ -2733,6 +2733,7 @@ body.modal-open .mm-slideout {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg); }
 .breadcrumbs {
+  margin-top: 25px;
   margin-bottom: 25px; }
 .breadcrumbs__list {
     padding: 0;
@@ -6240,8 +6241,6 @@ hr {
     background-color: white; }
 .main-content {
   position: relative; }
-.main-content--noindex {
-    padding-top: 25px; }
 .main-content--overlayed::before {
     display: block;
     content: "";
