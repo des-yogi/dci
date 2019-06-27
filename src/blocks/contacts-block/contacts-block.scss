@@ -1,0 +1,51 @@
+.contacts-block {
+
+  @media (min-width: $screen-md) {
+    background-color: $white;
+    box-shadow: $shadow;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  & > .row {
+    background-color: $white;
+    box-shadow: $shadow;
+
+    @media (min-width: $screen-md) {
+      background: none;
+      box-shadow: none;
+    }
+  }
+
+  &__text {
+    padding-top: 25px;
+
+    @media (min-width: $screen-md) {
+      padding-top: 0;
+    }
+
+    .col-1-2 {
+      //&:last-child {
+        margin-bottom: 0;
+      //}
+    }
+  }
+
+  &__title {
+    padding-bottom: 25px;
+    margin: 0;
+    border-bottom: 2px solid $body-bg;
+  }
+
+  &__list {
+
+  }
+
+  &__item {
+
+  }
+
+  &__link {
+
+  }
+}

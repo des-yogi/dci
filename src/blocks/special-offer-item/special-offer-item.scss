@@ -1,0 +1,48 @@
+.special-offer-item {
+  margin-bottom: 35px;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__img-col {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col(md, 5);
+  }
+
+  &__text-col {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col(md, 7);
+  }
+
+  &__img {
+    height: 100%;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__title {
+
+    @media (min-width: $screen-md) {
+      margin-top: 0;
+    }
+  }
+
+  &__descr {
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+  }
+
+  &__bottom {
+    margin-top: auto;
+
+    .publishedon {
+      margin-top: 20px;
+    }
+  }
+}

@@ -80,7 +80,10 @@
     "prod-filters-block": [],
     "product-slider": [],
     "product-tabs": [],
-    "tabs": []
+    "tabs": [],
+    "special-offer-card": [],
+    "special-offer-item": [],
+    "contacts-block": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

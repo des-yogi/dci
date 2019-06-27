@@ -1,0 +1,50 @@
+.special-offer-card {
+  background-color: $white;
+  box-shadow: $shadow;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__wrapper {
+    margin: 0;
+  }
+
+  &__img {
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__title {
+    padding: 18px 15px 15px;
+    border-bottom: 2px solid $main-color;
+
+    @media (min-width: $screen-xl) {
+      padding: 25px 20px;
+    }
+
+    h4 {
+      margin: 0;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 0;
+
+    @media (min-width: $screen-xl) {
+      padding: 15px 5px 15px 20px;
+    }
+
+    .btn--readmore {
+      padding-left: 10px;
+    }
+  }
+}
