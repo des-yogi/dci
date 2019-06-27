@@ -8294,6 +8294,7 @@ blockquote {
     padding-left: 15px;
     padding-right: 15px; }
 .product-slider__slider-col {
+    position: relative;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
@@ -8311,7 +8312,18 @@ blockquote {
 .product-slider__container {
     background-color: white;
     -webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
-            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15); }
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+    /* &::before {
+      display: block;
+      content: "Новинка";
+      z-index: 10;
+      position: absolute;
+      left: 0;
+      top: 20px;
+      width: auto;
+      padding: 10px;
+      background-color: yellow;
+    } */ }
 .product-slider__img {
     max-width: 405px;
     margin-left: auto;
@@ -8474,6 +8486,10 @@ blockquote {
       background-size: cover; }
 .product-slider__submit:hover, .product-slider__submit:focus {
       background-color: #15c9bf; }
+.product-slider__special-mark {
+    z-index: 5;
+    top: 30px;
+    left: 10px; }
 .product-tabs {
   margin-top: 25px;
   margin-bottom: 25px;
@@ -8505,12 +8521,15 @@ blockquote {
     margin: 0; }
 .product-tabs__descr-list-value {
     margin-left: 0; }
+.product-tabs__gallery-item {
+    cursor: -webkit-zoom-in;
+    cursor: zoom-in; }
 .product-tabs__gallery-item img {
-    -o-object-fit: contain;
-       font-family: "object-fit:contain;object-position:center";
-       object-fit: contain;
-    -o-object-position: center;
-       object-position: center; }
+      -o-object-fit: contain;
+         font-family: "object-fit:contain;object-position:center";
+         object-fit: contain;
+      -o-object-position: center;
+         object-position: center; }
 .tabs__links {
   margin: 0;
   padding: 0;
