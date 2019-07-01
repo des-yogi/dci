@@ -1,0 +1,50 @@
+.about {
+  margin-left: -10px;
+  margin-right: -10px;
+  background-color: $white;
+  box-shadow: $shadow;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+    padding: 25px 10px;
+    margin: 0;
+    border-bottom: 2px solid $body-bg;
+
+    @media (min-width: $screen-md) {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  }
+
+  &__content {
+    padding: 25px 10px;
+
+    @media (min-width: $screen-md) {
+      padding-left: 25px;
+      padding-right: 25px;
+      columns: 2 auto;
+      column-gap: 25px;
+      column-fill: balance-all;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    h2,
+    h3,
+    h4 {
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+  }
+}
