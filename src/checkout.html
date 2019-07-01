@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk">
+
+<head>
+  <meta charset="utf-8">
+  <title>Оформление заказа | DCI</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body><noscript>У вас отключен JavaScript. Это делает затруднительным использование нашего сайта.</noscript>
+
+  <div id="page" class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      <main class="main-content  main-content--noindex" role="main">
+
+        <div class="container">
+
+          @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+          <article class="basket  checkout">
+
+            <h1 class="basket__title">Оформление заказа&shy;<span class="h5  basket__title-quant">Товаров:&nbsp;<span>11</span></span></h1>
+
+            <div class="checkout__form">
+              <form id="checkout-form" action="/" method="post">
+
+                <div class="checkout__form-set">
+                  <fieldset class="checkout__fieldset">
+                    <legend class="checkout__legend">Покупатель</legend>
+
+                    <div class="checkout__form-group">
+                      <div class="field-checkbox">
+                        <label class="field-checkbox__name" tabindex="0">
+                          <input class="field-checkbox__input" type="checkbox">
+                          <span class="field-checkbox__name-text  field-checkbox__name-text--bold">Физическое лицо</span>
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="checkout__form-group">
+                      <div class="field-checkbox">
+                        <label class="field-checkbox__name" tabindex="0">
+                          <input class="field-checkbox__input" type="checkbox">
+                          <span class="field-checkbox__name-text  field-checkbox__name-text--bold">Юридическое лицо</span>
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+
+                <div class="checkout__form-set">
+                  <fieldset class="checkout__fieldset">
+                    <legend class="checkout__legend">Контактные данные</legend>
+                    <div class="checkout__form-group">
+                      <label class="field-text">
+                        <!-- <span class="field-text__name">Имя</span> -->
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" placeholder="Имя">
+                          <span class="field-text__help-text  error"></span>
+                        </span>
+                      </label>
+                    </div>
+
+                    <div class="checkout__form-group">
+                      <label class="field-text">
+                        <!-- <span class="field-text__name">Имя</span> -->
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="tel" placeholder="Телефон">
+                          <span class="field-text__help-text  error"></span>
+                        </span>
+                      </label>
+                    </div>
+
+                    <div class="checkout__form-group">
+                      <label class="field-text">
+                        <!-- <span class="field-text__name">Имя</span> -->
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="email" placeholder="Email">
+                          <span class="field-text__help-text  error"></span>
+                        </span>
+                      </label>
+                    </div>
+
+                    <div class="checkout__form-group">
+                      <label class="field-text">
+                        <!-- <span class="field-text__name">Имя</span> -->
+                        <span class="field-text__input-wrap">
+                          <textarea class="field-text__input" placeholder="Комментарий к заказу"></textarea>
+                          <span class="field-text__help-text  error"></span>
+                        </span>
+                      </label>
+                    </div>
+                  </fieldset>
+                </div>
+
+                <div class="checkout__form-set">
+                  <fieldset class="checkout__fieldset">
+                    <legend class="checkout__legend">Адрес доставки</legend>
+
+                    <div class="checkout__form-group">
+                      <label class="field-text">
+                        <!-- <span class="field-text__name">Имя</span> -->
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" placeholder="Адрес доставки">
+                          <span class="field-text__help-text  error"></span>
+                        </span>
+                      </label>
+                    </div>
+
+                  </fieldset>
+                </div>
+
+              </form>
+            </div>
+
+            <div class="basket__btns">
+              <div class="row">
+                <div class="basket__btn-col">
+                  <a href="#" class="btn  btn--outline  btn--outline--left  basket__link  basket__link">Назад</a>
+                </div>
+                <div class="basket__btn-col">
+                  <button type="button" class="btn  btn--outline  btn--outline--right  basket__link">Оформить заказ</button>
+                </div>
+              </div>
+            </div>
+
+          </article>
+
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      <div class="container">
+        @@include('blocks/page-footer/page-footer.html')
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Навигация: Каталог и Главное меню. Общие для всего сайта -->
+  @@include('blocks/catalog-menu/catalog-menu.html')
+  @@include('blocks/main-menu/main-menu.html')
+
+
+  <!-- Модалки общие для всего сайта -->
+  @@include('blocks/phones-modal/phones-modal.html')
+
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>
