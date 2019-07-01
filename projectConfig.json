@@ -85,7 +85,8 @@
     "special-offer-item": [],
     "contacts-block": [],
     "map": [],
-    "about": []
+    "about": [],
+    "delivery-and-payment": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
