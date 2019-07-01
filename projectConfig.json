@@ -84,7 +84,8 @@
     "special-offer-card": [],
     "special-offer-item": [],
     "contacts-block": [],
-    "map": []
+    "map": [],
+    "about": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
