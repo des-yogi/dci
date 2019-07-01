@@ -342,18 +342,21 @@ hr {
 
 .col-1-2 {
   @include col(xs, 12, $grid-columns, 20px);
-  @include col(md, 6);
-  margin-bottom: 20px;
+  @include col(md, 12);
+  @include col(lg, 6);
+  margin-bottom: 25px;
 
   &--map {
+    padding-left: 0;
+    padding-right: 0;
     margin-bottom: 0;
   }
 
-  @media (min-width: $screen-md) {
-    margin-bottom: 30px;
+  &--inner {
+    @include col(md, 6);
   }
 
-  @media (min-width: $screen-xl) {
+  @media (min-width: $screen-md) {
     margin-bottom: 0;
   }
 }
