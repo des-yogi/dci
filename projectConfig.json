@@ -83,7 +83,8 @@
     "tabs": [],
     "special-offer-card": [],
     "special-offer-item": [],
-    "contacts-block": []
+    "contacts-block": [],
+    "map": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

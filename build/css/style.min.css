@@ -6315,8 +6315,10 @@ hr {
   max-width: 100%;
   padding-left: 10px;
   padding-right: 10px;
-  margin-bottom: 20px; }
+  margin-bottom: 25px; }
 .col-1-2--map {
+    padding-left: 0;
+    padding-right: 0;
     margin-bottom: 0; }
 .col-1-3-3 {
   -webkit-box-flex: 0;
@@ -8698,6 +8700,18 @@ blockquote {
   padding-bottom: 25px;
   margin: 0;
   border-bottom: 2px solid #f5f5f5; }
+.contacts-block__item {
+  margin-top: 15px; }
+.contacts-block__item span {
+    display: inline-block;
+    vertical-align: baseline; }
+.contacts-block__item--worktime .contacts-block__day-off {
+    margin-left: 15px; }
+.contacts-block__link {
+  color: inherit; }
+.map {
+  width: 100%;
+  height: 240px; }
 @media all and (min-width: 0px) {
   .mm-wrapper_opening .mm-menu_columns-0.mm-menu_opened ~ .mm-slideout {
     -webkit-transform: translate3d(0, 0, 0);
@@ -8861,13 +8875,20 @@ blockquote {
         margin-bottom: 25px; }
     .col-1-2 {
       -webkit-box-flex: 0;
+          -ms-flex: 0 0 100%;
+              flex: 0 0 100%;
+      max-width: 100%;
+      padding-left: 12.5px;
+      padding-right: 12.5px; }
+    .col-1-2--inner {
+      -webkit-box-flex: 0;
           -ms-flex: 0 0 50%;
               flex: 0 0 50%;
       max-width: 50%;
       padding-left: 12.5px;
       padding-right: 12.5px; }
     .col-1-2 {
-      margin-bottom: 30px; }
+      margin-bottom: 0; }
     .col-1-3-3 {
       -webkit-box-flex: 0;
           -ms-flex: 0 0 33.33333%;
@@ -9413,7 +9434,11 @@ blockquote {
       -webkit-box-shadow: none;
               box-shadow: none; }
     .contacts-block__text {
-      padding-top: 0; } }
+      padding-bottom: 25px;
+      padding-left: 25px;
+      padding-right: 25px; }
+    .map {
+      height: 360px; } }
 @media (min-width: 768px) and (min-width: 768px) {
     .service-menu {
       -webkit-box-flex: 0;
@@ -9479,6 +9504,13 @@ blockquote {
         -webkit-box-ordinal-group: 1;
             -ms-flex-order: 0;
                 order: 0; }
+    .col-1-2 {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 50%;
+              flex: 0 0 50%;
+      max-width: 50%;
+      padding-left: 12.5px;
+      padding-right: 12.5px; }
     .col-1-2-3 {
       -webkit-box-flex: 0;
           -ms-flex: 0 0 33.33333%;
@@ -9713,7 +9745,12 @@ blockquote {
       .product-tabs__descr-list-name {
         width: calc(60% - 10px); }
       .product-tabs__descr-list-value {
-        width: calc(40% - 10px); } }
+        width: calc(40% - 10px); }
+      .contacts-block__item--worktime .contacts-block__day-off {
+        display: block;
+        margin-left: 0; }
+    .map {
+      height: 100%; } }
 @media all and (min-width: 1100px) {
   .mm-wrapper_opening .mm-menu_columns-2.mm-menu_opened ~ .mm-slideout {
     -webkit-transform: translate3d(880px, 0, 0);
@@ -9745,8 +9782,6 @@ blockquote {
     .container {
       padding-left: calc(50% - 625px);
       padding-right: calc(50% - 625px); }
-    .col-1-2 {
-      margin-bottom: 0; }
     .col-1-2-3-4 {
       -webkit-box-flex: 0;
           -ms-flex: 0 0 25%;
@@ -10078,7 +10113,9 @@ blockquote {
       .special-offer-card__title {
         padding: 25px 20px; }
       .special-offer-card__bottom {
-        padding: 15px 5px 15px 20px; } }
+        padding: 15px 5px 15px 20px; }
+    .contacts-block__text {
+      padding-left: 50px; } }
 @media all and (min-width: 1650px) {
   .mm-wrapper_opening .mm-menu_columns-3.mm-menu_opened ~ .mm-slideout {
     -webkit-transform: translate3d(1320px, 0, 0);

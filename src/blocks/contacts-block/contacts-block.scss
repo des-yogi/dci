@@ -21,7 +21,13 @@
     padding-top: 25px;
 
     @media (min-width: $screen-md) {
-      padding-top: 0;
+      padding-bottom: 25px;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-left: 50px;
     }
 
     .col-1-2 {
@@ -42,10 +48,27 @@
   }
 
   &__item {
+    margin-top: 15px;
 
+    span {
+      display: inline-block;
+      vertical-align: baseline;
+    }
+
+    &--worktime {
+
+      #{$block-name}__day-off {
+        margin-left: 15px;
+
+        @media (min-width: $screen-lg) {
+          display: block;
+          margin-left: 0;
+        }
+      }
+    }
   }
 
   &__link {
-
+    color: inherit;
   }
 }
