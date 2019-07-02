@@ -28,90 +28,116 @@
             <div class="checkout__form">
               <form id="checkout-form" action="/" method="post">
 
-                <div class="checkout__form-set">
-                  <fieldset class="checkout__fieldset">
-                    <legend class="checkout__legend">Покупатель</legend>
+                <div class="row">
 
-                    <div class="checkout__form-group">
-                      <div class="field-checkbox">
-                        <label class="field-checkbox__name" tabindex="0">
-                          <input class="field-checkbox__input" type="checkbox">
-                          <span class="field-checkbox__name-text  field-checkbox__name-text--bold">Физическое лицо</span>
+                  <div class="checkout__form-set">
+                    <fieldset class="checkout__fieldset">
+                      <legend class="h4  checkout__legend">Покупатель</legend>
+
+                      <div class="checkout__form-group">
+
+                        <div class="field-radio">
+                          <label class="field-radio__name">
+                            <input class="field-radio__input" type="radio" name="status" checked>
+                            <span class="field-radio__name-text">Физическое лицо</span>
+                          </label>
+                        </div>
+
+                      </div>
+
+                      <div class="checkout__form-group">
+                        <div class="field-radio">
+                          <label class="field-radio__name">
+                            <input class="field-radio__input" type="radio" name="status">
+                            <span class="field-radio__name-text">Юридическое лицо</span>
+                          </label>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+
+                  <div class="checkout__form-set">
+                    <fieldset class="checkout__fieldset">
+                      <legend class="h4  checkout__legend">Контактные данные</legend>
+                      <div class="checkout__form-group">
+                        <label class="field-text">
+                          <!-- <span class="field-text__name">Имя</span> -->
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="text" placeholder="Имя*">
+                            <span class="field-text__help-text  error"></span>
+                          </span>
                         </label>
                       </div>
-                    </div>
 
-                    <div class="checkout__form-group">
-                      <div class="field-checkbox">
-                        <label class="field-checkbox__name" tabindex="0">
-                          <input class="field-checkbox__input" type="checkbox">
-                          <span class="field-checkbox__name-text  field-checkbox__name-text--bold">Юридическое лицо</span>
+                      <div class="checkout__form-group">
+                        <label class="field-text">
+                          <!-- <span class="field-text__name">Имя</span> -->
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="tel" placeholder="Телефон*">
+                            <span class="field-text__help-text  error"></span>
+                          </span>
                         </label>
                       </div>
-                    </div>
-                  </fieldset>
-                </div>
 
-                <div class="checkout__form-set">
-                  <fieldset class="checkout__fieldset">
-                    <legend class="checkout__legend">Контактные данные</legend>
+                      <div class="checkout__form-group">
+                        <label class="field-text">
+                          <!-- <span class="field-text__name">Имя</span> -->
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="email" placeholder="Email">
+                            <span class="field-text__help-text  error"></span>
+                          </span>
+                        </label>
+                      </div>
+
+                      <div class="checkout__form-group">
+                        <label class="field-text">
+                          <!-- <span class="field-text__name">Имя</span> -->
+                          <span class="field-text__input-wrap">
+                            <textarea class="field-text__input" name="message" placeholder="Комментарий к заказу"></textarea>
+                            <span class="field-text__help-text  error"></span>
+                          </span>
+                        </label>
+                      </div>
+                    </fieldset>
                     <div class="checkout__form-group">
-                      <label class="field-text">
-                        <!-- <span class="field-text__name">Имя</span> -->
-                        <span class="field-text__input-wrap">
-                          <input class="field-text__input" type="text" placeholder="Имя">
-                          <span class="field-text__help-text  error"></span>
-                        </span>
-                      </label>
+                      <span><b>*</b> Поля, обязательное для заполнения</span>
                     </div>
+                  </div>
 
-                    <div class="checkout__form-group">
-                      <label class="field-text">
-                        <!-- <span class="field-text__name">Имя</span> -->
-                        <span class="field-text__input-wrap">
-                          <input class="field-text__input" type="tel" placeholder="Телефон">
-                          <span class="field-text__help-text  error"></span>
-                        </span>
-                      </label>
-                    </div>
+                  <div class="checkout__form-set">
+                    <fieldset class="checkout__fieldset">
+                      <legend class="h4  checkout__legend">Адрес доставки</legend>
 
-                    <div class="checkout__form-group">
-                      <label class="field-text">
-                        <!-- <span class="field-text__name">Имя</span> -->
-                        <span class="field-text__input-wrap">
-                          <input class="field-text__input" type="email" placeholder="Email">
-                          <span class="field-text__help-text  error"></span>
-                        </span>
-                      </label>
-                    </div>
+                      <div class="checkout__form-group">
+                        <label class="field-text">
+                          <!-- <span class="field-text__name">Имя</span> -->
+                          <span class="field-text__input-wrap">
+                            <textarea class="field-text__input" name="delivery-address" placeholder="Адрес доставки"></textarea>
+                            <span class="field-text__help-text  error"></span>
+                          </span>
+                        </label>
+                      </div>
 
-                    <div class="checkout__form-group">
-                      <label class="field-text">
-                        <!-- <span class="field-text__name">Имя</span> -->
-                        <span class="field-text__input-wrap">
-                          <textarea class="field-text__input" placeholder="Комментарий к заказу"></textarea>
-                          <span class="field-text__help-text  error"></span>
-                        </span>
-                      </label>
-                    </div>
-                  </fieldset>
-                </div>
+                      <div class="checkout__form-group  checkout__form-group--mb">
+                        <span>Пожалуйста, укажите полный адрес!</span>
+                      </div>
 
-                <div class="checkout__form-set">
-                  <fieldset class="checkout__fieldset">
-                    <legend class="checkout__legend">Адрес доставки</legend>
+                      <div class="checkout__form-group  checkout__form-group--mb">
+                        <span>Подробно о каждом способе доставки и ее стоимости смотрите в разделе <a href="#">Доставка и оплата</a>.</span>
+                      </div>
 
-                    <div class="checkout__form-group">
-                      <label class="field-text">
-                        <!-- <span class="field-text__name">Имя</span> -->
-                        <span class="field-text__input-wrap">
-                          <input class="field-text__input" type="text" placeholder="Адрес доставки">
-                          <span class="field-text__help-text  error"></span>
-                        </span>
-                      </label>
-                    </div>
+                      <div class="checkout__form-group">
+                        <div class="field-checkbox">
+                          <label class="field-checkbox__name">
+                            <input id="agreement" class="field-checkbox__input  agreement" type="checkbox" checked>
+                            <span class="small  field-checkbox__name-text">Даю согласие на обработку персональных данных и политикой конфиденциальности</span>
+                          </label>
+                        </div>
+                      </div>
 
-                  </fieldset>
+                    </fieldset>
+                  </div>
+
                 </div>
 
               </form>
@@ -122,8 +148,10 @@
                 <div class="basket__btn-col">
                   <a href="#" class="btn  btn--outline  btn--outline--left  basket__link  basket__link">Назад</a>
                 </div>
-                <div class="basket__btn-col">
-                  <button type="button" class="btn  btn--outline  btn--outline--right  basket__link">Оформить заказ</button>
+                <div class="basket__btn-col  basket__btn-col--submit">
+                  <div class="field-actions">
+                    <button class="btn  btn--outline  btn--outline--right  basket__link" type="submit">Оформить заказ</button>
+                  </div>
                 </div>
               </div>
             </div>

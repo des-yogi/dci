@@ -2,4 +2,101 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  .field-actions {
+    margin-top: 0;
+  }
+
+  .basket__btn-col--submit {
+    order: -1;
+
+    @media (min-width: $screen-md) {
+      order: initial;
+    }
+  }
+
+  textarea[name=delivery-address] {
+    height: 40px;
+    min-height: 40px;
+  }
+
+  &__form {
+    padding: 20px 10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: 25px;
+    background-color: $white;
+    box-shadow: $shadow;
+
+    @media (min-width: $screen-md) {
+      padding: 20px 20px;
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding: 25px 25px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding: 25px 50px;
+    }
+  }
+
+  &__form-set {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col(md, 6);
+    @include col(lg, 5);
+
+    &:first-child {
+      @include col(md, 12);
+      @include col(lg, 12);
+
+      #{$block-name}__form-group {
+
+        @media (min-width: $screen-md) {
+          width: calc(50% - 12.5px);
+        }
+
+        @media (min-width: $screen-lg) {
+          width: calc(41.6% - 12.5px);
+        }
+      }
+    }
+
+    &:last-child {
+      @include col-offset(lg, 1);
+    }
+
+    & + & {
+      margin-top: 35px;
+    }
+  }
+
+  &__fieldset {
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+
+  &__legend {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__form-group {
+
+    span:not(.field-radio__name-text) {
+      font-size: 14px;
+      font-weight: inherit;
+    }
+
+    &--mb {
+      margin-bottom: 15px;
+    }
+  }
 }
