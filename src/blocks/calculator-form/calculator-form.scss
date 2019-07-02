@@ -1,0 +1,47 @@
+.calculator-form {
+  padding: 25px 10px;
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-bottom: 25px;
+  background-color: $white;
+  box-shadow: $shadow;
+
+  @media (min-width: $screen-md) {
+    padding: 25px 20px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+    padding-bottom: 20px;
+    margin-top: 0;
+    margin-bottom: 25px;
+    border-bottom: 2px solid $body-bg;
+
+    @media (min-width: $screen-md) {
+      padding-bottom: 25px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__intro {
+    margin-bottom: 25px;
+    font-weight: 500;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 30px;
+    }
+  }
+}

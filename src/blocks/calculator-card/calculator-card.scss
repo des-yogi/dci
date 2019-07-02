@@ -1,0 +1,76 @@
+.calculator-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  padding: 15px 0;
+  background-color: $white;
+  box-shadow: $shadow;
+
+  @media (min-width: $screen-md) {
+    padding-top: 20px;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-top: 25px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__img {
+    max-height: 100px;
+
+    img {
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  &__title {
+    padding: 15px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid $main-color;
+
+    @media (min-width: $screen-md) {
+      padding: 20px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding: 25px;
+      border-width: 4px;
+    }
+
+    a {
+      display: block;
+
+      @media (min-width: $screen-md) {
+        //min-height: 56px;
+      }
+    }
+  }
+
+  &__inner {
+    flex: 1 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 15px;
+
+    @media (min-width: $screen-md) {
+      padding: 0 20px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding: 0 25px;
+    }
+  }
+
+  &__descr {
+
+  }
+
+  &__link-wrapper {
+    text-align: right;
+  }
+}

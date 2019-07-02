@@ -89,7 +89,11 @@
     "delivery-and-payment": [],
     "basket": [],
     "checkout": [],
-    "checkout-confirmation": []
+    "checkout-confirmation": [],
+    "calculator-card": [],
+    "calculator-form": [],
+    "calculator-item": [],
+    "brands-aside": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
