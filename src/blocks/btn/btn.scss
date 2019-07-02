@@ -138,6 +138,17 @@
       padding-right: 25px;
     }
 
+    &--disabled,
+    &:disabled {
+      color: $text-muted !important;
+      background-color: $body-bg !important;
+      //border-color: $body-bg !important;
+
+      &::after {
+        background: none;
+      }
+    }
+
     &:hover,
     &:focus {
 

@@ -1,0 +1,37 @@
+.checkout-confirmation {
+
+  $block-name:                &; // #{$block-name}__element
+
+  .checkout__form {
+
+    @media (min-width: $screen-lg) {
+      padding: 50px 25px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding: 50px 50px;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__content {
+
+    #{$block-name}__order-link {
+      text-decoration: underline;
+      color: $main-color;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+
+
+  &__phone {
+    font-weight: 500;
+  }
+}

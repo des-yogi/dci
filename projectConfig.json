@@ -86,7 +86,10 @@
     "contacts-block": [],
     "map": [],
     "about": [],
-    "delivery-and-payment": []
+    "delivery-and-payment": [],
+    "basket": [],
+    "checkout": [],
+    "checkout-confirmation": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
