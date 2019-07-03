@@ -1,0 +1,83 @@
+.login-form {
+  padding: 20px 0;
+
+  @media (min-width: $screen-md) {
+    padding: 20px;
+    background: $white;
+    box-shadow: $shadow;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding: 25px;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding: 25px 50px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  .btn {
+    width: 100%;
+  }
+
+  .field-checkbox__input {
+    position: absolute !important;
+  }
+
+  .field-checkbox__name-text {
+    &::before {
+      top: 7px;
+      //left: 0;
+
+      @media (min-width: $screen-md) {
+        left: 10px;
+      }
+    }
+  }
+
+  .field-checkbox__name {
+
+    @media (min-width: $screen-md) {
+      padding-left: 42px;
+      padding-right: 10px;
+    }
+  }
+
+  &__wrapper {
+    margin-bottom: 50px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 65px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 90px;
+    }
+  }
+
+  &__title {
+    padding-bottom: 20px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid $body-bg;
+  }
+
+  &__form {
+
+  }
+
+  &__update-pass {
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 0;
+    margin-top: 10px;
+    margin-left: 23px;
+    text-decoration: underline;
+
+    @media (min-width: $screen-md) {
+      margin: 0;
+      text-align: right;
+    }
+  }
+}

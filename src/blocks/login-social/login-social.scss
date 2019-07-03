@@ -1,0 +1,97 @@
+.login-social {
+  padding: 20px 0;
+
+  @media (min-width: $screen-md) {
+    padding: 20px;
+    background: $white;
+    box-shadow: $shadow;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding: 25px;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding: 25px 50px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+    padding-bottom: 20px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid $body-bg;
+  }
+
+  &__descr {
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+
+  &__link {
+    width: 100%;
+    padding: 11px 25px 12px;
+    text-align: center;
+    font-family: inherit;
+    font-size: $font-size;
+    font-weight: 700;
+    line-height: $line-height;
+    text-decoration: none;
+    color: $white;
+    user-select: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $white;
+      text-decoration: none;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: calc(50% - 12.5px);
+    }
+
+    &--fb {
+      $brand-color:  #507cc0;
+      margin-bottom: 20px;
+      background-color: $brand-color;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: darken( $brand-color, 10% );
+      }
+
+      @media (min-width: $screen-lg) {
+        margin-bottom: 0;
+      }
+    }
+
+    &--google {
+      $brand-color:  #ea4335;
+      background-color: $brand-color;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: darken( $brand-color, 10% );
+      }
+    }
+
+  }
+
+  &__link-reg {
+    text-decoration: underline;
+  }
+}

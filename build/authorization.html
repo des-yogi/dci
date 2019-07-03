@@ -2,7 +2,7 @@
 <html class="no-js  page" lang="uk">
 <head>
   <meta charset="utf-8">
-  <title>Оформление заказа | DCI</title>
+  <title>Авторизация | DCI</title>
   <meta name="description" content>  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  <meta http-equiv="x-ua-compatible" content="ie=edge">  <meta name="MobileOptimized" content="320">  <!--DEV Edge и ряд мобильных браузеров автоматом преобразуют телефоны в ссылки. Отключим это. -->  <meta name="format-detection" content="telephone=no">  <link href="css/style.min.css" rel="stylesheet" media="screen">  <!--DEV Перед </head> при сборке будут вставлены ссылки на favicon и служебные файлы --><link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
@@ -214,15 +214,55 @@
         </div>
       </header>
       <main class="main-content  main-content--noindex" role="main">
-        <div class="container">          <section class="breadcrumbs">            <h4 class="visually-hidden">Постраничная навигация — ваш путь на сайте</h4>            <ul class="breadcrumbs__list">              <li class="breadcrumbs__item">                <a href="#" class="breadcrumbs__link">Главная</a>              </li>              <li class="breadcrumbs__item">                <a href="#" class="breadcrumbs__link">Каталог товаров</a>              </li>              <li class="breadcrumbs__item">                <a href="#" class="breadcrumbs__link">Газобетон</a>              </li>              <li class="breadcrumbs__item">                <a class="breadcrumbs__link">Стеновой конструкционный блок D500 Bonolit</a>              </li>            </ul>          </section>          <article class="basket  checkout  checkout-confirmation">
-            <div class="checkout__form">
-              <h1 class="checkout-confirmation__title">Спасибо! Ваш заказ принят</h1>
-              <div class="checkout-confirmation__content">
-                <p class="h3">Номер Вашего заказа:&emsp;<a class="checkout-confirmation__order-link" href="#">000348</a></p>
-                <p>В ближайшее время менеджер свяжется с Вами по указанному контактному номеру:&emsp;<span id="confirmation-phone" class="checkout-confirmation__phone">+38 069 309 37 07</span></p>
-              </div>
+        <div class="container">          <section class="breadcrumbs">            <h4 class="visually-hidden">Постраничная навигация — ваш путь на сайте</h4>            <ul class="breadcrumbs__list">              <li class="breadcrumbs__item">                <a href="#" class="breadcrumbs__link">Главная</a>              </li>              <li class="breadcrumbs__item">                <a href="#" class="breadcrumbs__link">Каталог товаров</a>              </li>              <li class="breadcrumbs__item">                <a href="#" class="breadcrumbs__link">Газобетон</a>              </li>              <li class="breadcrumbs__item">                <a class="breadcrumbs__link">Стеновой конструкционный блок D500 Bonolit</a>              </li>            </ul>          </section>          <h1>Авторизация</h1>
+          <div class="row  login-form__wrapper">
+            <div class="login-col">
+              <article class="login-form">
+                <h3 class="login-form__title">Вход в личный кабинет</h3>
+                <form id="login-form" class="login-form__form" action="/" method="post">
+                  <div class="fields-group">
+                    <label class="field-text">
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="email" name="email" placeholder="Email">
+                        <span class="field-text__help-text error"></span>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="fields-group">
+                    <label class="field-text">
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="password" name="password" placeholder="Пароль">
+                        <span class="field-text__help-text error"></span>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="fields-group  fields-group--btn-wrapper">
+                    <button class="btn  btn--main" type="submit">Войти</button>
+                  </div>
+                  <div class="fields-group  fields-group--row">
+                    <div class="field-checkbox">
+                      <label class="field-checkbox__name" tabindex="0">
+                        <input class="field-checkbox__input" type="checkbox" checked>
+                        <span class="field-checkbox__name-text">Запомнить пароль</span>
+                      </label>
+                    </div>
+                    <a class="login-form__update-pass" href="#">Забыли пароль?</a>
+                  </div>
+                </form>
+              </article>
             </div>
-          </article>
+            <div class="login-social-col">
+              <article class="login-social">
+                <h3 class="login-social__title">Авторизация через социальные сети</h3>
+                <p class="login-social__descr">Вы можете авторизоваться на сайте с помощью учетных записей социальных сетей.</p>
+                <div class="login-social__inner">
+                  <a href="#" class="login-social__link  login-social__link--fb">Facebook</a>
+                  <a href="#" class="login-social__link  login-social__link--google">Google</a>
+                </div>
+                <p>Если вы ещё не зарегестрированы, перейдите на <a href="#" class="login-social__link-reg"><strong>страницу регистрации</strong></a>.</p>
+              </article>
+            </div>
+          </div>
         </div>
       </main>
     </div>

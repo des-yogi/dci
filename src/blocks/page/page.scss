@@ -499,6 +499,33 @@ hr {
   @include col(xl, 9);
 }
 
+.login-col {
+  @include col(xs, 12, $grid-columns, 20px);
+  @include col(md, 6);
+  @include col(xl, 5);
+  margin-bottom: 15px;
+  background: $white;
+  box-shadow: $shadow;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 0;
+    background: none;
+    box-shadow: none;
+  }
+}
+
+.login-social-col {
+  @include col(xs, 12, $grid-columns, 20px);
+  @include col(md, 6);
+  @include col(xl, 7);
+  background: $white;
+  box-shadow: $shadow;
+
+  @media (min-width: $screen-md) {
+    background: none;
+    box-shadow: none;
+  }
+}
 
 .list-nostyled {
   margin-top: 0;

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk">
+
+<head>
+  <meta charset="utf-8">
+  <title>Регистрация нового пользователя | DCI</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body><noscript>У вас отключен JavaScript. Это делает затруднительным использование нашего сайта.</noscript>
+
+  <div id="page" class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      <main class="main-content  main-content--noindex" role="main">
+
+        <div class="container">
+
+          @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+          <h1>Регистрация</h1>
+
+          <div class="row  login-form__wrapper">
+
+            <div class="login-col">
+
+              <article class="login-form  registry-form">
+                <h3 class="login-form__title">Новый пользователь</h3>
+                <form id="registry-form" class="login-form__form" action="/" method="post">
+
+                  <div class="fields-group">
+                    <label class="field-text">
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="text" name="name" placeholder="Введите имя*" required="">
+                        <span class="field-text__help-text error"></span>
+                      </span>
+                    </label>
+                  </div>
+
+                  <div class="fields-group">
+                    <label class="field-text">
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="tel" name="tel" placeholder="Введите телефон">
+                        <span class="field-text__help-text error"></span>
+                      </span>
+                    </label>
+                  </div>
+
+                  <div class="fields-group">
+                    <label class="field-text">
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="password" name="password" placeholder="Пароль">
+                        <span class="field-text__help-text error"></span>
+                      </span>
+                    </label>
+                  </div>
+
+                  <div class="fields-group">
+                    <label class="field-text">
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="password" name="password" placeholder="Повторите пароль">
+                        <span class="field-text__help-text error"></span>
+                      </span>
+                    </label>
+                  </div>
+
+                  <div class="field-actions  fields-group  fields-group--btn-wrapper">
+                    <button class="btn  btn--main" type="submit">Зарегистрироваться</button>
+                  </div>
+
+                  <div class="fields-group">
+                    <div class="field-checkbox">
+                      <label class="field-checkbox__name" tabindex="0">
+                        <input id="agreement" class="field-checkbox__input" type="checkbox" checked>
+                        <span class="field-checkbox__name-text">Даю согласие на обработку персональных данных</span>
+                      </label>
+                    </div>
+                  </div>
+
+                </form>
+              </article>
+
+            </div>
+
+            <div class="login-social-col">
+
+              <article class="login-social">
+                <h3 class="login-social__title">Авторизация через социальные сети</h3>
+                <p class="login-social__descr">Вы можете авторизоваться на сайте с помощью учетных записей социальных сетей.</p>
+                <div class="login-social__inner">
+                  <a href="#" class="login-social__link  login-social__link--fb">Facebook</a>
+                  <a href="#" class="login-social__link  login-social__link--google">Google</a>
+                </div>
+                <p>Если вы ещё не зарегестрированы, перейдите на <a href="#" class="login-social__link-reg"><strong>страницу регистрации</strong></a>.</p>
+              </article>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      <div class="container">
+        @@include('blocks/page-footer/page-footer.html')
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Навигация: Каталог и Главное меню. Общие для всего сайта -->
+  @@include('blocks/catalog-menu/catalog-menu.html')
+  @@include('blocks/main-menu/main-menu.html')
+
+
+  <!-- Модалки общие для всего сайта -->
+  @@include('blocks/phones-modal/phones-modal.html')
+
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>
