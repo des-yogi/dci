@@ -5,7 +5,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  margin-bottom: ($line-height / 2);
+  margin-bottom: 0.75em;
 
   .btn,
   select,                     // обычно, не участвует в группировке
@@ -61,6 +61,34 @@
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
     }
+  }
+
+  &--row {
+    justify-content: space-between;
+    margin-bottom: 0;
+
+    & > div,
+    & > a {
+      width: 100%;
+    }
+
+    & > div {
+
+      @media (min-width: $screen-md) {
+        width: calc(60% - 5px);
+      }
+    }
+
+    & > a {
+
+      @media (min-width: $screen-md) {
+        width: calc(40% - 5px);
+      }
+    }
+  }
+
+  &--btn-wrapper {
+    margin: 25px 0;
   }
 
   // .field-file {               // обычно, не участвует в группировке

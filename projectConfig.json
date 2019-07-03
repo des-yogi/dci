@@ -93,7 +93,12 @@
     "calculator-card": [],
     "calculator-form": [],
     "calculator-item": [],
-    "brands-aside": []
+    "brands-aside": [],
+    "login-form": [],
+    "login-social": [],
+    "personal-area": [],
+    "page-404": [],
+    "registry-form": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
