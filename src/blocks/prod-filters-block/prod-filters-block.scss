@@ -20,4 +20,11 @@
       border-bottom: 2px solid $icon-color;
     }
   }
+
+  &__submit-wrapper {
+
+    .btn {
+      width: 100%;
+    }
+  }
 }
