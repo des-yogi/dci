@@ -469,7 +469,7 @@ gulp.task('serve', gulp.series('build', function() {
 
   browserSync.init({
     server: dirs.buildPath,
-    port: 8080,
+    port: 3000,
     startPath: 'index.html',
     open: true,
   });
