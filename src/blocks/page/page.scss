@@ -361,6 +361,21 @@ hr {
   }
 }
 
+.col-1-2-calc {
+  @include col(xs, 12, $grid-columns, 20px);
+  @include col(md, 6);
+  @include col(lg, 6);
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 0;
+  }
+}
+
 .col-1-3-3 {
   @include col(xs, 12, $grid-columns, 20px);
   @include col(md, 4);
@@ -375,6 +390,13 @@ hr {
   @media (min-width: $screen-md) {
     margin-bottom: 25px;
   }
+}
+
+.col-1-2-4 {
+  @include col(xs, 12, $grid-columns, 20px);
+  @include col(md, 6)
+  @include col(lg, 3);
+  margin-bottom: 20px;
 }
 
 .col-1-2-3-4 {
