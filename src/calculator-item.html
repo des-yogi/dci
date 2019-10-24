@@ -27,7 +27,149 @@
 
             <p class="calculator-form__intro">Онлайн-калькулятор газобетона позволит вам быстро рассчитать, какое количество газоблоков вам понадобится для постройки стен.</p>
 
-            <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Страна ему единственное сбить подпоясал рукописи, злых свое за переулка, бросил осталось грамматики решила от всех текста, щеке всеми сих большой свой заманивший рыбными семантика? Домах, вопрос безопасную реторический курсивных города осталось снова единственное эта повстречался до скатился семь алфавит ведущими, заглавных, ему путь, буквоград точках! Родного о это переписывается пунктуация заглавных дорогу злых над, реторический агенство то. Предложения которой всемогущая пояс текстов строчка продолжил семантика скатился ручеек свое запятых, всеми страну ее, предупреждал, взобравшись образ. Родного диких, ведущими предупреждал коварный первую строчка по всей, дорогу курсивных живет щеке назад от всех деревни страну сих решила себя за, путь не сбить? По всей себя рыбными путь однажды, вопроса. Реторический путь то, текст агенство маленькая, моей вдали вскоре грамматики выйти бросил языком там приставка заглавных за вопроса текста дал он безопасную пор, lorem составитель если дороге страну. Одна страна правилами напоивший подзаголовок толку снова меня она текстов, за всеми страну запятой, он то власти строчка не ему! Предупредила, курсивных, силуэт. Заголовок свою которой путь буквенных агенство, единственное это семь залетают обеспечивает города, прямо имени текстов продолжил, маленькая рекламных своих о деревни безопасную свой журчит.</p>
+            <div class="calc-wrap  calculator-form__wrapper">
+
+              <form class="calculator-form__calc" id="jquery-calculator">
+
+                <div class="row">
+
+                  <div class="col-1-2-4">
+                    <div class="field-select">
+                      <span class="field-select__name">Размер:</span>
+                      <span class="field-select__select-wrap">
+                        <select class="field-select__select" v-model="typeBlock">
+                          <option value="100х200х600">100х200х600</option>
+                          <option value="100х288х600">100х288х600</option>
+                          <option value="120х200х600">120х200х600</option>
+                          <option value="125х200х600">125х200х600</option>
+                          <option value="150х200х600">150х200х600</option>
+                          <option value="150х288х600">150х288х600</option>
+                          <option value="200х200х600">200х200х600</option>
+                          <option value="200х288х600">200х288х600</option>
+                          <option value="250х200х600">250х200х600</option>
+                          <option value="280х200х600">280х200х600</option>
+                          <option value="300х200х600">300х200х600</option>
+                          <option value="300х250х600">300х250х600</option>
+                          <option value="375х200х600">375х200х600</option>
+                          <option value="375х250х600">375х250х600</option>
+                          <option value="400х200х600">400х200х600</option>
+                          <option value="400х250х600">400х250х600</option>
+                          <option value="500х200х600">500х200х600</option>
+                          <option value="150х200х600">150х200х600</option>
+                        </select>
+                        <small class="field-select__help-text"></small>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="col-1-2-4">
+                    <label class="field-text">
+                      <span class="field-text__name">Длина стен, м:</span>
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="number" min="1" max="9999" step="0.01" v-model="weightWall" placeholder="0" required>
+                        <span class="field-text__help-text"></span>
+                      </span>
+                    </label>
+                  </div>
+
+                  <div class="col-1-2-4">
+                    <label class="field-text">
+                      <span class="field-text__name">Высота стен, м:</span>
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="number" min="1" max="9999" step="0.01" v-model="heightWall" placeholder="0" required>
+                        <span class="field-text__help-text"></span>
+                      </span>
+                    </label>
+                  </div>
+
+                  <div class="col-1-2-4">
+                    <label class="field-text">
+                      <span class="field-text__name">Проемы (окна, двери), м<sup>2</sup>:</span>
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="number" min="1" max="9999" step="0.01" v-model="otherWall" placeholder="0" required>
+                        <span class="field-text__help-text"></span>
+                      </span>
+                    </label>
+                  </div>
+
+                </div>
+
+                <div class="row">
+
+                  <div class="col-1-2-calc">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox" v-model="weightSeam">
+                      <span class="field-checkbox__name-text">Враховувати товщину шва (+10мм)</span>
+                    </label>
+                  </div>
+
+                  <div class="col-1-2-calc">
+                    <div class="fields-group  calculator-form__actions">
+                      <button type="reset" class="btn  btn--outline">Очистить</button>
+                      <button type="submit" class="btn  btn--main">Рассчитать</button>
+                    </div>
+                  </div>
+
+                </div>
+
+
+
+              </form>
+
+              <form class="calculator-form__result" id="jquery-calculator-results" style="display: none">
+
+                <div class="row">
+
+                  <div class="col-1-2-calc">
+                    <div class="calculator-form__param">
+                      <h4>Параметри розрахунку:</h4>
+                        <dl class="calculator-form__list">
+                          <div class="calculator-form__list-inner">
+                            <dt>Размер, мм:</dt>
+                            <dd id="calc-typeBlock">100х200х600</dd>
+                          </div>
+                          <div class="calculator-form__list-inner">
+                            <dt>Длина стен, м:</dt>
+                            <dd id="calc-weightWall">234</dd>
+                          </div>
+                          <div class="calculator-form__list-inner">
+                            <dt>Высота стен, м:</dt>
+                            <dd id="calc-heightWall">3</dd>
+                          </div>
+                          <div class="calculator-form__list-inner">
+                            <dt>Проемы (окна, двери), м<sup>2</sup>:</dt>
+                            <dd id="calc-otherWall">20</dd>
+                          </div>
+                        </dl>
+                    </div>
+                  </div>
+
+                  <div class="col-1-2-calc">
+                    <div class="calculator-form__total">
+                      <h4 id="calc-weightSeam">Результат расчета без учёта шва*:</h4>
+                      <dl class="calculator-form__list">
+                        <div class="calculator-form__list-inner">
+                          <dt>Площадь стен, м<sup>2</sup>:</dt>
+                          <dd id="calc-sqrWall">600</dd>
+                        </div>
+                        <div class="calculator-form__list-inner">
+                          <dt>Объём блока, м<sup>3</sup>:</dt>
+                          <dd id="calc-amountBrick">234</dd>
+                        </div>
+                        <div class="calculator-form__list-inner">
+                          <dt>Количество блоков, шт:</dt>
+                          <dd id="calc-qtyBrick">5659</dd>
+                        </div>
+                      </dl>
+                      <div class="field-actions">
+                        <button class="btn  btn--main">Новый расчет</button>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </form>
 
           </article>
 

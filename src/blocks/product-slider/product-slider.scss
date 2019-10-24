@@ -33,20 +33,9 @@
   }
 
   &__container {
+    height: 100%;
     background-color: $white;
     box-shadow: $shadow;
-
-    /* &::before {
-      display: block;
-      content: "Новинка";
-      z-index: 10;
-      position: absolute;
-      left: 0;
-      top: 20px;
-      width: auto;
-      padding: 10px;
-      background-color: yellow;
-    } */
   }
 
   &__item {
@@ -292,7 +281,7 @@
   }
 
   &__special-mark {
-    z-index: 5;
+    z-index: 1;
     top: 30px;
     left: 10px;
   }
