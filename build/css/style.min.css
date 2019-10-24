@@ -3894,9 +3894,6 @@ input:checked ~ .field-toggler__name-text:after {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   margin-bottom: 0.75em; }
 .fields-group .btn,
   .fields-group select,
