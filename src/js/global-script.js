@@ -24,3 +24,12 @@ const translateTitle = function (titleObj) {
     selector: '.b-lazy'
   });
 })();
+
+
+$(document).ready(function(){
+  $('ul.sf-menu').superfish({
+    animation: {height:'show'}, // slide-down effect without fade-in
+    speed:     'fast',
+    delay:     1000     // 1.2 second delay on mouseout default
+  });
+});
