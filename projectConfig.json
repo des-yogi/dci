@@ -123,6 +123,7 @@
   "copiedJs": [
     "./node_modules/picturefill/dist/picturefill.min.js",
     "./node_modules/nouislider/distribute/nouislider.min.js",
+    "./node_modules/imask/dist/imask.min.js",
     "./src/js/libs/popper.min.js",
     "./node_modules/jquery/dist/jquery.min.js",
     "./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js",
