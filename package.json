@@ -73,6 +73,7 @@
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
     "blazy": "^1.8.2",
+    "imask": "^5.2.1",
     "ismobilejs": "^1.0.3",
     "jquery": "^3.4.1",
     "jquery.mmenu": "^7.3.3",
