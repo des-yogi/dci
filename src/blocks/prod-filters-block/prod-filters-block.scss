@@ -27,4 +27,42 @@
       width: 100%;
     }
   }
+
+  &__selected-filters {
+    border-bottom: 2px solid $body-bg;
+  }
+
+  &__selected-filters-title {
+    padding: 24px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  &__clear-filters {
+    width: 100%;
+    padding: 10px 24px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: $link-color;
+    text-align: left;
+    text-decoration: underline;
+    white-space: nowrap;
+    background: none;
+    border: none;
+    user-select: none;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: $link-color--hover;
+    }
+
+    &--disabled,
+    &:disabled {
+      text-decoration: none;
+      color: $text-muted;
+      pointer-events: none;
+      cursor: default;
+    }
+  }
 }
