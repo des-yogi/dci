@@ -88,7 +88,9 @@
   }
 
   &__price {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
     width: 100%;
     padding: 0 20px;
     margin-bottom: 15px;
@@ -116,7 +118,7 @@
 
   &__unit {
     font-size: 12px;
-    color: $text-muted;
+    color: $main-color;
   }
 
   &__form {
