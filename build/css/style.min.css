@@ -8678,6 +8678,22 @@ blockquote {
 .product-slider__favorits-wrapper span {
       margin-left: 10px;
       color: inherit; }
+.product-slider__btn-favorits {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center; }
+.product-slider__btn-favorits svg {
+      position: static;
+      display: inline-block;
+      vertical-align: middle;
+      -webkit-transform: none;
+              transform: none; }
+.product-slider__btn-favorits span {
+      display: inline-block;
+      vertical-align: middle; }
 .product-slider__submit {
     width: 100%;
     height: auto;
