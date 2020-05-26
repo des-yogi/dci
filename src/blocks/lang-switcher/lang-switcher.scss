@@ -59,20 +59,33 @@
 
   .dropdown-menu {
     min-width: 65px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
   }
 
   .dropdown-item {
+    padding: 10px 10px;
     font-family: $font-family;
     font-size: $font-size--mob;
     font-weight: 500;
-    padding-right: 5px;
+    text-align: center;
     color: inherit;
 
     &:hover,
-    &:focus {
+    &:focus,
+    &:active {
       color: $main-color;
+      background-color: $white;
+    }
+
+    &.active {
+      color: $white;
+      background-color: $main-color;
+      pointer-events: none;
     }
   }
+
   .dropdown-item + .dropdown-item {
     padding-top: 10px;
   }
