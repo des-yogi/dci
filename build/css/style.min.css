@@ -3141,15 +3141,18 @@ a.btn--disabled {
   white-space: nowrap;
   background-color: transparent;
   border: 0; }
-.dropdown-item:hover, .dropdown-item:focus {
+.dropdown-item:hover,
+.dropdown-item:focus {
   color: #16181b;
   text-decoration: none;
   background-color: #f8f9fa; }
-.dropdown-item.active, .dropdown-item:active {
+.dropdown-item.active,
+.dropdown-item:active {
   color: #fff;
   text-decoration: none;
   background-color: #007bff; }
-.dropdown-item.disabled, .dropdown-item:disabled {
+.dropdown-item.disabled,
+.dropdown-item:disabled {
   color: #6c757d;
   pointer-events: none;
   background-color: transparent; }
@@ -7148,9 +7151,9 @@ blockquote {
   margin-right: 0; }
 .social-contact {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
-  max-width: 100%;
+      -ms-flex: 0 0 58.33333%;
+          flex: 0 0 58.33333%;
+  max-width: 58.33333%;
   padding-left: 10px;
   padding-right: 10px;
   display: -webkit-box;
@@ -7158,9 +7161,9 @@ blockquote {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
@@ -7247,15 +7250,25 @@ blockquote {
       -webkit-transform: rotate(180deg) translateY(2px);
               transform: rotate(180deg) translateY(2px); }
 .lang-switcher .dropdown-menu {
-    min-width: 65px; }
+    min-width: 65px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    -webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15); }
 .lang-switcher .dropdown-item {
+    padding: 10px 10px;
     font-family: -apple-system, BlinkMacSystemFont, "Rubik", "Ubuntu", "Droid Sans", "Helvetica Neue", "Arial", sans-serif;
     font-size: 14px;
     font-weight: 500;
-    padding-right: 5px;
+    text-align: center;
     color: inherit; }
-.lang-switcher .dropdown-item:hover, .lang-switcher .dropdown-item:focus {
-      color: #03a49b; }
+.lang-switcher .dropdown-item:hover, .lang-switcher .dropdown-item:focus, .lang-switcher .dropdown-item:active {
+      color: #03a49b;
+      background-color: white; }
+.lang-switcher .dropdown-item.active {
+      color: white;
+      background-color: #03a49b;
+      pointer-events: none; }
 .lang-switcher .dropdown-item + .dropdown-item {
     padding-top: 10px; }
 .catalog-menu:not(.mm-menu) {
