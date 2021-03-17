@@ -99,7 +99,8 @@
     "login-social": [],
     "personal-area": [],
     "page-404": [],
-    "registry-form": []
+    "registry-form": [],
+    "faq": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
@@ -115,6 +116,7 @@
   "singleCompiled": [],
   "addJsBefore": [],
   "addJsAfter": [
+    "./node_modules/focus-visible/dist/focus-visible.min.js",
     "./src/js/global-script.js"
   ],
   "addImages": [
