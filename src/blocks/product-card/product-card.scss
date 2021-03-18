@@ -90,7 +90,6 @@
   &__price {
     display: flex;
     flex-wrap: wrap;
-    //justify-content: space-between;
     align-items: baseline;
     width: 100%;
     padding: 0 20px;
@@ -119,6 +118,7 @@
 
   &__unit {
     flex-basis: 100%;
+    display: inline-flex;
     width: 100%;
     margin-top: 6px;
     font-size: 12px;

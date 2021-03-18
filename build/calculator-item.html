@@ -491,7 +491,37 @@
         </div>
       </header>
       <main class="main-content  main-content--noindex" role="main">
-        <div class="container">          <nav class="breadcrumbs">            <h4 class="visually-hidden">Постраничная навигация — ваш путь на сайте</h4>            <ul class="breadcrumbs__list">              <li class="breadcrumbs__item">                <a href="#" class="breadcrumbs__link">Главная</a>              </li>              <li class="breadcrumbs__item">                <a href="#" class="breadcrumbs__link">Каталог товаров</a>              </li>              <li class="breadcrumbs__item">                <a href="#" class="breadcrumbs__link">Газобетон</a>              </li>              <li class="breadcrumbs__item">                <a class="breadcrumbs__link">Стеновой конструкционный блок D500 Bonolit</a>              </li>            </ul>          </nav>          <article id="calculator-form-gb" class="calculator-form">
+        <div class="container">
+          <nav class="breadcrumbs">
+            <ul class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="#" class="breadcrumbs__link" itemprop="item">
+                  <span itemprop="name">Главная</span>
+                  <meta itemprop="position" content="1">
+                </a>
+              </li>
+              <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="#" class="breadcrumbs__link" itemprop="item">
+                  <span itemprop="name">Каталог товаров</span>
+                  <meta itemprop="position" content="2">
+                </a>
+              </li>
+              <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="#" class="breadcrumbs__link" itemprop="item">
+                  <span itemprop="name">Газобетон</span>
+                  <meta itemprop="position" content="3">
+                </a>
+              </li>
+              <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <!-- Последняя ссылка должна содержать аттрибут « aria-current="page" » -->
+                <a class="breadcrumbs__link" itemprop="item" aria-current="page">
+                  <span itemprop="name">Стеновой конструкционный блок D500 Bonolit</span>
+                  <meta itemprop="position" content="4">
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <article id="calculator-form-gb" class="calculator-form">
             <h1 class="calculator-form__title">Калькулятор газобетона</h1>
             <p class="calculator-form__intro">Онлайн-калькулятор газобетона позволит вам быстро рассчитать, какое количество газоблоков вам понадобится для постройки стен.</p>
             <div class="calc-wrap  calculator-form__wrapper">

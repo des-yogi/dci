@@ -100,7 +100,11 @@
     "personal-area": [],
     "page-404": [],
     "registry-form": [],
-    "faq": []
+    "faq": [],
+    "rating": [],
+    "rating-show": [],
+    "review": [],
+    "review-form": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

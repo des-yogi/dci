@@ -41,4 +41,46 @@
       }
     }
   }
+
+  &__panel {
+    font-size: 14px;
+
+    @media (min-width: $screen-xl) {
+      font-size: 16px;
+    }
+  }
+
+  &--inner {
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none;
+
+    #{$block-name}__title {
+      display: none;
+    }
+
+    #{$block-name}__item {
+
+      &:first-child {
+
+        .accordion__header {
+          padding-top: 0;
+        }
+      }
+
+      &:last-child {
+
+        .accordion__header {
+          padding-bottom: 0;
+        }
+      }
+    }
+
+    #{$block-name}__panel {
+
+      .text-component {
+        font-weight: 400;
+      }
+    }
+  }
 }

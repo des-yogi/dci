@@ -197,5 +197,18 @@ $field-padding-horizontal:    0.7em !default;
       margin-bottom: 25px;
     }
   }
+
+  &__col-review {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col(md, 6);
+    @include col(lg, 7);
+  }
+
+  &__col-review-form {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col(md, 6);
+    @include col-offset(lg, 1);
+    @include col(lg, 4);
+  }
 }
 
