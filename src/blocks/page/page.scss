@@ -578,6 +578,25 @@ hr {
   }
 }
 
+.aside-panel {
+  background-color: $white;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+
+  &__title,
+  &__content {
+    padding: 20px;
+
+    @media (min-width: $screen-xl) {
+      padding: 25px 24px;
+    }
+  }
+
+  &__title {
+    margin: 0 !important;
+    border-bottom: 2px solid $body-bg;
+  }
+}
+
 *:not(img)::selection {
   color: $white;
   background-color: $main-color; /* Safari, Chrome, Opera */
