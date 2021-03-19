@@ -2,8 +2,8 @@
 @ @include('blocks/product-card/product-card.html')
 -->
 
-<article class="product-card" tabindex="0">
-  <a href="#" class="product-card__link">
+<article class="product-card">
+  <a href="#" class="product-card__link" tabindex="-1" aria-hidden="true">
     <div class="embed-responsive  embed-responsive--4-3  product-card__img">
       <picture>
         <source data-srcset="img/product-img.webp" media="(min-width: 1280px)" type="image/webp">
@@ -29,9 +29,9 @@
   </div>
   <div class="product-card__price-block">
     <span class="product-card__price">
-      <!-- <span class="product-card__old-price" title="Старая цена">12 000</span> -->
       <span class="product-card__new-price"><span>1 500 000</span> грн.</span>
-      <span class="product-card__unit">Палетта</span>
+      <span class="product-card__old-price" title="Старая цена">12 000</span>
+      <span class="product-card__unit">Цена за:&emsp;<span>Палетта</span></span>
     </span>
 
     <form class="product-card__form" action="/" method="post">
