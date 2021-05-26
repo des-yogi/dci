@@ -1,0 +1,51 @@
+.rating-show {
+  display: inline-flex;
+  align-items: center;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__star {
+    flex: 0 0;
+    flex-basis: 17px;
+    width: 17px;
+    height: 16px;
+    background-position: center;
+    background-size: 17px 16px;
+    background-repeat: no-repeat;
+    background-image: svg-load('../blocks/rating-show/bg-img/star.svg', fill=$icon-color);
+
+    & + & {
+      margin-left: 14px;
+    }
+  }
+
+  &[data-rate="1"] {
+    #{$block-name}__star:nth-child(1) {
+      background-image: svg-load('../blocks/rating-show/bg-img/star.svg', fill=$main-color);
+    }
+  }
+
+  &[data-rate="2"] {
+    #{$block-name}__star:nth-child(-n+2) {
+      background-image: svg-load('../blocks/rating-show/bg-img/star.svg', fill=$main-color);
+    }
+  }
+
+  &[data-rate="3"] {
+    #{$block-name}__star:nth-child(-n+3) {
+      background-image: svg-load('../blocks/rating-show/bg-img/star.svg', fill=$main-color);
+    }
+  }
+
+  &[data-rate="4"] {
+    #{$block-name}__star:nth-child(-n+4) {
+      background-image: svg-load('../blocks/rating-show/bg-img/star.svg', fill=$main-color);
+    }
+  }
+
+  &[data-rate="5"] {
+    #{$block-name}__star:nth-child(-n+5) {
+      background-image: svg-load('../blocks/rating-show/bg-img/star.svg', fill=$main-color);
+    }
+  }
+}
