@@ -6350,6 +6350,13 @@ input[type="month"] {
 textarea {
   overflow: auto;
   resize: vertical; }
+textarea,
+input[type="text"],
+input[type="search"],
+input[type="button"],
+input[type="submit"] {
+  -webkit-appearance: none;
+  border-radius: 0; }
 svg {
   fill: currentColor; }
 a svg,
